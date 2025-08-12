@@ -25,7 +25,7 @@ import JainismPage from './Pages/Schools/JainismPage';
 import BuddhismPage from './Pages/Schools/BuddhismPage';
 import CarvakaPage from './Pages/Schools/CarvakaPage';
 
-// Gita Pages (Now Protected)
+// Gita Pages (Protected)
 import Gita from './Pages/Gita/Gita';
 import GitaChapters from './Pages/Gita/Chapters/Chapters';
 import GitaVerses from './Pages/Gita/GitaVerses';
@@ -52,9 +52,9 @@ function App() {
           <main id="main-content" className="flex-grow" role="main">
             <Routes>
               {/* --- Public Routes --- */}
-              <Route path="/" element={<Home />} />
               <Route path="/login" element={<AuthPage />} />
-              <Route path="/explore" element={<ExplorePage />} />
+              
+              {/* School pages can remain public for discovery, or you can protect them too */}
               <Route path="/explore/samkhya" element={<SamkhyaPage />} />
               <Route path="/explore/yoga" element={<YogaPage />} />
               <Route path="/explore/nyaya" element={<NyayaPage />} />
@@ -65,7 +65,10 @@ function App() {
               <Route path="/explore/buddhism" element={<BuddhismPage />} />
               <Route path="/explore/carvaka" element={<CarvakaPage />} />
 
-              {/* --- Protected Gita Routes --- */}
+
+              {/* --- Protected Routes --- */}
+              <Route path="/" element={<ProtectedRoute><Home /></ProtectedRoute>} />
+              <Route path="/explore" element={<ProtectedRoute><ExplorePage /></ProtectedRoute>} />
               <Route path="/gita" element={<ProtectedRoute><Gita /></ProtectedRoute>} />
               <Route path="/gita/chapters" element={<ProtectedRoute><GitaChapters /></ProtectedRoute>} />
               <Route path="/gita/verses" element={<ProtectedRoute><GitaVerses /></ProtectedRoute>} />
