@@ -14,42 +14,42 @@ const schools = [
     name: 'Sāṃkhya',
     icon: <PuzzlePieceIcon className="w-8 h-8 text-amber-600" />,
     description: 'A dualistic school emphasizing the distinction between consciousness (puruṣa) and matter (prakṛti).',
-    path: '/explore/samkhya',
+    path: '/schools/samkhya', // Changed from /explore/samkhya
     category: 'Āstika'
   },
   {
     name: 'Yoga',
     icon: <SunIcon className="w-8 h-8 text-amber-600" />,
     description: 'Focuses on meditative and ascetic practices to unite the self with the ultimate reality.',
-    path: '/explore/yoga',
+    path: '/schools/yoga', // Changed from /explore/yoga
     category: 'Āstika'
   },
   {
     name: 'Nyāya',
     icon: <ScaleIcon className="w-8 h-8 text-amber-600" />,
     description: 'The school of logic, focusing on the sources of valid knowledge (pramāṇas).',
-    path: '/explore/nyaya',
+    path: '/schools/nyaya', // Changed from /explore/nyaya
     category: 'Āstika'
   },
   {
     name: 'Vaiśeṣika',
     icon: <SparklesIcon className="w-8 h-8 text-amber-600" />,
     description: 'An atomist school that postulates that all objects in the physical universe are reducible to atoms.',
-    path: '/explore/vaisesika',
+    path: '/schools/vaisesika', // Changed from /explore/vaisesika
     category: 'Āstika'
   },
   {
     name: 'Mīmāṃsā',
     icon: <BookOpenIcon className="w-8 h-8 text-amber-600" />,
     description: 'Focuses on the exegesis of the Vedas, emphasizing dharma and ritual obligations.',
-    path: '/explore/mimamsa',
+    path: '/schools/mimamsa', // Changed from /explore/mimamsa
     category: 'Āstika'
   },
   {
     name: 'Vedānta',
     icon: <StarIcon className="w-8 h-8 text-amber-600" />,
     description: 'Focuses on the philosophical teachings of the Upanishads, with many sub-schools like Advaita and Viśiṣṭādvaita.',
-    path: '/explore/vedanta',
+    path: '/schools/vedanta', // Changed from /explore/vedanta
     category: 'Āstika'
   },
   // Nāstika (Heterodox) Schools
@@ -57,21 +57,21 @@ const schools = [
     name: 'Jainism',
     icon: <HandRaisedIcon className="w-8 h-8 text-indigo-600" />,
     description: 'Emphasizes non-violence (ahiṃsā), non-absolutism (anekāntavāda), and non-attachment (aparigraha).',
-    path: '/explore/jainism',
+    path: '/schools/jainism', // Changed from /explore/jainism
     category: 'Nāstika'
   },
   {
     name: 'Buddhism',
     icon: <UsersIcon className="w-8 h-8 text-indigo-600" />,
     description: 'Based on the teachings of Siddhartha Gautama, focusing on the path to enlightenment (Nirvāṇa).',
-    path: '/explore/buddhism',
+    path: '/schools/buddhism', // Changed from /explore/buddhism
     category: 'Nāstika'
   },
   {
     name: 'Cārvāka',
     icon: <ChatBubbleBottomCenterTextIcon className="w-8 h-8 text-indigo-600" />,
     description: 'A materialist and skeptical school that rejected supernaturalism and accepted only direct perception as a means of knowledge.',
-    path: '/explore/carvaka',
+    path: '/schools/carvaka', // Changed from /explore/carvaka
     category: 'Nāstika'
   }
 ];
