@@ -33,6 +33,7 @@ import GitaResources from './Pages/Gita/GitaResources';
 import GitaGuide from './Pages/Gita/GitaGuide';
 import Adhyay1 from './Pages/Gita/Chapters/Adhyay1';
 
+import ScrollToTop from './Components/ScrollToTop';
 // 404 Component
 const NotFound = () => (
   <div className="min-h-screen flex items-center justify-center">
@@ -45,7 +46,9 @@ const NotFound = () => (
 
 function App() {
   return (
+    
     <Router>
+      <ScrollToTop />
       <AuthProvider>
         <div className="flex flex-col min-h-screen font-sans bg-[#F8F5F2]">
           <Navbar />
