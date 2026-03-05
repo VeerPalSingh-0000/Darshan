@@ -2,11 +2,9 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion } from "framer-motion";
 
 /**
- * SpeakButton — plays pre-recorded audio with optional TTS fallback.
+ * SpeakButton — Plays only pre-recorded audio files.
+ * Priority: Cloudinary -> Local -> Remote APIs.
  */
-
-let cachedVoice = null;
-let voicesLoaded = false;
 
 const pad3 = (value) => String(value).padStart(3, "0");
 
@@ -28,103 +26,62 @@ const buildAudioCandidates = ({ audioUrl, chapterNumber, verseNumber }) => {
   if (audioUrl) candidates.push(audioUrl);
 
   if (cv) {
+    // 1. Your Cloudinary Audio
     candidates.push(`${CLOUDINARY_GITA_PATH}/Chapter_${cv.chapter}_Verse_${cv.verse}.wav`);
-    candidates.push(`/audio/gita/Chapter_${cv.chapter}_Verse_${cv.verse}.wav`);
-    candidates.push(`/audio/gita/Chapter_${cv.chapter}_Verse_${cv.verse}.mp3`);
-
+    
+    // 2. Remote Fallbacks
     const chapter = pad3(cv.chapter);
     const verse = pad3(cv.verse);
     candidates.push(`https://shlokam.org/audio/bg/${chapter}_${verse}.mp3`);
     candidates.push(`https://shlokam.org/wp-content/uploads/audio/bhagavad-gita/${chapter}_${verse}.mp3`);
-    candidates.push(`https://www.holy-bhagavad-gita.org/public/audio/${chapter}_${verse}.mp3`);
     candidates.push(`https://bhagavadgitaapi.in/audio/${cv.chapter}/${cv.verse}.mp3`);
   }
   return [...new Set(candidates.filter(Boolean))];
 };
 
-const findBestVoice = () => {
-  if (cachedVoice && voicesLoaded) return cachedVoice;
-  const synth = window.speechSynthesis;
-  const voices = synth.getVoices();
-  if (!voices.length) return null;
-  voicesLoaded = true;
-  const googleHindiMale = voices.find(v => v.name.toLowerCase().includes("google") && v.lang.startsWith("hi") && !v.name.toLowerCase().includes("female"));
-  if (googleHindiMale) return (cachedVoice = googleHindiMale);
-  const hindiMale = voices.find(v => v.lang.startsWith("hi") && (v.name.toLowerCase().includes("male") || v.name.toLowerCase().includes("hemant")));
-  return (cachedVoice = hindiMale || voices.find((v) => v.lang.startsWith("hi")) || null);
-};
-
-const SpeakButton = ({ text, audioUrl, chapterNumber, verseNumber, className = "", fallbackToTTS = true }) => {
+const SpeakButton = ({ audioUrl, chapterNumber, verseNumber, className = "" }) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const audioRef = useRef(null);
-  const synthRef = useRef(window.speechSynthesis);
+  const isTransitioning = useRef(false);
 
-  // Helper to kill all active audio/speech
   const stopAll = useCallback(() => {
     if (audioRef.current) {
       audioRef.current.pause();
-      audioRef.current.src = ""; // Force clear source to stop buffering
+      audioRef.current.onended = null;
+      audioRef.current.onerror = null;
+      audioRef.current.src = ""; 
       audioRef.current = null;
     }
-    synthRef.current.cancel();
     setIsSpeaking(false);
+    isTransitioning.current = false;
   }, []);
 
   useEffect(() => {
-    const loadVoices = () => findBestVoice();
-    window.speechSynthesis.addEventListener("voiceschanged", loadVoices);
-    return () => {
-      window.speechSynthesis.removeEventListener("voiceschanged", loadVoices);
-      stopAll();
-    };
+    return () => stopAll();
   }, [stopAll]);
 
-  // Stop audio if chapter/verse changes
   useEffect(() => {
     stopAll();
   }, [audioUrl, chapterNumber, verseNumber, stopAll]);
 
-  const playFallbackTTS = useCallback(() => {
-    const cleanedText = text?.replace(/\|\|[^|]*\|\|/g, "").replace(/\|/g, ",").replace(/\\n/g, ", ").trim();
-    if (!cleanedText) {
-      setIsSpeaking(false);
-      return;
-    }
-    const utterance = new SpeechSynthesisUtterance(cleanedText.split(/[।॥]+/).join(" ... "));
-    const voice = findBestVoice();
-    if (voice) { utterance.voice = voice; utterance.lang = voice.lang; }
-    utterance.rate = 0.6;
-    utterance.pitch = 0.65;
-    utterance.onstart = () => setIsSpeaking(true);
-    utterance.onend = () => setIsSpeaking(false);
-    utterance.onerror = () => setIsSpeaking(false);
-    synthRef.current.speak(utterance);
-  }, [text]);
-
   const handleSpeak = useCallback(() => {
-    // If we are currently speaking OR an audio object exists, STOP.
-    if (isSpeaking || audioRef.current) {
+    if (isSpeaking || audioRef.current || isTransitioning.current) {
       stopAll();
       return;
     }
 
     const candidates = buildAudioCandidates({ audioUrl, chapterNumber, verseNumber });
-    if (!candidates.length) {
-      if (fallbackToTTS) playFallbackTTS();
-      return;
-    }
+    if (!candidates.length) return;
 
+    isTransitioning.current = true;
     let index = 0;
-    let aborted = false;
 
     const tryNext = () => {
-      // If stopAll was called, 'aborted' or missing audioRef.current will trigger
-      if (aborted) return;
+      if (!isTransitioning.current) return;
 
       const source = candidates[index];
       if (!source) {
-        setIsSpeaking(false);
-        if (fallbackToTTS) playFallbackTTS();
+        stopAll();
         return;
       }
 
@@ -134,32 +91,34 @@ const SpeakButton = ({ text, audioUrl, chapterNumber, verseNumber, className = "
       audio.onended = () => {
         setIsSpeaking(false);
         audioRef.current = null;
+        isTransitioning.current = false;
       };
 
       audio.onerror = () => {
-        if (aborted) return;
+        if (!isTransitioning.current) return;
         index += 1;
         tryNext();
       };
 
       audio.play()
         .then(() => {
-          // Double check if user clicked "Stop" while audio was loading
-          if (!audioRef.current) {
+          if (!isTransitioning.current) {
             audio.pause();
+            audioRef.current = null;
             return;
           }
           setIsSpeaking(true);
+          isTransitioning.current = false;
         })
         .catch(() => {
-          if (aborted) return;
+          if (!isTransitioning.current) return;
           index += 1;
           tryNext();
         });
     };
 
     tryNext();
-  }, [audioUrl, chapterNumber, verseNumber, fallbackToTTS, isSpeaking, playFallbackTTS, stopAll]);
+  }, [audioUrl, chapterNumber, verseNumber, isSpeaking, stopAll]);
 
   return (
     <motion.button
@@ -194,9 +153,6 @@ const SpeakButton = ({ text, audioUrl, chapterNumber, verseNumber, className = "
           </g>
         ) : (
           <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" />
-        )}
-        {!isSpeaking && (
-          <path d="M15.54 8.46a5 5 0 0 1 0 7.07" className="opacity-0 group-hover/speak:opacity-100 transition-opacity duration-300" />
         )}
       </svg>
     </motion.button>
