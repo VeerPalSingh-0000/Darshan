@@ -1,132 +1,179 @@
-import React, { useState, useEffect, useCallback, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-const pad3 = (value) => String(value).padStart(3, "0");
+/* ──────────────────────────────────────────
+   GLOBAL – only ONE audio can ever play
+   ────────────────────────────────────────── */
+let gAudio = null; // the one Audio element
+let gOwner = null; // setPlaying of the active button
+let gSession = 0; // numeric session id
 
-const extractChapterVerse = ({ audioUrl, chapterNumber, verseNumber }) => {
-  if (chapterNumber && verseNumber) {
+function stopGlobal() {
+  gSession++; // invalidate any pending tryNext
+  if (gAudio) {
+    gAudio.onended = null; // detach FIRST
+    gAudio.pause();
+    gAudio = null;
+  }
+  if (gOwner) {
+    try {
+      gOwner(false);
+    } catch (_) {}
+    gOwner = null;
+  }
+}
+
+/* ──── URL helpers ──── */
+const pad3 = (v) => String(v).padStart(3, "0");
+
+const extractCV = ({ audioUrl, chapterNumber, verseNumber }) => {
+  if (chapterNumber && verseNumber)
     return { chapter: Number(chapterNumber), verse: Number(verseNumber) };
-  }
   if (!audioUrl) return null;
-  const match = audioUrl.match(/\/audio\/(\d+)\/(\d+)\.mp3$/i);
-  if (!match) return null;
-  return { chapter: Number(match[1]), verse: Number(match[2]) };
+  const m = audioUrl.match(/\/audio\/(\d+)\/(\d+)\.mp3$/i);
+  return m ? { chapter: Number(m[1]), verse: Number(m[2]) } : null;
 };
 
-const buildAudioCandidates = ({ audioUrl, chapterNumber, verseNumber }) => {
-  const candidates = [];
-  const cv = extractChapterVerse({ audioUrl, chapterNumber, verseNumber });
-  const CLOUDINARY_GITA_PATH = "https://res.cloudinary.com/dbkqcnogo/video/upload/gita";
-
-  if (audioUrl) candidates.push(audioUrl);
-
+const buildCandidates = ({ audioUrl, chapterNumber, verseNumber }) => {
+  const list = [];
+  const cv = extractCV({ audioUrl, chapterNumber, verseNumber });
+  const CLOUD = "https://res.cloudinary.com/dbkqcnogo/video/upload/gita";
+  if (audioUrl) list.push(audioUrl);
   if (cv) {
-    candidates.push(`${CLOUDINARY_GITA_PATH}/Chapter_${cv.chapter}_Verse_${cv.verse}.wav`);
-    const chapter = pad3(cv.chapter);
-    const verse = pad3(cv.verse);
-    candidates.push(`https://shlokam.org/audio/bg/${chapter}_${verse}.mp3`);
-    candidates.push(`https://shlokam.org/wp-content/uploads/audio/bhagavad-gita/${chapter}_${verse}.mp3`);
-    candidates.push(`https://bhagavadgitaapi.in/audio/${cv.chapter}/${cv.verse}.mp3`);
+    list.push(`${CLOUD}/Chapter_${cv.chapter}_Verse_${cv.verse}.wav`);
+    const c = pad3(cv.chapter),
+      v = pad3(cv.verse);
+    list.push(`https://shlokam.org/audio/bg/${c}_${v}.mp3`);
+    list.push(
+      `https://shlokam.org/wp-content/uploads/audio/bhagavad-gita/${c}_${v}.mp3`,
+    );
+    list.push(`https://bhagavadgitaapi.in/audio/${cv.chapter}/${cv.verse}.mp3`);
   }
-  return [...new Set(candidates.filter(Boolean))];
+  return [...new Set(list.filter(Boolean))];
 };
 
-const SpeakButton = ({ audioUrl, chapterNumber, verseNumber, className = "" }) => {
-  const [isSpeaking, setIsSpeaking] = useState(false);
-  const audioRef = useRef(null);
-  const abortController = useRef(false); // The "Kill Switch"
+/* ──────────────────────────────────────────
+   TRY playing candidates one by one.
+   Uses only play().then/catch – NO onerror.
+   ────────────────────────────────────────── */
+function playCandidates(candidates, setPlaying, mountedRef) {
+  const sess = ++gSession; // new session, invalidates old ones
+  gOwner = setPlaying;
 
-  const stopAll = useCallback(() => {
-    abortController.current = true; // Tell any pending tryNext to stop
-    
-    if (audioRef.current) {
-      audioRef.current.pause();
-      audioRef.current.src = ""; // Clear the source
-      audioRef.current.load(); // Force the browser to drop the audio resource
-      audioRef.current = null;
-    }
-    
-    setIsSpeaking(false);
-  }, []);
+  let idx = 0;
 
-  useEffect(() => {
-    return () => stopAll();
-  }, [stopAll]);
+  function tryNext() {
+    if (gSession !== sess) return; // session was cancelled
 
-  useEffect(() => {
-    stopAll();
-  }, [audioUrl, chapterNumber, verseNumber, stopAll]);
-
-  const handleSpeak = useCallback(() => {
-    // If already playing or loading, STOP
-    if (isSpeaking || audioRef.current) {
-      stopAll();
+    if (idx >= candidates.length) {
+      // all sources failed – reset
+      gAudio = null;
+      gOwner = null;
+      if (mountedRef.current) setPlaying(false);
       return;
     }
 
-    const candidates = buildAudioCandidates({ audioUrl, chapterNumber, verseNumber });
-    if (!candidates.length) return;
+    // pause previous attempt (if any)
+    if (gAudio) {
+      gAudio.onended = null;
+      gAudio.pause();
+      gAudio = null;
+    }
 
-    abortController.current = false; // Reset kill switch
-    let index = 0;
+    const audio = new Audio();
+    gAudio = audio;
 
-    const tryNext = () => {
-      // Strict check: If user clicked stop, exit the loop immediately
-      if (abortController.current) return;
-
-      const source = candidates[index];
-      if (!source) {
-        stopAll();
-        return;
+    audio.onended = () => {
+      audio.onended = null;
+      if (gAudio === audio) {
+        gAudio = null;
+        gOwner = null;
       }
-
-      const audio = new Audio(source);
-      audioRef.current = audio;
-
-      audio.onended = () => {
-        setIsSpeaking(false);
-        audioRef.current = null;
-      };
-
-      audio.onerror = () => {
-        if (abortController.current) return;
-        index += 1;
-        tryNext();
-      };
-
-      audio.play()
-        .then(() => {
-          // Double check: Did the user click "Stop" while it was buffering?
-          if (abortController.current) {
-            audio.pause();
-            audio.src = "";
-            audioRef.current = null;
-            return;
-          }
-          setIsSpeaking(true);
-        })
-        .catch(() => {
-          if (abortController.current) return;
-          index += 1;
-          tryNext();
-        });
+      if (mountedRef.current) setPlaying(false);
     };
 
-    tryNext();
-  }, [audioUrl, chapterNumber, verseNumber, isSpeaking, stopAll]);
+    // Set src and try to play
+    audio.src = candidates[idx];
+
+    audio
+      .play()
+      .then(() => {
+        // Succeeded! But check session is still valid
+        if (gSession !== sess) {
+          audio.onended = null;
+          audio.pause();
+          return;
+        }
+        if (mountedRef.current) setPlaying(true);
+      })
+      .catch(() => {
+        // This source failed. Clean up and try next.
+        audio.onended = null;
+        audio.pause();
+        if (gSession !== sess) return;
+        idx++;
+        tryNext();
+      });
+  }
+
+  tryNext();
+}
+
+/* ──── Component ──── */
+const SpeakButton = ({
+  audioUrl,
+  chapterNumber,
+  verseNumber,
+  className = "",
+}) => {
+  const [playing, setPlaying] = useState(false);
+  const mountedRef = useRef(true);
+
+  useEffect(() => {
+    mountedRef.current = true;
+    return () => {
+      mountedRef.current = false;
+      if (gOwner === setPlaying) stopGlobal();
+    };
+  }, []);
+
+  useEffect(() => {
+    if (gOwner === setPlaying) stopGlobal();
+  }, [audioUrl, chapterNumber, verseNumber]);
+
+  function handleClick(e) {
+    e.stopPropagation();
+
+    // THIS button is playing → stop
+    if (gOwner === setPlaying) {
+      stopGlobal();
+      return;
+    }
+
+    // Something else playing → stop it
+    stopGlobal();
+
+    // Build URLs and play
+    const urls = buildCandidates({ audioUrl, chapterNumber, verseNumber });
+    if (!urls.length) return;
+
+    if (mountedRef.current) setPlaying(true);
+    playCandidates(urls, setPlaying, mountedRef);
+  }
 
   return (
     <motion.button
-      onClick={handleSpeak}
+      type="button"
+      onClick={handleClick}
       className={`relative p-3 rounded-full transition-all duration-300 group/speak ${
-        isSpeaking
+        playing
           ? "bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/40 dark:to-orange-900/30 text-amber-600 shadow-lg"
           : "hover:bg-amber-50 dark:hover:bg-amber-900/20 text-slate-400 hover:text-amber-600"
       } ${className}`}
       whileHover={{ scale: 1.12 }}
       whileTap={{ scale: 0.88 }}
     >
-      {isSpeaking && (
+      {playing && (
         <motion.span
           className="absolute inset-0 rounded-full border-2 border-amber-500/30"
           animate={{ scale: [1, 2], opacity: [0.5, 0] }}
@@ -141,13 +188,16 @@ const SpeakButton = ({ audioUrl, chapterNumber, verseNumber, className = "" }) =
         strokeWidth={2}
         className="w-5 h-5 relative z-10"
       >
-        {isSpeaking ? (
+        {playing ? (
           <g>
             <rect x="6" y="4" width="4" height="16" fill="currentColor" />
             <rect x="14" y="4" width="4" height="16" fill="currentColor" />
           </g>
         ) : (
-          <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5" fill="currentColor" />
+          <polygon
+            points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"
+            fill="currentColor"
+          />
         )}
       </svg>
     </motion.button>
