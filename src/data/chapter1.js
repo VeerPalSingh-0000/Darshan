@@ -1,0 +1,425 @@
+export const chapter1Shlokas = [
+  {
+    "num": 1,
+    "sanskrit": "धृतराष्ट्र उवाच |\nधर्मक्षेत्रे कुरुक्षेत्रे समवेता युयुत्सवः |\nमामकाः पाण्डवाश्चैव किमकुर्वत सञ्जय ॥1॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/1.mp3",
+    "hindi": "धृतराष्ट्र बोले- हे संजय! धर्मभूमि कुरुक्षेत्र में एकत्रित, युद्ध की इच्छावाले मेरे और पाण्डु के पुत्रों ने क्या किया?",
+    "english": "Dhritarastra said: O Sanjaya, what did my sons and the sons of Pandu actually do when, eager for battle, they gathered together on the holy field of Kuruksetra?",
+    "hindi_meaning": "(सज्य) हे संजय! (धर्मक्षेत्रो) धर्मभूमि (कुरुक्षेत्रो) कुरुक्षेत्रामें (समवेताः) एकत्रित (युयुत्सवः) युद्धकी इच्छावाले (मामकाः) मेरे (च) और (एव) यहाँ (पाण्डवाः) पाण्डुके पुत्रोंने (किम्) क्या (अकुर्वत) किया?",
+    "meaning": "dhṛitarāśhtraḥ uvācha—Dhritarashtra said; dharma-kṣhetre—the land of dharma; kuru-kṣhetre—at Kurukshetra; samavetāḥ—having gathered; yuyutsavaḥ—desiring to fight; māmakāḥ—my sons; pāṇḍavāḥ—the sons of Pandu; cha—and; eva—certainly; kim—what; akurvata—did they do; sañjaya—Sanjay\n"
+  },
+  {
+    "num": 2,
+    "sanskrit": "सञ्जय उवाच ।\nदृष्ट्वा तु पाण्डवानीकं व्यूढं दुर्योधनस्तदा ।\nआचार्यमुपसङ्गम्य राजा वचनमब्रवीत् ॥2॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/2.mp3",
+    "hindi": "संजय बोले- उस समय राजा दुर्योधन ने व्यूहरचनायुक्त पाण्डवों की सेना को देखा और द्रोणाचार्य के पास जाकर यह वचन कहा।",
+    "english": "Sanjaya said: But then, seeing the army of the Pandavas in battle array, King Duryodhana approached his teacher (Dronacharya) and spoke the following words:",
+    "hindi_meaning": "(तदा) उस समय (राजा) राजा (दुर्योधनः) दुर्योंधनने (व्यूढम्) व्यूहरचनायुक्त (पाण्डवानीकम्) पाण्डवोंकी सेनाको (दृष्टा) देखकर (तु) और (आचार्यम्) द्रोणाचार्यके (उपसग्म्य) पास जाकर यह (वचनम्) वचन (अब्रवीत्) कहा।",
+    "meaning": "sanjayaḥ uvācha—Sanjay said; dṛiṣhṭvā—on observing; tu—but; pāṇḍava-anīkam—the Pandava army; vyūḍham—standing in a military formation; duryodhanaḥ—King Duryodhan; tadā—then; āchāryam—teacher; upasaṅgamya—approached; rājā—the king; vachanam—words; abravīt—spoke\n"
+  },
+  {
+    "num": 3,
+    "sanskrit": "पश्यैतां पाण्डुपुत्राणामाचार्य महतीं चमूम् ।\nव्यूढां द्रुपदपुत्रेण तव शिष्येण धीमता ॥3॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/3.mp3",
+    "hindi": "हे आचार्य! आपके बुद्धिमान्‌ शिष्य द्रुपदपुत्र धृष्टद्युम्न द्वारा व्यूहाकार खड़ी की हुई पाण्डुपुत्रों की इस बड़ी भारी सेना को देखिए।",
+    "english": "O teacher, (please) see this vast army of the sons of Pandu, arrayed for battle by the son of Drupada, your intelligent disciple, Dhrishtadyumna.",
+    "hindi_meaning": "(आचार्य) हे आचार्य! (तव) आपके (धीमता) बुद्धिमान् (शिष्येण) शिष्य (द्रुपदपुत्रोण) द्रुपदपुत्रा धृष्टद्युम्न द्वारा (व्यूढाम्) व्यूहाकार खड़ी की हुई (पाण्डुपुत्राणाम्) पाण्डु-पुत्रोंकी (एताम्) इस (महतीम्) बड़ी भारी (चमूम्) सेनाको (पश्य) देखिये।",
+    "meaning": "paśhya—behold; etām—this; pāṇḍu-putrāṇām—of the sons of Pandu; āchārya—respected teacher; mahatīm—mighty; chamūm—army; vyūḍhām—arrayed in a military formation; drupada-putreṇa—son of Drupad, Dhrishtadyumna; tava—by your; śhiṣhyeṇa—disciple; dhī-matā—intelligent\n"
+  },
+  {
+    "num": 4,
+    "sanskrit": "अत्र शूरा महेष्वासा भीमार्जुनसमा युधि |\nयुयुधानो विराटश्च द्रुपदश्च महारथ: ॥4॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/4.mp3",
+    "hindi": "इस सेना में बड़े-बड़े धनुषों वाले तथा युद्ध में भीम और अर्जुन के समान शूरवीर सात्यकि और विराट तथा महारथी राजा द्रुपद...",
+    "english": "There are in this army, heroes wielding great bows, and equal in military prowess to Bhima and Arjuna: Yuyudhana (Satyaki) and Virata, and the maharatha (great chariot-rider) Drupada;",
+    "hindi_meaning": "(अत्रा) इस सेनामें (महेष्वासाः) बड़े-बड़े धनुषोंवाले (च) तथा (युधि) युद्धमें (भीमार्जुनसमाः) भीम और अर्जुनके समान (शूराः) शूर-वीर (युयुधानः) सात्यकि (च) और (विराटः) विराट (च) तथा (महारथः) महारथी (द्रुपदः) राजा द्रुपद",
+    "meaning": "atra—here; śhūrāḥ—powerful warriors; mahā-iṣhu-āsāḥ—great bowmen; bhīma-arjuna-samāḥ—equal to Bheem and Arjun; yudhi—in military prowess; yuyudhānaḥ—Yuyudhan; virāṭaḥ—Virat; cha—and; drupadaḥ—Drupad; cha—also; mahā-rathaḥ—warriors who could single handedly match the strength of ten thousand ordinary warriors;\n"
+  },
+  {
+    "num": 5,
+    "sanskrit": "धृष्टकेतुश्चेकितान: काशिराजश्च वीर्यवान् |\nपुरुजित्कुन्तिभोजश्च शैयश्च नरपुङ्गव: ॥5॥\nयुधामन्युश्च विक्रान्त उत्तमौजाश्च वीर्यवान् |",
+    "audio": "https://bhagavadgitaapi.in/audio/1/5.mp3",
+    "hindi": "...धृष्टकेतु और चेकितान तथा बलवान काशिराज, पुरुजित, कुन्तिभोज और मनुष्यों में श्रेष्ठ शैब्य...",
+    "english": "Dhrstaketu, Cekitana, and the valiant king of Kasi (Varanasi); Purujit and Kuntibhoja, and Saibya, the choicest among men;",
+    "hindi_meaning": "(धृष्टकेतुः) धृष्टकेतु (च) और (चेकितानः) चेकितान (च) तथा (वीर्यवान्) बलवान् (काशिराजः) काशिराज (पुरुजित्) पुरुजित् (कुन्तिभोजः) कुन्तिभोज (च) और (नरपुग्वः) मनुष्योंमें श्रेष्ठ (शैब्यः) शैब्य",
+    "meaning": "dhṛiṣhṭaketuḥ—Dhrishtaketu; chekitānaḥ—Chekitan; kāśhirājaḥ—Kashiraj; cha—and; vīrya-vān—heroic; purujit—Purujit; kuntibhojaḥ—Kuntibhoj; cha—and; śhaibyaḥ—Shaibya; cha—and; nara-puṅgavaḥ—best of men; yudhāmanyuḥ—Yudhamanyu; cha—and; vikrāntaḥ—courageous; uttamaujāḥ—Uttamauja; cha—and; vīrya-vān—gallant;\n"
+  },
+  {
+    "num": 6,
+    "sanskrit": "सौभद्रो द्रौपदेयाश्च सर्व एव महारथा: ॥6॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/6.mp3",
+    "hindi": "...पराक्रमी युधामन्यु तथा बलवान उत्तमौजा, सुभद्रापुत्र अभिमन्यु एवं द्रौपदी के पाँचों पुत्र - ये सभी महारथी हैं।",
+    "english": "And the chivalrous Yudhamanyu, and the valiant Uttamaujas; son of Subhadra (Abhimanyu) and the sons of Draupadi all (of whom) are, verily, maharathas.",
+    "hindi_meaning": "(विक्रान्तः) पराक्रमी (युधामन्युः) युधामन्यु (च) तथा (वीर्यवान्) बलवान् (उत्तमौजाः) उत्तमौजा (सौभद्रः) सुभद्रापुत्रा अभिमन्यु (च) एवं (द्रौपदेयाः)द्रौपदीके पाँचों पुत्रा ये (सर्वे, एव)सभी (महारथाः) महारथी हैं।",
+    "meaning": "saubhadraḥ—the son of Subhadra; draupadeyāḥ—the sons of Draupadi; cha—and; sarve—all; eva—indeed; mahā-rathāḥ—warriors who could single handedly match the strength of ten thousand ordinary warriors\n"
+  },
+  {
+    "num": 7,
+    "sanskrit": "अस्माकं तु विशिष्टा ये तान्निबोध द्विजोत्तम |\nनायका मम सैन्यस्य संज्ञार्थं तान्ब्रवीमि ते ॥7॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/7.mp3",
+    "hindi": "हे ब्राह्मणश्रेष्ठ! अपने पक्ष में भी जो प्रधान हैं, उनको आप समझ लीजिए। आपकी जानकारी के लिए मेरी सेना के जो-जो सेनापति हैं, उनको बतलाता हूँ।",
+    "english": "But, O best among the Brahmanas, please be appraised of those who are foremost among us, the principal warriors of my army. I speak of them to you by way of example.",
+    "hindi_meaning": "(द्विजोत्तम) हे ब्राह्मणश्रेष्ठ! (अस्माकम्) अपने पक्षमें (तु) भी (ये) जो (विशिष्टाः) प्रधान हैं (तान्) उनको आप (निबोध) समझ लीजिये। (ते) आपकी (सज्ञार्थम्) जानकारीके लिए (मम) मेरी (सैन्यस्य) सेनाके जो-जो (नायकाः) सेनापति हैं (तान्) उनको (ब्रवीमि) बतलाता हूँ।",
+    "meaning": "asmākam—ours; tu—but; viśhiṣhṭāḥ—special; ye—who; tān—them; nibodha—be informed; dwija-uttama—best of Brahmnis; nāyakāḥ—principal generals; mama—our; sainyasya—of army; sanjñā-artham—for information; tān—them; bravīmi—I recount; te—unto you\n"
+  },
+  {
+    "num": 8,
+    "sanskrit": "भवान्भीष्मश्च कर्णश्च कृपश्च समितिञ्जय: |\nअश्वत्थामा विकर्णश्च सौमदत्तिस्तथैव च ॥8॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/8.mp3",
+    "hindi": "आप-द्रोणाचार्य और पितामह भीष्म तथा कर्ण और संग्रामविजयी कृपाचार्य तथा वैसे ही अश्वत्थामा, विकर्ण और सोमदत्त का पुत्र भूरिश्रवा।",
+    "english": "(They are:) Your venerable self, Bhisma and Karna, and Krpa who is ever victorious in battle; Asvatthama, Vikarna, Saumadatti and Jayadratha.",
+    "hindi_meaning": "(भवान्) आप-द्रोणाचार्य (च) और (भीष्मः) पितामह भीष्म (च) तथा (कर्णः) कर्ण (च) और (समितिजयः) संग्रामविजयी (कृपः) कृपाचार्य (च) तथा (तथा) वैसे (एव) ही (अश्वत्थामा) अश्वत्थामा (विकर्णः) विकर्ण (च) और (सौमदत्तिः) सोमदत्तका पुत्रा भूरिश्रवा।",
+    "meaning": "bhavān—yourself; bhīṣhmaḥ—Bheeshma; cha—and; karṇaḥ—Karna; cha—and; kṛipaḥ—Kripa; cha—and; samitim-jayaḥ—victorious in battle; aśhvatthāmā—Ashvatthama; vikarṇaḥ—Vikarna; cha—and; saumadattiḥ—Bhurishrava; tathā—thus; eva—even; cha—also\n"
+  },
+  {
+    "num": 9,
+    "sanskrit": "अन्ये च बहव: शूरा मदर्थे त्यक्तजीविता: |\nनानाशस्त्रप्रहरणा: सर्वे युद्धविशारदा: ॥9॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/9.mp3",
+    "hindi": "और भी मेरे लिए जीवन की आशा त्याग देने वाले बहुत-से शूरवीर अनेक प्रकार के शस्त्रास्त्रों से सुसज्जित और सब-के-सब युद्ध में चतुर हैं।",
+    "english": "There are many heroes who have dedicated their lives for my sake, who possess various kinds of weapons and missiles, (and) all of whom are skilled in battle.",
+    "hindi_meaning": "(अन्ये) और (च) भी (मदर्थे) मेरे लिये (त्यक्तजीविताः) जीवनकी आशा त्याग देनेवाले (बहवः)बहुत-से (शूराः) शूरवीर (नानाशस्त्राप्रहरणाः) अनेक प्रकारके शस्त्रास्त्रोंसे सुसज्जित और (सर्वे) सब-के-सब (युद्धविशारदाः)युद्धमें चतुर हैं।",
+    "meaning": "anye—others; cha—also; bahavaḥ—many; śhūrāḥ—heroic warriors; mat-arthe—for my sake; tyakta-jīvitāḥ—prepared to lay down their lives; nānā-śhastra-praharaṇāḥ—equipped with various kinds of weapons; sarve—all; yuddha-viśhāradāḥ—skilled in the art of warfare\n"
+  },
+  {
+    "num": 10,
+    "sanskrit": "अपर्याप्तं तदस्माकं बलं भीष्माभिरक्षितम् |\nपर्याप्तं त्विदमेतेषां बलं भीमाभिरक्षितम् ॥10॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/10.mp3",
+    "hindi": "भीष्म पितामह द्वारा रक्षित हमारी वह सेना सब प्रकार से अजेय है और भीम द्वारा रक्षित इन लोगों की यह सेना जीतने में सुगम है।",
+    "english": "Therefore, our army under the complete protection of Bhisma and others is unlimited. But the army of these (enemies), under the protection of Bhima and others is limited.",
+    "hindi_meaning": "(भीष्माभिरक्षितम्)भीष्मपितामह द्वारा रक्षित (अस्माकम्)हमारी (तत्)वह (बलम्)सेना (अपर्याप्तम्) सब प्रकारसे अजेय है (तु) और (भीमाभिरक्षितम्) भीमद्वारा रक्षित (एतेषाम्) इन लोगोंकी (इदम्) यह (बलम्) सेना (पर्याप्तम्) जीतनेमें सुगम है।",
+    "meaning": "aparyāptam—unlimited; tat—that; asmākam—ours; balam—strength; bhīṣhma—by Grandsire Bheeshma; abhirakṣhitam—safely marshalled; paryāptam—limited; tu—but; idam—this; eteṣhām—their; balam—strength; bhīma—Bheem; abhirakṣhitam—carefully marshalled\n"
+  },
+  {
+    "num": 11,
+    "sanskrit": "अयनेषु च सर्वेषु यथाभागमवस्थिता: |\nभीष्ममेवाभिरक्षन्तु भवन्त: सर्व एव हि ॥11॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/11.mp3",
+    "hindi": "इसलिए सब मोर्चों पर अपनी-अपनी जगह स्थित र��ते हुए आप लोग सभी निःसंदेह भीष्म पितामह की ही सब ओर से रक्षा करें।",
+    "english": "However, venerable sirs, all of you without exception, while occupying all the positions in the different directions as allotted (to you respectively), please fully protect Bhisma in particular.",
+    "hindi_meaning": "(च) इसलिए (सर्वेषु) सब (अयनेषु) मोर्चोंपर (यथाभागम्) अपनी-अपनी जगह (अवस्थिताः) स्थित रहते हुए (भवन्तः) आपलोग (सर्वे, एव) सभी (हि) निःसन्देह (भीष्मम्) भीष्मपितामहकी (एव) ही (अभिरक्षन्तु) सब ओरसे रक्षा करें।",
+    "meaning": "ayaneṣhu—at the strategic points; cha—also; sarveṣhu—all; yathā-bhāgam—in respective position; avasthitāḥ—situated; bhīṣhmam—to Grandsire Bheeshma; eva—only; abhirakṣhantu—defend; bhavantaḥ—you; sarve—all; eva hi—even as\n"
+  },
+  {
+    "num": 12,
+    "sanskrit": "तस्य सञ्जनयन्हर्षं कुरुवृद्ध: पितामह: |\nसिंहनादं विनद्योच्चै: शङ्खं दध्मौ प्रतापवान् ॥12॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/12.mp3",
+    "hindi": "कौरवों में वृद्ध बड़े प्रतापी पितामह भीष्म ने उस दुर्योधन के हृदय में हर्ष उत्पन्न करते हुए उच्च स्वर से सिंह की दहाड़ के समान गरजकर शंख बजाया।",
+    "english": "The valiant grandfather, the eldest of the Kurus, loudly sounding a lion-roar, blew the conch to raise his (Duryodhana's) spirits.",
+    "hindi_meaning": "(कुरुवृद्धः) कौरवोंमें वृद्ध (प्रतापवान्) बड़े प्रतापी (पितामहः) पितामह भीष्मने (तस्य) उस दुर्योंधन के हृदयमें (हर्षम्) हर्ष (सजनयन्) उत्पन्न करते हुए (उच्चैः) उच्च स्वरसे (सिंहनादम्) सिंहकी दहाड़ के समान (विनद्य) गरजकर (शङ्खम्) शंख (दध्मौ) बजाया।",
+    "meaning": "tasya—his; sañjanayan—causing; harṣham—joy; kuru-vṛiddhaḥ—the grand old man of the Kuru dynasty (Bheeshma); pitāmahaḥ—grandfather; sinha-nādam—lion’s roar; vinadya—sounding; uchchaiḥ—very loudly; śhaṅkham—conch shell; dadhmau—blew; pratāpa-vān—the glorious\n"
+  },
+  {
+    "num": 13,
+    "sanskrit": "तत: शङ्खाश्च भेर्यश्च पणवानकगोमुखा: |\nसहसैवाभ्यहन्यन्त स शब्दस्तुमुलोऽभवत् ॥13॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/13.mp3",
+    "hindi": "इसके पश्चात शंख और नगाड़े तथा ढोल, मृदंग और नरसिंघे आदि बाजे एक साथ ही बज उठे। उनका वह शब्द बड़ा भयंकर हुआ।",
+    "english": "Just immediately after that conchs and kettledrums, and tabors, trumpets and cow-horns blared forth. That sound became tumultuous.",
+    "hindi_meaning": "(ततः) इसके पश्चात् (शङ्खाः) शंख (च) और (भेर्यः) नगारे (च) तथा (पणवानक गोमुखाः) ढोल, मृदंग और नरसिंघे आदि बाजे (सहसा) एक साथ (एव) ही (अभ्यहन्यन्त) बज उठे। उनका (सः) वह (शब्दः) शब्द (तुमुलः) बड़ा भयंकर (अभवत्) हुआ।",
+    "meaning": "tataḥ—thereafter; śhaṅkhāḥ—conches; cha—and; bheryaḥ—bugles; cha—and; paṇava-ānaka—drums and kettledrums; go-mukhāḥ—trumpets; sahasā—suddenly; eva—indeed; abhyahanyanta—blared forth; saḥ—that; śhabdaḥ—sound; tumulaḥ—overwhelming; abhavat—was\n"
+  },
+  {
+    "num": 14,
+    "sanskrit": "तत: श्वेतैर्हयैर्युक्ते महति स्यन्दने स्थितौ |\nमाधव: पाण्डवश्चैव दिव्यौ शङ्खौ प्रदध्मतु: ॥14॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/14.mp3",
+    "hindi": "इसके अनन्तर सफेद घोड़ों से युक्त उत्तम रथ में बैठे हुए श्रीकृष्ण महाराज और अर्जुन ने भी अलौकिक शंख बजाए।",
+    "english": "Then, Madhava (Krishna) and the son of Pandu (Arjuna), stationed in their magnificent chariot with white horses attached to it, loudly blew their divine conchs.",
+    "hindi_meaning": "(ततः) इसके अनन्तर (श्वेतैः) सफेद (हयैः) घोड़ोंसे (युक्ते) युक्त (महति) उत्तम (स्यन्दने) रथमें (स्थितौ) बैठे हुए (माधवः) श्रीकृष्ण महाराज (च) और (पाण्डवः) अर्जुनने (एव) भी (दिव्यौ) अलौकिक (शङ्खौ) शंख (प्रदध्मतुः) बजाये।",
+    "meaning": "tataḥ—then; śhvetaiḥ—by white; hayaiḥ—horses; yukte—yoked; mahati—glorious; syandane—chariot; sthitau—seated; mādhavaḥ—Shree Krishna, the husband of the goddess of fortune, Lakshmi; pāṇḍavaḥ—Arjun; cha—and; eva—also; divyau—Divine; śhaṅkhau—conch shells; pradadhmatuḥ—blew\n"
+  },
+  {
+    "num": 15,
+    "sanskrit": "पाञ्चजन्यं हृषीकेशो देवदत्तं धनञ्जय: |\nपौण्ड्रं दध्मौ महाशङ्खं भीमकर्मा वृकोदर: ॥15॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/15.mp3",
+    "hindi": "श्रीकृष्ण महाराज ने पाञ्चजन्य नामक, अर्जुन ने देवदत्त नामक और भयानक कर्मवाले भीमसेन ने पौण्ड्र नामक महाशंख बजाया।",
+    "english": "Hrsikesa (Krishna) blew the conch Pancajanya; Dhananjaya (Arjuna) (the conch) Devadatta; and Vrkodara (Bhima) of terrible deeds blew the great conch Paundra;",
+    "hindi_meaning": "(हृषीकेशः) श्रीकृष्ण महाराजने (पाचजन्यम्) पाजन्य नामक (धनजयः) अर्जुनने (देवदत्तम्) देवदत्त नामक और (भीमकर्मा) भयानक कर्मवाले (वृकोदरः) भीमसेनने (पौण्ड्रम्) पौण्ड्र नामक (महाशङ्खम्) महाशंख (दध्मौ) बजाया।",
+    "meaning": "pāñchajanyam—the conch shell named Panchajanya; hṛiṣhīka-īśhaḥ—Shree Krishna, the Lord of the mind and senses; devadattam—the conch shell named Devadutta; dhanam-jayaḥ—Arjun, the winner of wealth; pauṇḍram—the conch named Paundra; dadhmau—blew; mahā-śhaṅkham—mighty conch; bhīma-karmā—one who performs herculean tasks; vṛika-udaraḥ—Bheem, the voracious eater\n"
+  },
+  {
+    "num": 16,
+    "sanskrit": "अनन्तविजयं राजा कुन्तीपुत्रो युधिष्ठिर: |\nनकुल: सहदेवश्च सुघोषमणिपुष्पकौ ॥16॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/16.mp3",
+    "hindi": "कुन्तीपुत्र राजा युधिष्ठिर ने अनन्तविजय नामक और नकुल तथा सहदेव ने सुघोष और मणिपुष्पक नामक शंख बजाए।",
+    "english": "King Yudhisthira, son of Kunti, (blew) the Anantavijaya; Nakula and Sahadeva, the Sughosa and the Manipuspaka (respectively).",
+    "hindi_meaning": "(कुन्तीपुत्राः) कुन्तीपुत्रा (राजा) राजा (युधिष्ठिरः) युधिष्ठिरने (अनन्तविजयम्) अनन्तविजय नामक और (नकुलः) नकुल (च) तथा (सहदेवः) सहदेवने (सुघोषमणिपुष्पकौ) सुघोष और मणिपुष्पक नामक शंख बजाये।",
+    "meaning": "ananta-vijayam—the conch named Anantavijay; rājā—king; kuntī-putraḥ—son of Kunti; yudhiṣhṭhiraḥ—Yudhishthir; nakulaḥ—Nakul; sahadevaḥ—Sahadev; cha—and; sughoṣha-maṇipuṣhpakau—the conche shells named Sughosh and Manipushpak;\n"
+  },
+  {
+    "num": 17,
+    "sanskrit": "काश्यश्च परमेष्वास: शिखण्डी च महारथ: |\nधृष्टद्युम्नो विराटश्च सात्यकिश्चापराजित: ॥17॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/17.mp3",
+    "hindi": "श्रेष्ठ धनुष वाले काशिराज और महारथी शिखण्डी एवं धृष्टद्युम्न तथा राजा विराट और अजेय सात्यकि,...।",
+    "english": "And the King of Kasi, wielding a great bow, and the great chariot-rider Sikhandi, Dhrstadyumna and Virata, and Satyaki the unconquered;",
+    "hindi_meaning": "(परमेष्वासः) श्रेष्ठ धनुषवाले (काश्यः) काशिराज (च) और (महारथः) महारथी (शिखण्डी) शिखण्डी (च) एवं (धृष्टद्युम्नः) धृष्टद्युम्न (च) तथा (विराटः) राजा विराट (च) और (अपराजितः) अजेय (सात्यकिः) सात्यकि",
+    "meaning": "kāśhyaḥ—King of Kashi; cha—and; parama-iṣhu-āsaḥ—the excellent archer; śhikhaṇḍī—Shikhandi; cha—also; mahā-rathaḥ—warriors who could single handedly match the strength of ten thousand ordinary warriors; dhṛiṣhṭadyumnaḥ—Dhrishtadyumna; virāṭaḥ—Virat; cha—and; sātyakiḥ—Satyaki; cha—and; aparājitaḥ—invincible;\n"
+  },
+  {
+    "num": 18,
+    "sanskrit": "द्रुपदो द्रौपदेयाश्च सर्वश: पृथिवीपते |\nसौभद्रश्च महाबाहु: शङ्खान्दध्मु: पृथक् पृथक् ॥18॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/18.mp3",
+    "hindi": "...राजा द्रुपद एवं द्रौपदी के पाँचों पुत्र और बड़ी भुजावाले सुभद्रा पुत्र अभिमन्यु- इन सभी ने, हे राजन्‌! सब ओर से अलग-अलग शंख बजाए।",
+    "english": "Drupada and the sons of Draupadi, and the son of Subhadra, (Abhimanyu) the mighty-armed all (of them) together, O king, blew their respective conchs.",
+    "hindi_meaning": "(दु्रपदः) राजा द्रुपद (च) एवं (द्रौपदेयाः) द्रौपदीके पाँचों पुत्रा (च) और (महाबाहुः) बड़ी भुजावाले (सौभद्रः) सुभद्रापुत्रा अभिमन्यु इन सभीने (पृथिवीपते) हे राजन्! (सर्वशः) सब ओरसे (पृथक्-पृथक्) अलग-अलग (शङ्खान्) शंख (दध्मुः) बजाये।",
+    "meaning": "drupadaḥ—Drupad; draupadeyāḥ—the five sons of Draupadi; cha—and; sarvaśhaḥ—all; pṛithivī-pate—Ruler of the earth; saubhadraḥ—Abhimanyu, the son of Subhadra; cha—also; mahā-bāhuḥ—the mighty-armed; śhaṅkhān—conch shells; dadhmuḥ—blew; pṛithak pṛithak—individually\n"
+  },
+  {
+    "num": 19,
+    "sanskrit": "स घोषो धार्तराष्ट्राणां हृदयानि व्यदारयत् |\nनभश्च पृथिवीं चैव तुमुलो नुनादयन् ॥19॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/19.mp3",
+    "hindi": "और उस भयानक शब्द ने आकाश और पृथ्वी को भी गुंजाते हुए धार्तराष्ट्रों के अर्थात आपके पक्षवालों के हृदय विदीर्ण कर दिए।",
+    "english": "That tremendous sound pierced the hearts of the sons of Dhrtarastra as it reverberated through the sky and the earth.",
+    "hindi_meaning": "(च) और (सः) उस (तुमुलः) भयानक (घोषः) शब्दने (नभः) आकाश (च) और (पृथिवीम्) पृथ्वीको (एव) भी (व्यनुनादयन्) गुँजाते हुए (धार्तराष्ट्राणाम्) धृतराष्ट्रके यानि आपके पक्षवालोंके (हृदयानि) हृदय (व्यदारयत्) विदीर्ण कर दिये।",
+    "meaning": "saḥ—that; ghoṣhaḥ—sound; dhārtarāṣhṭrāṇām—of Dhritarashtra’s sons; hṛidayāni—hearts; vyadārayat—shattered; nabhaḥ—the sky; cha—and; pṛithivīm—the earth; cha—and; eva—certainly; tumulaḥ—terrific sound; abhyanunādayan—thundering\n"
+  },
+  {
+    "num": 20,
+    "sanskrit": "अथ व्यवस्थितान्दृष्ट्वा धार्तराष्ट्रान् कपिध्वज: |\nप्रवृत्ते शस्त्रसम्पाते धनुरुद्यम्य पाण्डव: ॥20॥\nहृषीकेशं तदा वाक्यमिदमाह महीपते |",
+    "audio": "https://bhagavadgitaapi.in/audio/1/20.mp3",
+    "hindi": "हे राजन्‌! इसके बाद कपिध्वज अर्जुन ने मोर्चा बाँधकर डटे हुए धृतराष्ट्र-संबंधियों को देखकर, उस शस्त्र चलने की तैयारी के समय धनुष उठाकर हृषीकेश श्रीकृष्ण महाराज से यह वचन कहा।",
+    "english": "O king, thereafter, seeing Dhrtarastra's men standing in their positions, when all the weapons were ready for action, the son of Pandu (Arjuna) who had the insignia of Hanuman on his chariot-flag, raising up his bow, said the following to Hrsikesa.",
+    "hindi_meaning": "(महीपते) हे राजन्! (अथ) इसके बाद (कपिध्वजः) कपिध्वज (पाण्डवः) अर्जुनने (व्यवस्थितान्) मोर्चा बाँधकर डटे हुए (धार्तराष्ट्रान्) धृतराष्ट्र सम्बन्धियोंको (दृष्टवा) देखकर (तदा) उस (शस्त्रासम्पाते) शस्त्रा चलनेकी तैयारीके (प्रवृत्ते) समय (धनुः) धनुष (उद्यम्य) उठाकर (हृषीकेशम्) हृषीकेश श्रीकृष्ण महाराजसे (इदम्) यह (वाक्यम्) वचन (आह) कहा।",
+    "meaning": "atha—thereupon; vyavasthitān—arrayed; dṛiṣhṭvā—seeing; dhārtarāṣhṭrān—Dhritarashtra’s sons; kapi-dwajaḥ—the Monkey Bannered; pravṛitte—about to commence; śhastra-sampāte—to use the weapons; dhanuḥ—bow; udyamya—taking up; pāṇḍavaḥ—Arjun, the son of Pandu; hṛiṣhīkeśham—to Shree Krishna; tadā—at that time; vākyam—words; idam—these; āha—said; mahī-pate—King\n"
+  },
+  {
+    "num": 21,
+    "sanskrit": "अर्जुन उवाच |\nसेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत ॥21॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/21.mp3",
+    "hindi": "हे अच्युत! मेरे रथ को दोनों सेनाओं के बीच में खड़ा कीजिए।",
+    "english": "Arjuna said: O Acyuta, please place my chariot between both the armies.",
+    "hindi_meaning": "हे अच्युत! (मे) मेरे (रथम्) रथको (उभयोः) दोनों (सेनयोः) सेनाओंके (मध्ये) बीचमें (स्थापय) खड़ा कीजिये।",
+    "meaning": "arjunaḥ uvācha—Arjun said; senayoḥ—armies; ubhayoḥ—both; madhye—in the middle; ratham—chariot; sthāpaya—place; me—my; achyuta—Shree Krishna, the infallible One;\n"
+  },
+  {
+    "num": 22,
+    "sanskrit": "यावदेतान्निरीक्षेऽहं योद्धुकामानवस्थितान् |\nकैर्मया सह योद्धव्यमस्मिन् रणसमुद्यमे ॥22॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/22.mp3",
+    "hindi": "और जब तक कि मैं युद्ध क्षेत्र में डटे हुए युद्ध के अभिलाषी इन विपक्षी योद्धाओं को भली प्रकार देख न लूँ कि इस युद्ध रूप व्यापार में मुझे किन-किन के साथ युद्ध करना योग्य है, तब तक उसे खड़ा रखिए।",
+    "english": "And keep it there until I survey these who stand intent on fighting, and those who are going to engage in battle with me in this impending war.",
+    "hindi_meaning": "(यावत्) जबतक कि (अहम्) मैं (अवस्थितान्) युद्ध-क्षेत्रामें डटे हुए (योद्धुकामान्) युद्धके अभिलाषी (एतान्) इन विपक्षी योद्धओंको (निरीक्षे) भली प्रकार देख लूँ कि (अस्मिन्) इस (रणसमुद्यमे) युद्धरूप व्यापारमें (मया) मुझे (कैः) किन-किनके (सह) साथ (योद्धव्यम्) युद्ध करना योग्य है।",
+    "meaning": "yāvat—as many as; etān—these; nirīkṣhe—look; aham—I; yoddhu-kāmān—for the battle; avasthitān—arrayed; kaiḥ—with whom; mayā—by me; saha—together; yoddhavyam—must fight; asmin—in this; raṇa-samudyame—great combat\n"
+  },
+  {
+    "num": 23,
+    "sanskrit": "योत्स्यमानानवेक्षेऽहं य एतेऽत्र समागता: |\nधार्तराष्ट्रस्य दुर्बुद्धेर्युद्धे प्रियचिकीर्षव: ॥23॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/23.mp3",
+    "hindi": "दुर्बुद्धि दुर्योधन का युद्ध में हित चाहने वाले जो-जो ये राजा लोग इस सेना में आए हैं, इन युद्ध करने वालों को मैं देखूँगा।",
+    "english": "These who have assembled here and want to accomplish in the war what is dear to the perverted son of Dhrtarastra, I find them to be intent on fighting.",
+    "hindi_meaning": "(दुर्बुद्धेः) दुर्बुद्धि (धार्तराष्ट्रस्य) धृतराष्ट्रके दुर्योंधनका (युद्धे) युद्धमें (प्रियचिकीर्षवः) हित चाहनेवाले (ये) जो-जो (एते) ये राजालोग (अत्रा) इस सेनामें (समागताः) आये हैं इन (योत्स्यमानान्)युद्ध करनेवालोंको (अहम्) मैं (अवेक्षे) देखूँगा।",
+    "meaning": "yotsyamānān—those who have come to fight; avekṣhe aham—I desire to see; ye—who; ete—those; atra—here; samāgatāḥ—assembled; dhārtarāṣhṭrasya—of Dhritarashtra’s son; durbuddheḥ—evil-minded; yuddhe—in the fight; priya-chikīrṣhavaḥ—wishing to please\n"
+  },
+  {
+    "num": 24,
+    "sanskrit": "सञ्जय उवाच |\nएवमुक्तो हृषीकेशो गुडाकेशेन भारत |\nसेनयोरुभयोर्मध्ये स्थापयित्वा रथोत्तमम् ॥24॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/24.mp3",
+    "hindi": "संजय बोले- हे धृतराष्ट्र! अर्जुन द्वारा कहे अनुसार महाराज श्रीकृष्णचंद्र ने दोनों सेनाओं के बीच मेे उत्तम रथ को खड़ा कर इस प्रकार कहा।",
+    "english": "Sanjay said: O scion of the line of Bharata (Dhrtararastra), Hrsikesa, being told so by Gudakesa (Arjuna), placed the excellent chariot between the two armies.",
+    "hindi_meaning": "(भारत) हे धृतराष्ट्र! (गुडाकेशेन) अर्जुनद्वारा (एवम्) इस प्रकार (उक्तः) कहे हुए (हृषीकेशः) महाराज श्रीकृणचन्द्रने (उभयोः) दोनों (सेनयोः) सेनाओंके (मध्ये) बीचमें (रथोत्तमम्) उत्तम रथको (स्थापयित्वा) खड़ा करके (इति) इस प्रकार (उवाच) कहा।",
+    "meaning": "sañjayaḥ uvācha—Sanjay said; evam—thus; uktaḥ—addressed; hṛiṣhīkeśhaḥ—Shree Krishna, the Lord of the senses; guḍākeśhena—by Arjun, the conqueror of sleep; bhārata—descendant of Bharat; senayoḥ—armies; ubhayoḥ—the two; madhye—between; sthāpayitvā—having drawn; ratha-uttamam—magnificent chariot\n"
+  },
+  {
+    "num": 25,
+    "sanskrit": "भीष्मद्रोणप्रमुखत: सर्वेषां च महीक्षिताम् |\nउवाच पार्थ पश्यैतान्समवेतान्कुरूनिति ॥25॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/25.mp3",
+    "hindi": "भीष्म और द्रोणाचार्य के सामने तथा सम्पूर्ण राजाओं के सामने उत्तम रथ को खड़ा कर श्री कृष्णा ने कहा कि हे पार्थ! युद्ध के लिए जुटे हुए इन कौरवों को देख।",
+    "english": "In front of Bhisma and Drona as also all the rulers of the earth, and said, 'O Partha (Arjuna), see these assembled people of the Kuru dynasty.'",
+    "hindi_meaning": "(भीष्मद्रोणप्रमुखतः) भीष्म और द्रोणाचार्यके सामने (च) तथा (सर्वेषाम्) सम्पूर्ण (महीक्षिताम्) राजाओंके सामने श्री कृष्णा ने (उवाच) कहा कि (पार्थ) हे पार्थ! युद्ध के लिये (समवेतान्) जुटे हुए (एतान्) इन (कुरून्) कौरवोंको (पश्य) देख।",
+    "meaning": "bhīṣhma—Grandsire Bheeshma; droṇa—Dronacharya; pramukhataḥ—in the presence; sarveṣhām—all; cha—and; mahī-kṣhitām—other kings; uvācha—said; pārtha—Arjun, the son of Pritha; paśhya—behold; etān—these; samavetān—gathered; kurūn—descendants of Kuru; iti—thus\n"
+  },
+  {
+    "num": 26,
+    "sanskrit": "तत्रापश्यत्स्थितान् पार्थ: पितृ नथ पितामहान् |\nआचार्यान्मातुलान्भ्रातृ न्पुत्रान्पौत्रान्सखींस्तथा ॥26॥\nश्वशुरान्सुहृदश्चैव सेनयोरुभयोरपि |",
+    "audio": "https://bhagavadgitaapi.in/audio/1/26.mp3",
+    "hindi": "इसके बाद पृथापुत्र अर्जुन ने उन दोनों ही सेनाओं में स्थित ताऊ-चाचों को, दादों-परदादों को, गुरुओं को, मामाओं को, भाइयों को, पुत्रों को, पौत्रों को तथा मित्रों को, ससुरों को और सुहृदों को भी देखा।",
+    "english": "Then Partha (Arjuna) saw, marshalled among both the armies, (his) uncles as also grandfathers, teachers, maternal uncles, brothers (and (cousins), sons, grandsons, as well as comrades and fathers-in-law and friends.",
+    "hindi_meaning": "(अथ) इसके बाद (पार्थः) पृथापुत्रा अर्जुनने (तत्रा) उन (उभयोः) दोनों (एव) ही (सेनयोः) सेनाओंमें (स्थितान्) स्थित (पित¤न्) ताऊ-चाचोंको (पितामहान्) दादों-परदादोंको (आचार्यान्) गुरुओंको (मातुलान्) मामाओंको (भ्रात¤न्) भाइयोंको (पुत्रान्) पुत्रोंको (पौत्रान्) पौत्रोंको (तथा) तथा (सखीन्) मित्रोंकों (श्वशुरान्) ससुरोंको (च) और (सुहृदः) सुहृदोंको (अपि) भी (अपश्यत्) देखा।।",
+    "meaning": "tatra—there; apaśhyat—saw; sthitān—stationed; pārthaḥ—Arjun; pitṝīn—fathers; atha—thereafter; pitāmahān—grandfathers; āchāryān—teachers; mātulān—maternal uncles; bhrātṝīn—brothers; putrān—sons; pautrān—grandsons; sakhīn—friends; tathā—also; śhvaśhurān—fathers-in-law; suhṛidaḥ—well-wishers; cha—and; eva—indeed; senayoḥ—armies; ubhayoḥ—in both armies; api—also\n"
+  },
+  {
+    "num": 27,
+    "sanskrit": "तान्समीक्ष्य स कौन्तेय: सर्वान्बन्धूनवस्थितान् ॥27॥\nकृपया परयाविष्टो विषीदन्निदमब्रवीत् |",
+    "audio": "https://bhagavadgitaapi.in/audio/1/27.mp3",
+    "hindi": "उन उपस्थित सम्पूर्ण बंधुओं को देखकर वे कुंतीपुत्र अर्जुन अत्यन्त करुणा से युक्त होकर शोक करते हुए यह वचन बोले।",
+    "english": "The son of Kunti (Ajuna), seeing all those relatives arrayed (there), became overwhelmed by supreme compassion and said this sorrowfully:",
+    "hindi_meaning": "(तान्) उन (अवस्थितान्) उपस्थित (सर्वान्) सम्पूर्ण (बन्धून्) बन्धुओंको (समीक्ष्य) देखकर (सः) उस (कौन्तेयः) कुन्तीपुत्रा अर्जुन ने (परया) अत्यन्त (कृपया) करुणासे (आविष्टः) युक्त होकर (विषीदन्) शोक करते हुए (इदम्) यह वचन (अब्रवीत्) बोले।",
+    "meaning": "tān—these; samīkṣhya—on seeing; saḥ—they; kaunteyaḥ—Arjun, the son of Kunti; sarvān—all; bandhūn—relatives; avasthitān—present; kṛipayā—by compassion; parayā—great; āviṣhṭaḥ—overwhelmed; viṣhīdan—deep sorrow; idam—this; abravīt—spoke\n"
+  },
+  {
+    "num": 28,
+    "sanskrit": "अर्जुन उवाच |\nदृष्ट्वेमं स्वजनं कृष्ण युयुत्सुं समुपस्थितम् ॥28॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/28.mp3",
+    "hindi": "अर्जुन बोले- हे कृष्ण! युद्ध क्षेत्र में डटे हुए युद्ध के अभिलाषी इस स्वजनसमुदाय को देखकर मेरे अंग शिथिल हुए जा रहे हैं।",
+    "english": "Arjuna said: O Krsna, seeing these relatives and friends who have assembled here with the intention of fighting, my limbs give way and my mouth becomes completely dry.",
+    "hindi_meaning": "(कृष्ण) हे कृष्ण! युद्ध-क्षेत्रामें (समुपस्थितम्) डटे हुए (युयुत्सुम्) युद्धके अभिलाषी (इमम्) इस (स्वजनम्) स्वजन-समुदायको (दृष्टवा) देखकर",
+    "meaning": "arjunaḥ uvācha—Arjun said; dṛiṣhṭvā—on seeing; imam—these; sva-janam—kinsmen; kṛiṣhṇa—Krishna; yuyutsum—eager to fight; samupasthitam—present;\n"
+  },
+  {
+    "num": 29,
+    "sanskrit": "सीदन्ति मम गात्राणि मुखं च परिशुष्यति |\nवेपथुश्च शरीरे मे रोमहर्षश्च जायते ॥29॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/29.mp3",
+    "hindi": "और मुख सूखा जा रहा है तथा मेरे शरीर में कम्प एवं रोमांच हो रहा है।",
+    "english": "And there is trembling in my body, and there are cold shivers; the Gandiva (bow) slips from the hand and even the skin burns intensely.",
+    "hindi_meaning": "(मम) मेरे (गात्राणि) अंग (सीदन्ति) शिथिल हुए जा रहे हैं। (च) और (मुखम्) मुख (परिशुष्यति) सूखा जा रहा है (च) तथा (मे) मेरे (शरीरे) शरीरमें (वेपथुः) कम्पन (च) एवं (रोमहर्षः) रोमांच (जायते) हो रहा है।",
+    "meaning": "sīdanti—quivering; mama—my; gātrāṇi—limbs; mukham—mouth; cha—and; pariśhuṣhyati—is drying up\nvepathuḥ—shuddering; cha—and; śharīre—on the body; me—my; roma-harṣhaḥ—standing of bodily hair on end; cha—also; jāyate—is happening;\n"
+  },
+  {
+    "num": 30,
+    "sanskrit": "गाण्डीवं स्रंसते हस्तात्वक्चै व परिदह्यते |\nन च शक्नोम्यवस्थातुं भ्रमतीव च मे मन: ॥30॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/30.mp3",
+    "hindi": "हाथ से गांडीव धनुष गिर रहा है और त्वचा भी बहुत जल रही है तथा मेरा मन भ्रमित-सा हो रहा है, इसलिए मैं खड़ा रहने को भी समर्थ नहीं हूँ।",
+    "english": "Moreover, O Kesava (Krsna), I am not able to stand firmly, and my mind seems to be whirling. And I notice the omens to be adverse.",
+    "hindi_meaning": "(हस्तात्) हाथसे (गाण्डीवम्) गाण्डीव धनुष (स्त्रांसते) गिर रहा है (च) और (त्वक्) त्वचा (एव) भी (परिदह्यते) बहुत जल रही है (च) तथा (मे) मेरा (मनः) मन (भ्रमति, इव) भ्रमित-सा हो रहा है इसलिए मैं (अवस्थातुम्) खड़ा रहनेको (च) भी (न शक्नोमि) समर्थ नहीं हूँ।",
+    "meaning": "gāṇḍīvam—Arjun’s bow; sraṁsate—is slipping; hastāt—from (my) hand; tvak—skin; cha—and; eva—indeed; paridahyate—is burning all over; na—not; cha—and; śhaknomi—am able; avasthātum—remain steady; bhramati iva—whirling like; cha—and; me—my; manaḥ—mind;\n"
+  },
+  {
+    "num": 31,
+    "sanskrit": "निमित्तानि च पश्यामि विपरीतानि केशव |\nन च श्रेयोऽनुपश्यामि हत्वा स्वजनमाहवे ॥31॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/31.mp3",
+    "hindi": "हे केशव! मैं लक्षणों को भी विपरीत ही देख रहा हूँ तथा युद्ध में स्वजन-समुदाय को मारकर कल्याण भी नहीं देखता।",
+    "english": "Besides, I do not see any good (to be derived) from killing my own people in battle. O Krsna, I do not desire victory, nor even a kingdom nor pleasures.",
+    "hindi_meaning": "(केशव) हे केशव! मैं (निमित्तानि) लक्षणोंको (च) भी (विपरीतानि) विपरीत ही (पश्यामि) देख रहा हूँ तथा (आहवे) युद्धमें (स्वजनम्) स्वजनसमुदायको (हत्वा) मारकर (श्रेयः) कल्याण (च) भी (न) नहीं (अनुपश्यामि) देखता।",
+    "meaning": "nimittāni—omens; cha—and; paśhyāmi—I see; viparītāni—misfortune; keśhava—Shree Krishna, killer of the Keshi demon; na—not; cha—also; śhreyaḥ—good; anupaśhyāmi—I foresee; hatvā—from killing; sva-janam—kinsmen; āhave—in battle\n"
+  },
+  {
+    "num": 32,
+    "sanskrit": "न काङ्क्षे विजयं कृष्ण न च राज्यं सुखानि च |\nकिं नो राज्येन गोविन्द किं भोगैर्जीवितेन वा ॥32॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/32.mp3",
+    "hindi": "हे कृष्ण! मैं न तो विजय चाहता हूँ और न राज्य तथा सुखों को ही। हे गोविंद! हमें ऐसे राज्य से क्या प्रयोजन है अथवा ऐसे भोगों से और जीवन से भी क्या लाभ है?",
+    "english": "I desire not victory, O Krishna, nor kingdom, nor pleasures. Of what avail is dominion to us, O Krishna, or pleasures or even life?",
+    "hindi_meaning": "(कृष्ण) हे कृष्ण! मैं (न) न तो (विजयम्) विजय (काङ्क्षे) चाहता हूँ (च) और (न) न (राज्यम्) राज्य (च) तथा (सुखानि) सुखोंको ही (गोविन्द) हे गोविन्द! (नः) हमें ऐसे (राज्येन) राज्यसे (किम्) क्या प्रयोजन है (वा) अथवा ऐसे (भोगैः) भोगोंसे और (जीवितेन) जीवनसे भी (किम्) क्या लाभ है?",
+    "meaning": "na—nor; kāṅkṣhe—do I desire; vijayam—victory; kṛiṣhṇa—Krishna; na—nor; cha—as well; rājyam—kingdom; sukhāni—happiness; cha—also; kim—what; naḥ—to us; rājyena—by kingdom; govinda—Krishna, he who gives pleasure to the senses, he who is fond of cows; kim—what?; bhogaiḥ—pleasures; jīvitena—life; vā—or;\n"
+  },
+  {
+    "num": 33,
+    "sanskrit": "येषामर्थे काङ्क्षितं नो राज्यं भोगा: सुखानि च |\nत इमेऽवस्थिता युद्धे प्राणांस्त्यक्त्वा धनानि च ॥33॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/33.mp3",
+    "hindi": "हमें जिनके लिए राज्य, भोग और सुखादि अभीष्ट हैं, वे ही ये सब धन और जीवन की आशा को त्यागकर युद्ध में खड़े हैं।",
+    "english": "Those for whose sake we desire kingdom, enjoyments and pleasures, stand here in battle, having renounced life and wealth.",
+    "hindi_meaning": "(नः) हमें (येषाम्) जिनके (अर्थे) लिये (राज्यम्) राज्य (भोगाः) भोग (च) और (सुखानि) सुखादि (काङ्क्षितम्) अभीष्ट हैं (ते) वे ही (इमे) ये सब (धनानि) धन (च) और (प्राणान्) जीवन की आशा को (त्यक्त्वा) त्यागकर (युद्धे) युद्धमें (अवस्थिताः) खड़े हैं।",
+    "meaning": "yeṣhām—for whose; arthe—sake; kāṅkṣhitam—coveted for; naḥ—by us; rājyam—kingdom; bhogāḥ—pleasures; sukhāni—happiness; cha—also; te—they; ime—these; avasthitāḥ—situated; yuddhe—for battle; prāṇān—lives; tyaktvā—giving up; dhanāni—wealth; cha—also\n"
+  },
+  {
+    "num": 34,
+    "sanskrit": "आचार्या: पितर: पुत्रास्तथैव च पितामहा: |\nमातुला: श्वशुरा: पौत्रा: श्याला: सम्बन्धिनस्तथा ॥34॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/34.mp3",
+    "hindi": "गुरुजन, ताऊ-चाचे, लड़के और उसी प्रकार दादे, मामे, ससुर, पौत्र, साले तथा और भी संबंधी लोग हैं।",
+    "english": "Teachers, fathers, sons and also grandfathers, maternal uncles, fathers-in-law, grandsons, brothers-in-law and other relatives.",
+    "hindi_meaning": "(आचार्याः) गुरुजन (पितरः) ताऊ-चाचे (पुत्राः) लड़के (च) और (तथा, एव) उसी प्रकार (पितामहाः) दादे (मातुलाः) मामे (श्वशुराः) ससुर (पौत्राः) पौत्रा (श्यालाः) साले (तथा) तथा और भी (सम्बन्धिनः) सम्बन्धी लोग हैं।",
+    "meaning": "āchāryāḥ—teachers; pitaraḥ—fathers; putrāḥ—sons; tathā—as well; eva—indeed; cha—also; pitāmahāḥ—grandfathers; mātulāḥ—maternal uncles; śhvaśhurāḥ—fathers-in-law; pautrāḥ—grandsons; śhyālāḥ—brothers-in-law; sambandhinaḥ—kinsmen; tathā—as well;\n"
+  },
+  {
+    "num": 35,
+    "sanskrit": "एतान्न हन्तुमिच्छामि घ्नतोऽपि मधुसूदन |\nअपि त्रैलोक्यराज्यस्य हेतो: किं नु महीकृते ॥35॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/35.mp3",
+    "hindi": "हे मधुसूदन! मुझे मारने पर भी अथवा तीनों लोकों के राज्य के लिए भी मैं इन सबको मारना नहीं चाहता, फिर पृथ्वी के लिए तो कहना ही क्या है?",
+    "english": "O Madhusudana, even if I am killed, I do not want to kill these even for the sake of a kingdom extending over the three worlds; what to speak of doing so for the earth!",
+    "hindi_meaning": "(मधुसूदन) हे मधुसूदन! मुझे (घ्नतः) मारनेपर (अपि) भी अथवा (त्रौलोक्यराज्यस्य) तीनों लोकोंके राज्यके (हेतोः) लिये (अपि) भी मैं (एतान्) इन सबको (हन्तुम्) मारना (न) नहीं (इच्छामि) चाहता फिर (महीकृते) पृथ्वीके लिये तो (नु किम्) कहना ही क्या है?",
+    "meaning": "etān—these; na—not; hantum—to slay; ichchhāmi—I wish; ghnataḥ—killed; api—even though; madhusūdana—Shree Krishna, killer of the demon Madhu; api—even though; trai-lokya-rājyasya—dominion over three worlds; hetoḥ—for the sake of; kim nu—what to speak of; mahī-kṛite—for the earth\n"
+  },
+  {
+    "num": 36,
+    "sanskrit": "निहत्य धार्तराष्ट्रान्न: का प्रीति: स्याज्जनार्दन |\nपापमेवाश्रयेदस्मान्हत्वैतानाततायिन: || 36 ||",
+    "audio": "https://bhagavadgitaapi.in/audio/1/36.mp3",
+    "hindi": "हे जनार्दन! धृतराष्ट्र के पुत्रों को मारकर हमें क्या प्रसन्नता होगी? इन आततायियों को मारकर तो हमें पाप ही लगेगा।",
+    "english": "O Janardana, what happiness shall we derive by killing the sons of Dhrtarastra? Sin alone will accrue to us by killing these felons.",
+    "hindi_meaning": "(जनार्दन) हे जनार्दन! (धार्तराष्ट्रान्) धृतराष्ट्रके पुत्रोंको (निहत्य) मारकर (नः) हमें (का) क्या (प्रीतिः) प्रसन्नता (स्यात्) होगी? (एतान्) इन (आततायिनः) आततायियोंको (हत्वा) मारकर तो (अस्मान्) हमें (पापम्) पाप (एव) ही (आश्रयेत्) लगेगा।",
+    "meaning": "nihatya—by killing; dhārtarāṣhṭrān—the sons of Dhritarashtra; naḥ—our; kā—what; prītiḥ—pleasure; syāt—will there be; janārdana—he who looks after the public, Shree Krishna; pāpam—vices; eva—certainly; āśhrayet—must come upon; asmān—us; hatvā—by killing; etān—all these; ātatāyinaḥ—aggressors;\n"
+  },
+  {
+    "num": 37,
+    "sanskrit": "तस्मान्नार्हा वयं हन्तुं धार्तराष्ट्रान्स्वबान्धवान् |\nस्वजनं हि कथं हत्वा सुखिन: स्याम माधव ॥37॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/37.mp3",
+    "hindi": "अतएव हे माधव! अपने ही बान्धव धृतराष्ट्र के पुत्रों को मारने के लिए हम योग्य नहीं हैं क्योंकि अपने ही कुटुम्ब को मारकर हम कैसे सुखी होंगे?",
+    "english": "Therefore, it is not proper for us to kill the sons of Dhrtarastra who are our own relatives. For, O Madhava, how can we be happy by killing our kinsmen?",
+    "hindi_meaning": "(तस्मात्) अतएव (माधव) हे माधव! (स्वबान्धवान्) अपने ही बान्धव (धार्तराष्ट्रान्) धृतराष्ट्रके पुत्रोंको (हन्तुम्) मारनेके लिये (वयम्) हम (न अर्हाः) योग्य नहीं हैं (हि) क्योंकि (स्वजनम्) अपने ही कुटुम्बको (हत्वा) मारकर हम (कथम्) कैसे (सुखिनः) सुखी (स्याम) होंगे?",
+    "meaning": "tasmāt—hence; na—never; arhāḥ—behoove; vayam—we; hantum—to kill; dhārtarāṣhṭrān—the sons of Dhritarashtra; sva-bāndhavān—along with friends; sva-janam—kinsmen; hi—certainly; katham—how; hatvā—by killing; sukhinaḥ—happy; syāma—will we become; mādhava—Shree Krishna, the husband of Yogmaya\n"
+  },
+  {
+    "num": 38,
+    "sanskrit": "यद्यप्येते न पश्यन्ति लोभोपहतचेतस: |\nकुलक्षयकृतं दोषं मित्रद्रोहे च पातकम् ॥38॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/38.mp3",
+    "hindi": "यद्यपि लोभ से भ्रष्टचित्त हुए ये लोग कुल के नाश से उत्पन्न दोष को और मित्रों से विरोध करने में पाप को नहीं देखते।",
+    "english": "O Janardana, although these people, whose hearts have become perverted by greed, do not see the evil arising from destroying the family and sin in hostility towards, friends,",
+    "hindi_meaning": "(यद्यपि) यद्यपि (लोभोपहतचेतसः) लोभसे भ्रष्टचित हुए (एते) ये लोग (कुलक्षयकृतम्) कुलके नाशसे उत्पन्न (दोषम्) दोषको (च) और (मित्राद्रोहे) मित्रोंसे विरोध करनेमें (पातकम्) पापको (न) नहीं (पश्यन्ति) देखते।",
+    "meaning": "yadi api—even though; ete—they; na—not; paśhyanti—see; lobha—greed; upahata—overpowered; chetasaḥ—thoughts; kula-kṣhaya-kṛitam—in annihilating their relatives; doṣham—fault; mitra-drohe—to wreak treachery upon friends; cha—and; pātakam—sin;\n"
+  },
+  {
+    "num": 39,
+    "sanskrit": "कथं न ज्ञेयमस्माभि: पापादस्मान्निवर्तितुम् |\nकुलक्षयकृतं दोषं प्रपश्यद्भिर्जनार्दन ॥39॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/39.mp3",
+    "hindi": "तो भी हे जनार्दन! कुल के नाश से उत्पन्न दोष को जानने वाले हम लोगों को इस पाप से हटने के लिए क्यों नहीं विचार करना चाहिए?",
+    "english": "yet how can we who clearly see the evil arising from destroying the family remain unaware of (the need of) abstaining from this sin?",
+    "hindi_meaning": "तो भी (जनार्दन) हे जनार्दन! (कुलक्षयकृतम्) कुलके नाशसे उत्पन्न (दोषम्) दोषको (प्रपश्यभ्दिः) जाननेवाले (अस्माभिः) हमलोगोंको (अस्मात्) इस (पापात्) पापसे (निवर्तितुम्) हटनेके लिये (कथम्) क्यों (न) नहीं (ज्ञेयम्) विचार करना चाहिये?",
+    "meaning": "katham—why; na—not; jñeyam—should be known; asmābhiḥ—we; pāpāt—from sin; asmāt—these; nivartitum—to turn away; kula-kṣhaya—killing the kindered; kṛitam—done; doṣham—crime; prapaśhyadbhiḥ—who can see; janārdana—he who looks after the public, Shree Krishna\n"
+  },
+  {
+    "num": 40,
+    "sanskrit": "कुलक्षये प्रणश्यन्ति कुलधर्मा: सनातना: |\nधर्मे नष्टे कुलं कृत्स्नमधर्मोऽभिभवत्युत ॥40॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/40.mp3",
+    "hindi": "कुल के नाश से सनातन कुल-धर्म नष्ट हो जाते हैं तथा धर्म का नाश हो जाने पर सम्पूर्ण कुल में पाप भी बहुत फैल जाता है।",
+    "english": "From the ruin of the family are totally destroyed the traditional rites and duties of the family. When rites and duties are destroyed, vice overpowers the entire family also.",
+    "hindi_meaning": "(कुलक्षये) कुलके नाशसे (सनातनाः) सनातन (कुलधर्माः) कुलधर्म (प्रणश्यन्ति) नष्ट हो जाते हैं (धर्मे) धर्मके (नष्टे) नाश हो जानेपर (कृत्स्त्राम्) सम्पूर्ण (कुलम्) कुलमें (अधर्मः) पाप (उत) भी (अभिभवति) बहुत फैल जाता है।",
+    "meaning": "kula-kṣhaye—in the destruction of a dynasty; praṇaśhyanti—are vanquished; kula-dharmāḥ—family traditions; sanātanāḥ—eternal; dharme—religion; naṣhṭe—is destroyed; kulam—family; kṛitsnam—the whole; adharmaḥ—irreligion; abhibhavati—overcome; uta—indeed\n"
+  },
+  {
+    "num": 41,
+    "sanskrit": "अधर्माभिभवात्कृष्ण प्रदुष्यन्ति कुलस्त्रिय: |\nस्त्रीषु दुष्टासु वार्ष्णेय जायते वर्णसङ्कर: ॥41॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/41.mp3",
+    "hindi": "हे कृष्ण! पाप के अधिक बढ़ जाने से कुल की स्त्रियाँ अत्यन्त दूषित हो जाती हैं और हे वार्ष्णेय! स्त्रियों के दूषित हो जाने पर वर्णसंकर उत्पन्न होता है।",
+    "english": "O Krsna, when vice predominates, the women of the family become corrupt. O descendent of the Vrsnis, when women become corrupted, it results in the intermingling of castes.",
+    "hindi_meaning": "(कृष्ण) हे कृष्ण! (अधर्माभिभवात्) पापके अधिक बढ़ जानेसे (कुलस्त्रिायः) कुलकी स्त्रिायाँ (प्रदुष्यन्ति) अत्यन्त दूषित हो जाती हैं और (वाष्र्णेय) हे वाष्र्णेंय! (स्त्राीषु) स्त्रिायोंके (दुष्टासु) दूषित चरित्रा वाली हो जानेपर (वर्णसंकर) वर्णशंकर संतान (जायते) उत्पन्न होती है।",
+    "meaning": "adharma—irreligion; abhibhavāt—preponderance; kṛiṣhṇa—Shree Krishna; praduṣhyanti—become immoral; kula-striyaḥ—women of the family; strīṣhu—of women; duṣhṭāsu—become immoral; vārṣhṇeya—descendant of Vrishni; jāyate—are born; varṇa-saṅkaraḥ—unwanted progeny\n"
+  },
+  {
+    "num": 42,
+    "sanskrit": "सङ्करो नरकायैव कुलघ्नानां कुलस्य च |\nपतन्ति पितरो ह्येषां लुप्तपिण्डोदकक्रिया: ॥42॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/42.mp3",
+    "hindi": "वर्णसंकर कुलघातियों को और कुल को नरक में ले जाने के लिए ही होता है। लुप्त हुई पिण्ड और जल की क्रिया वाले अर्थात श्राद्ध और तर्पण से वंचित इनके पितर लोग भी अधोगति को प्राप्त होते हैं।",
+    "english": "And the intermingling in the family leads the ruiners of the family verily into hell. The forefathers of these fall down (into hell) because of being deprived of the offerings of rice-balls and water.",
+    "hindi_meaning": "(संकरः) वर्णसंकर (कुलघ्नानाम्) कुलघातियोंको (च) और (कुलस्य) कुलको (नरकाय) नरकमें ले जानेके लिये (एव) ही होता है (लुप्तपिण्डोदक) गुप्त शारीरिक विलास जो नर-मादा के बीज और रज रूप जल की (क्रियाः) क्रियासे (एषाम्) इनके (पितरः) वंश (हि) भी (पतन्ति) अधोगतिको प्राप्त होते हैं।",
+    "meaning": "saṅkaraḥ—unwanted children; narakāya—hellish; eva—indeed; kula-ghnānām—for those who destroy the family; kulasya—of the family; cha—also; patanti—fall; pitaraḥ—ancestors; hi—verily; eṣhām—their; lupta—deprived of; piṇḍodaka-kriyāḥ—performances of sacrificial offerings\n"
+  },
+  {
+    "num": 43,
+    "sanskrit": "दोषैरेतै: कुलघ्नानां वर्णसङ्करकारकै: |\nउत्साद्यन्ते जातिधर्मा: कुलधर्माश्च शाश्वता: ॥43॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/43.mp3",
+    "hindi": "इन वर्णसंकरकारक दोषों से कुलघातियों के सनातन कुल-धर्म और जाति-धर्म नष्ट हो जाते हैं।",
+    "english": "Due to these misdeeds of the ruiners of the family, which cause intermingling of castes, the traditional rites and duties of the castes and families become destroyed.",
+    "hindi_meaning": "(एतैः) इन (वर्णसंकरकारकैः) वर्णसंकरकारक (दोषैः) दोषोंसे (कुलघ्नानाम्) कुलघातियोंके (शाश्वताः) सनातन (कुलधर्माः) कुल-धर्म (च) और (जातिधर्माः) जाति- धर्म (उत्साद्यन्ते) नष्ट हो जाते हैं।",
+    "meaning": "doṣhaiḥ—through evil deeds; etaiḥ—these; kula-ghnānām—of those who destroy the family; varṇa-saṅkara—unwanted progeny; kārakaiḥ—causing; utsādyante—are ruined; jāti-dharmāḥ—social and family welfare activities; kula-dharmāḥ—family traditions; cha—and; śhāśhvatāḥ—eternal\n"
+  },
+  {
+    "num": 44,
+    "sanskrit": "उत्सन्नकुलधर्माणां मनुष्याणां जनार्दन |\nनरकेऽनियतं वासो भवतीत्यनुशुश्रुम ॥44॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/44.mp3",
+    "hindi": "हे जनार्दन! जिनका कुल-धर्म नष्ट हो गया है, ऐसे मनुष्यों का अनिश्चितकाल तक नरक में वास होता है, ऐसा हम सुनते आए हैं।",
+    "english": "O Janardana, we have heard that living in hell becomes inevitable for those persons whose family duties get destroyed.",
+    "hindi_meaning": "(जनार्दन) हे जनार्दन! (उत्सन्नकुल धर्माणाम्) जिनका कुल-धर्म नष्ट हो गया है ऐसे (मनुष्याणाम्) मनुष्योंका (अनियतम्) अनिश्चित कालतक (नरके) नरकमें (वासः) वास (भवति) होता है (इति) ऐसा हम (अनुशुश्रुम) सुनते आये हैं।",
+    "meaning": "utsanna—destroyed; kula-dharmāṇām—whose family traditions; manuṣhyāṇām—of such human beings; janārdana—he who looks after the public, Shree Krishna; narake—in hell; aniyatam—indefinite; vāsaḥ—dwell; bhavati—is; iti—thus; anuśhuśhruma—I have heard from the learned\n"
+  },
+  {
+    "num": 45,
+    "sanskrit": "अहो बत महत्पापं कर्तुं व्यवसिता वयम् |\nयद्राज्यसुखलोभेन हन्तुं स्वजनमुद्यता: ॥45॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/45.mp3",
+    "hindi": "हा! शोक! हम लोग बुद्धिमान होकर भी महान पाप करने को तैयार हो गए हैं, जो राज्य और सुख के लोभ से स्वजनों को मारने के लिए उद्यत हो गए हैं।",
+    "english": "What a pity that we have resolved to commit a great sin by being eager to kill our own kith and kin, out of greed for the pleasures of a kingdom!",
+    "hindi_meaning": "(अहो) हा! (बत) शोक! (वयम्) हमलोग बुद्धिमान् होकर भी (महत्) महान् (पापम्) पाप (कर्तुम्) करनेको (व्यवसिताः) तैयार हो गये हैं (यत्) जो (राज्यसुखलोभेन) राज्य और सुखके लोभसे (स्वजनम्) स्वजनोंको (हन्तुम्) मारनेके लिये (उद्यताः) उद्यत हो गये हैं।",
+    "meaning": "aho—alas; bata—how; mahat—great; pāpam—sins; kartum—to perform; vyavasitāḥ—have decided; vayam—we; yat—because; rājya-sukha-lobhena—driven by the desire for kingly pleasure; hantum—to kill; sva-janam—kinsmen; udyatāḥ—intending;\n"
+  },
+  {
+    "num": 46,
+    "sanskrit": "यदि मामप्रतीकारमशस्त्रं शस्त्रपाणय: |\nधार्तराष्ट्रा रणे हन्युस्तन्मे क्षेमतरं भवेत् ॥46॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/46.mp3",
+    "hindi": "यदि मुझ शस्त्ररहित एवं सामना न करने वाले को शस्त्र हाथ में लिए हुए धृतराष्ट्र के पुत्र रण में मार डालें तो वह मारना भी मेरे लिए अधिक कल्याणकारक होगा।",
+    "english": "If, in this battle, the sons of Dhrtarastra armed with weapons kill me who am non-resistant and unarmed, that will be more beneficial to me.",
+    "hindi_meaning": "(यदि) यदि (माम्) मुझ (अशस्त्राम्) शस्त्रारहित एवं (अप्रतीकारम्) सामना न करनेवालेको (शस्त्रापाणयः) शस्त्रा हाथमें लिये हुए (धार्तराष्ट्राः) धृतराष्ट्रके पुत्रा (रणे) रणमें (हन्युः) मार डालें तो (तत्) वह मरना भी (मे) मेरे लिये (क्षेमतरम्) अधिक कल्याण-कारक (भवेत्) होगा।",
+    "meaning": "yadi—if; mām—me; apratīkāram—unresisting; aśhastram—unarmed; śhastra-pāṇayaḥ—those with weapons in hand; dhārtarāṣhṭrāḥ—the sons of Dhritarashtra; raṇe—on the battlefield; hanyuḥ—shall kill; tat—that; me—to me; kṣhema-taram—better; bhavet—would be\n"
+  },
+  {
+    "num": 47,
+    "sanskrit": "सञ्जय उवाच |\nएवमुक्त्वार्जुन: सङ्ख्ये रथोपस्थ उपाविशत् |\nविसृज्य सशरं चापं शोकसंविग्नमानस: ॥47॥",
+    "audio": "https://bhagavadgitaapi.in/audio/1/47.mp3",
+    "hindi": "संजय बोले- रणभूमि में शोक से उद्विग्न मन वाले अर्जुन इस प्रकार कहकर, बाणसहित धनुष को त्यागकर रथ के पिछले भाग में बैठ गए\nॐ तत्सदिति श्रीमद्भगवद्गीतासूपनिषत्सु ब्रह्मविद्यायां योगशास्त्रे श्रीकृष्णार्जुनसंवादेऽर्जुनविषादयोगो नाम प्रथमोऽध्यायः।।",
+    "english": "Sanjaya narrated: Having said so, Arjuna, with a mind afflicted with sorrow, sat down on the chariot in the midst of the battle, casting aside the bow along with the arrows.",
+    "hindi_meaning": "(सङ्ख्ये) रणभूमिमें (शोकसंविग्न) शोकसे उद्विग्न (मानसः) मनवाला (अर्जुनः) अर्जुन (एवम्) इस प्रकार (उक्त्वा) कहकर (सशरम्) बाणसहित (चापम्) धनुषको (विसृज्य) त्यागकर (रथोपस्थे) रथके पिछले भागमें (उपाविशत्) बैठ गया।",
+    "meaning": "sañjayaḥ uvācha—Sanjay said; evam uktvā—speaking thus; arjunaḥ—Arjun; saṅkhye—in the battlefield; ratha upasthe—on the chariot; upāviśhat—sat; visṛijya—casting aside; sa-śharam—along with arrows; chāpam—the bow; śhoka—with grief; saṁvigna—distressed; mānasaḥ—mind\n"
+  }
+];

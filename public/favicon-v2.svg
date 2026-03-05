@@ -1,0 +1,13 @@
+<svg width="128" height="128" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid">
+    <!-- Background: Solid amber rounded square -->
+    <rect width="256" height="256" rx="56" fill="#b45309"/>
+
+    <!-- Corrected Curved Swastika Symbol (White) -->
+    <g fill="#FFFFFF" transform="translate(128, 128) scale(0.12) translate(-1024, -1024)">
+        <path d="M1024 432v592c0 44.183-35.817 80-80 80s-80-35.817-80-80v-512h-512c-44.183 0-80-35.817-80-80s35.817-80 80-80h592c44.183 0 80 35.817 80 80zM1616 1024h-592c-44.183 0-80 35.817-80 80s35.817 80 80 80h512v512c0 44.183 35.817 80 80 80s80-35.817 80-80v-592c0-44.183-35.817-80-80-80zM432 1024h-592c-44.183 0-80 35.817-80 80s35.817 80 80 80h512v-160zM1184 0v160h512c44.183 0 80 35.817 80 80s-35.817 80-80 80h-592c-44.183 0-80-35.817-80-80V0c0-44.183 35.817-80 80-80s80 35.817 80 80z"/>
+        <circle cx="640" cy="640" r="120"/>
+        <circle cx="1408" cy="640" r="120"/>
+        <circle cx="640" cy="1408" r="120"/>
+        <circle cx="1408" cy="1408" r="120"/>
+    </g>
+</svg>
