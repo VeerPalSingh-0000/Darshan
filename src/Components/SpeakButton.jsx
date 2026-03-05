@@ -1,11 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { motion } from "framer-motion";
 
-/**
- * SpeakButton — Plays only pre-recorded audio files.
- * Priority: Cloudinary -> Local -> Remote APIs.
- */
-
 const pad3 = (value) => String(value).padStart(3, "0");
 
 const extractChapterVerse = ({ audioUrl, chapterNumber, verseNumber }) => {
@@ -26,10 +21,7 @@ const buildAudioCandidates = ({ audioUrl, chapterNumber, verseNumber }) => {
   if (audioUrl) candidates.push(audioUrl);
 
   if (cv) {
-    // 1. Your Cloudinary Audio
     candidates.push(`${CLOUDINARY_GITA_PATH}/Chapter_${cv.chapter}_Verse_${cv.verse}.wav`);
-    
-    // 2. Remote Fallbacks
     const chapter = pad3(cv.chapter);
     const verse = pad3(cv.verse);
     candidates.push(`https://shlokam.org/audio/bg/${chapter}_${verse}.mp3`);
@@ -42,18 +34,19 @@ const buildAudioCandidates = ({ audioUrl, chapterNumber, verseNumber }) => {
 const SpeakButton = ({ audioUrl, chapterNumber, verseNumber, className = "" }) => {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const audioRef = useRef(null);
-  const isTransitioning = useRef(false);
+  const abortController = useRef(false); // The "Kill Switch"
 
   const stopAll = useCallback(() => {
+    abortController.current = true; // Tell any pending tryNext to stop
+    
     if (audioRef.current) {
       audioRef.current.pause();
-      audioRef.current.onended = null;
-      audioRef.current.onerror = null;
-      audioRef.current.src = ""; 
+      audioRef.current.src = ""; // Clear the source
+      audioRef.current.load(); // Force the browser to drop the audio resource
       audioRef.current = null;
     }
+    
     setIsSpeaking(false);
-    isTransitioning.current = false;
   }, []);
 
   useEffect(() => {
@@ -65,7 +58,8 @@ const SpeakButton = ({ audioUrl, chapterNumber, verseNumber, className = "" }) =
   }, [audioUrl, chapterNumber, verseNumber, stopAll]);
 
   const handleSpeak = useCallback(() => {
-    if (isSpeaking || audioRef.current || isTransitioning.current) {
+    // If already playing or loading, STOP
+    if (isSpeaking || audioRef.current) {
       stopAll();
       return;
     }
@@ -73,11 +67,12 @@ const SpeakButton = ({ audioUrl, chapterNumber, verseNumber, className = "" }) =
     const candidates = buildAudioCandidates({ audioUrl, chapterNumber, verseNumber });
     if (!candidates.length) return;
 
-    isTransitioning.current = true;
+    abortController.current = false; // Reset kill switch
     let index = 0;
 
     const tryNext = () => {
-      if (!isTransitioning.current) return;
+      // Strict check: If user clicked stop, exit the loop immediately
+      if (abortController.current) return;
 
       const source = candidates[index];
       if (!source) {
@@ -91,27 +86,27 @@ const SpeakButton = ({ audioUrl, chapterNumber, verseNumber, className = "" }) =
       audio.onended = () => {
         setIsSpeaking(false);
         audioRef.current = null;
-        isTransitioning.current = false;
       };
 
       audio.onerror = () => {
-        if (!isTransitioning.current) return;
+        if (abortController.current) return;
         index += 1;
         tryNext();
       };
 
       audio.play()
         .then(() => {
-          if (!isTransitioning.current) {
+          // Double check: Did the user click "Stop" while it was buffering?
+          if (abortController.current) {
             audio.pause();
+            audio.src = "";
             audioRef.current = null;
             return;
           }
           setIsSpeaking(true);
-          isTransitioning.current = false;
         })
         .catch(() => {
-          if (!isTransitioning.current) return;
+          if (abortController.current) return;
           index += 1;
           tryNext();
         });
