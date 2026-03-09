@@ -6,7 +6,13 @@ export const chapter1Shlokas = [
     "hindi": "धृतराष्ट्र बोले- हे संजय! धर्मभूमि कुरुक्षेत्र में एकत्रित, युद्ध की इच्छावाले मेरे और पाण्डु के पुत्रों ने क्या किया?",
     "english": "Dhritarastra said: O Sanjaya, what did my sons and the sons of Pandu actually do when, eager for battle, they gathered together on the holy field of Kuruksetra?",
     "hindi_meaning": "(सज्य) हे संजय! (धर्मक्षेत्रो) धर्मभूमि (कुरुक्षेत्रो) कुरुक्षेत्रामें (समवेताः) एकत्रित (युयुत्सवः) युद्धकी इच्छावाले (मामकाः) मेरे (च) और (एव) यहाँ (पाण्डवाः) पाण्डुके पुत्रोंने (किम्) क्या (अकुर्वत) किया?",
-    "meaning": "dhṛitarāśhtraḥ uvācha—Dhritarashtra said; dharma-kṣhetre—the land of dharma; kuru-kṣhetre—at Kurukshetra; samavetāḥ—having gathered; yuyutsavaḥ—desiring to fight; māmakāḥ—my sons; pāṇḍavāḥ—the sons of Pandu; cha—and; eva—certainly; kim—what; akurvata—did they do; sañjaya—Sanjay\n"
+    "meaning": "dhṛitarāśhtraḥ uvācha—Dhritarashtra said; dharma-kṣhetre—the land of dharma; kuru-kṣhetre—at Kurukshetra; samavetāḥ—having gathered; yuyutsavaḥ—desiring to fight; māmakāḥ—my sons; pāṇḍavāḥ—the sons of Pandu; cha—and; eva—certainly; kim—what; akurvata—did they do; sañjaya—Sanjay\n",
+    "tamil": "திருதராஷ்டிரர் சொன்னார்: ஓ சஞ்சயா, என் மகன்களும் பாண்டுவின் மகன்களும், போருக்கு ஆவலுடன் குருக்ஷேத்திரத்தில் ஒன்று கூடும் போது உண்மையில் என்ன செய்தார்கள்?",
+    "tamil_meaning": "dhṛitarāshtraḥ uvacha—திருதராஷ்டிரன் சொன்னான்; தர்ம-க்ஷேத்ரே—தர்ம நிலம்; குரு-க்ஷேத்ரே—குருக்ஷேத்திரத்தில்; சமவேதாঃ—கூடி; யுயுத்ஸவঃ—போராட விரும்புவது; மாமகஹ்—என் மகன்கள்; பாண்டவன்—பாண்டுவின் மகன்கள்; சா—மற்றும்; ஏவ—நிச்சயமாக; யார்-என்ன; அகுர்வத—அவர்கள் செய்தார்களா; சஞ்சயா-சஞ்சய்",
+    "bengali": "ধৃতরাষ্ট্র বললেনঃ হে সঞ্জয়, আমার পুত্ররা এবং পান্ডুর পুত্ররা যখন যুদ্ধের জন্য উদগ্রীব হয়ে কুরুক্ষেত্রের পবিত্র ময়দানে সমবেত হয়েছিল তখন আসলে কী করেছিল?",
+    "bengali_meaning": "dhṛitarāshtrah uvacha — ধৃতরাষ্ট্র বলেছেন; ধর্মক্ষেত্র - ধর্মের দেশ; kuru-kṣhetre — কুরুক্ষেত্রে; samavetāḥ — জড়ো হওয়া; যুযুৎসবঃ- যুদ্ধ করার ইচ্ছা; মামাকাঃ—আমার ছেলেরা; পাণ্ডবঃ—পান্ডুর পুত্র; cha-এবং; ইভা - অবশ্যই; কে—কি; akurvata - তারা কি করেছে; সঞ্জয়—সঞ্জয়",
+    "spanish": "Dhritarastra dijo: Oh Sanjaya, ¿qué hicieron realmente mis hijos y los hijos de Pandu cuando, ansiosos por la batalla, se reunieron en el campo sagrado de Kuruksetra?",
+    "spanish_meaning": "dhṛitarāśhtraḥ uvācha—Dhritarashtra dijo; dharma-kṣhetre—la tierra del dharma; kuru-kṣhetre—en Kurukshetra; samavetāḥ—habiendo reunido; yuyutsavaḥ—deseando luchar; māmakāḥ—mis hijos; pāṇḍavāḥ—los hijos de Pandu; cha—y; eva—ciertamente; quién—qué; akurvata—lo hicieron; sanjaya—Sanjay"
   },
   {
     "num": 2,
@@ -15,7 +21,13 @@ export const chapter1Shlokas = [
     "hindi": "संजय बोले- उस समय राजा दुर्योधन ने व्यूहरचनायुक्त पाण्डवों की सेना को देखा और द्रोणाचार्य के पास जाकर यह वचन कहा।",
     "english": "Sanjaya said: But then, seeing the army of the Pandavas in battle array, King Duryodhana approached his teacher (Dronacharya) and spoke the following words:",
     "hindi_meaning": "(तदा) उस समय (राजा) राजा (दुर्योधनः) दुर्योंधनने (व्यूढम्) व्यूहरचनायुक्त (पाण्डवानीकम्) पाण्डवोंकी सेनाको (दृष्टा) देखकर (तु) और (आचार्यम्) द्रोणाचार्यके (उपसग्म्य) पास जाकर यह (वचनम्) वचन (अब्रवीत्) कहा।",
-    "meaning": "sanjayaḥ uvācha—Sanjay said; dṛiṣhṭvā—on observing; tu—but; pāṇḍava-anīkam—the Pandava army; vyūḍham—standing in a military formation; duryodhanaḥ—King Duryodhan; tadā—then; āchāryam—teacher; upasaṅgamya—approached; rājā—the king; vachanam—words; abravīt—spoke\n"
+    "meaning": "sanjayaḥ uvācha—Sanjay said; dṛiṣhṭvā—on observing; tu—but; pāṇḍava-anīkam—the Pandava army; vyūḍham—standing in a military formation; duryodhanaḥ—King Duryodhan; tadā—then; āchāryam—teacher; upasaṅgamya—approached; rājā—the king; vachanam—words; abravīt—spoke\n",
+    "tamil": "சஞ்சயன் சொன்னான்: ஆனால், பாண்டவர்களின் படை போர் அணிவகுப்பில் இருப்பதைக் கண்டு, அரசன் துரியோதனன் தன் ஆசிரியரை (துரோணாச்சாரியாரை) அணுகி, பின்வரும் வார்த்தைகளைப் பேசினான்:",
+    "tamil_meaning": "sanjayaḥ uvacha—சஞ்சயன் சொன்னான்; த்ரிஷ்ட்வா—கவனிப்பதில்; து—ஆனால்; பாண்டவ-அணிகம்—பாண்டவப் படை; வியுதம்—ஒரு இராணுவ அமைப்பில் நின்று; துரியோதன:-ராஜா துரியோதனன்; ததா—பின்னர்; ஆச்சார்யம்—ஆசிரியர்; உபஸங்கம்ய—அருகி; ராஜா—ராஜா; வசனம்—வார்த்தைகள்; arabīt — பேசினார்",
+    "bengali": "সঞ্জয় বললেন: কিন্তু তারপর, পাণ্ডবদের সৈন্যবাহিনীকে যুদ্ধের সারিতে দেখে, রাজা দুর্যোধন তাঁর শিক্ষকের (দ্রোণাচার্য) কাছে গিয়ে নিম্নলিখিত কথাগুলি বললেন:",
+    "bengali_meaning": "sanjaya: uvācha—সঞ্জয় বললেন; dṛiṣhṭvā — পর্যবেক্ষণ করা; tu—কিন্তু; পাণ্ডব-অনীকম—পাণ্ডব বাহিনী; vyūdham - একটি সামরিক গঠনে দাঁড়িয়ে; দুর্যোধনঃ- রাজা দুর্যোধন; tadā - তারপর; আচার্যম—শিক্ষক; উপসংগম্য—সংযোগ করা; rājā — রাজা; বচনম—শব্দ; abravīt—কথা বলা",
+    "spanish": "Sanjaya dijo: Pero entonces, al ver el ejército de los Pandavas en orden de batalla, el rey Duryodhana se acercó a su maestro (Dronacharya) y le pronunció las siguientes palabras:",
+    "spanish_meaning": "sanjayaḥ uvācha—Sanjay dijo; dṛiṣhṭvā—al observar; tu—pero; pāṇḍava-anīkam—el ejército Pandava; vyūḍham—de pie en formación militar; duryodhanaḥ—el rey Duryodhan; tadā—entonces; āchāryam—maestro; upasaṅgamya—se acercó; rājā—el rey; vachanam—palabras; abravīt—habló"
   },
   {
     "num": 3,
@@ -24,7 +36,13 @@ export const chapter1Shlokas = [
     "hindi": "हे आचार्य! आपके बुद्धिमान्‌ शिष्य द्रुपदपुत्र धृष्टद्युम्न द्वारा व्यूहाकार खड़ी की हुई पाण्डुपुत्रों की इस बड़ी भारी सेना को देखिए।",
     "english": "O teacher, (please) see this vast army of the sons of Pandu, arrayed for battle by the son of Drupada, your intelligent disciple, Dhrishtadyumna.",
     "hindi_meaning": "(आचार्य) हे आचार्य! (तव) आपके (धीमता) बुद्धिमान् (शिष्येण) शिष्य (द्रुपदपुत्रोण) द्रुपदपुत्रा धृष्टद्युम्न द्वारा (व्यूढाम्) व्यूहाकार खड़ी की हुई (पाण्डुपुत्राणाम्) पाण्डु-पुत्रोंकी (एताम्) इस (महतीम्) बड़ी भारी (चमूम्) सेनाको (पश्य) देखिये।",
-    "meaning": "paśhya—behold; etām—this; pāṇḍu-putrāṇām—of the sons of Pandu; āchārya—respected teacher; mahatīm—mighty; chamūm—army; vyūḍhām—arrayed in a military formation; drupada-putreṇa—son of Drupad, Dhrishtadyumna; tava—by your; śhiṣhyeṇa—disciple; dhī-matā—intelligent\n"
+    "meaning": "paśhya—behold; etām—this; pāṇḍu-putrāṇām—of the sons of Pandu; āchārya—respected teacher; mahatīm—mighty; chamūm—army; vyūḍhām—arrayed in a military formation; drupada-putreṇa—son of Drupad, Dhrishtadyumna; tava—by your; śhiṣhyeṇa—disciple; dhī-matā—intelligent\n",
+    "tamil": "ஓ ஆசிரியரே, (தயவுசெய்து) பாண்டுவின் மகன்களின் இந்தப் பரந்த படையைப் பாருங்கள், துருபதனின் மகன், உனது புத்திசாலி சீடன் திருஷ்டத்யும்னன் போருக்கு அணிவகுத்துள்ளான்.",
+    "tamil_meaning": "பஷ்ய—இதோ; ஏதம்—இது; பாண்டு-புத்ராணம்—பாண்டுவின் மகன்களின்; ஆச்சார்யா—மரியாதைக்குரிய ஆசிரியர்; மகாதீம்—வல்லமையுள்ள; சாமம்—இராணுவம்; வ்யூஹம்—ஒரு இராணுவ அமைப்பில் அணிவகுத்து; துருபத-புத்ரேண—துருபதனின் மகன், திருஷ்டத்யும்னன்; தவ—உன்னால்; ஷிஷ்யேன—சிஷ்யன்; dhī-matā—அறிவுள்ளவர்",
+    "bengali": "হে শিক্ষক, (দয়া করে) পাণ্ডুর পুত্রদের এই বিশাল সৈন্যবাহিনীকে দেখুন, আপনার বুদ্ধিমান শিষ্য ধৃষ্টদ্যুম্ন দ্রুপদ পুত্রের দ্বারা যুদ্ধের জন্য সজ্জিত।",
+    "bengali_meaning": "পাশ্য-দেখুন; etām—এই; পাণ্ডু-পুত্রনাম—পাণ্ডুর পুত্রদের; আচার্য - সম্মানিত শিক্ষক; mahatim - পরাক্রমশালী; chamūm - সেনাবাহিনী; vyūḍhām - একটি সামরিক গঠনে সাজানো; দ্রুপদ-পুত্রেণ—দ্রুপদের পুত্র, ধৃষ্টদ্যুম্ন; tava - তোমার দ্বারা; শিষ্য্যণ—শিষ্য; ধী-মাতা—বুদ্ধিমান",
+    "spanish": "Oh maestro, (por favor) observa este vasto ejército de los hijos de Pandu, preparado para la batalla por el hijo de Drupada, tu inteligente discípulo, Dhrishtadyumna.",
+    "spanish_meaning": "paśhya—he aquí; etām—esto; pāṇḍu-putrāṇām—de los hijos de Pandu; āchārya—maestro respetado; mahatīm—poderoso; chamūm—ejército; vyūḍhām—dispuestos en formación militar; drupada-putreṇa—hijo de Drupad, Dhrishtadyumna; tava—por tu; śhiṣhyeṇa—discípulo; dhī-matā—inteligente"
   },
   {
     "num": 4,
@@ -33,25 +51,43 @@ export const chapter1Shlokas = [
     "hindi": "इस सेना में बड़े-बड़े धनुषों वाले तथा युद्ध में भीम और अर्जुन के समान शूरवीर सात्यकि और विराट तथा महारथी राजा द्रुपद...",
     "english": "There are in this army, heroes wielding great bows, and equal in military prowess to Bhima and Arjuna: Yuyudhana (Satyaki) and Virata, and the maharatha (great chariot-rider) Drupada;",
     "hindi_meaning": "(अत्रा) इस सेनामें (महेष्वासाः) बड़े-बड़े धनुषोंवाले (च) तथा (युधि) युद्धमें (भीमार्जुनसमाः) भीम और अर्जुनके समान (शूराः) शूर-वीर (युयुधानः) सात्यकि (च) और (विराटः) विराट (च) तथा (महारथः) महारथी (द्रुपदः) राजा द्रुपद",
-    "meaning": "atra—here; śhūrāḥ—powerful warriors; mahā-iṣhu-āsāḥ—great bowmen; bhīma-arjuna-samāḥ—equal to Bheem and Arjun; yudhi—in military prowess; yuyudhānaḥ—Yuyudhan; virāṭaḥ—Virat; cha—and; drupadaḥ—Drupad; cha—also; mahā-rathaḥ—warriors who could single handedly match the strength of ten thousand ordinary warriors;\n"
+    "meaning": "atra—here; śhūrāḥ—powerful warriors; mahā-iṣhu-āsāḥ—great bowmen; bhīma-arjuna-samāḥ—equal to Bheem and Arjun; yudhi—in military prowess; yuyudhānaḥ—Yuyudhan; virāṭaḥ—Virat; cha—and; drupadaḥ—Drupad; cha—also; mahā-rathaḥ—warriors who could single handedly match the strength of ten thousand ordinary warriors;\n",
+    "tamil": "இந்தப் படையில் பீமன் மற்றும் அர்ஜுனனுக்கு நிகரான இராணுவ வலிமையில் பெரும் வில் ஏந்திய மாவீரர்கள் உள்ளனர்: யுயுதனன் (சாத்யகி) மற்றும் விராடன், மற்றும் மஹாரதன் (பெரிய தேர் ஏறி) துருபதன்;",
+    "tamil_meaning": "அத்ரா-இங்கே; ஷுராஹ்—சக்திவாய்ந்த வீரர்கள்; mahā-ishhu-āsāḥ—பெரிய வில்லாளிகள்; பீம-அர்ஜுன-சமாஹ்—பீம் மற்றும் அர்ஜுனுக்கு சமம்; யுதி—இராணுவ வலிமையில்; யுயுதானঃ—யுயுதன்; விரதஹ—விராட்; சா—மற்றும்; துருபதா: துருபத்; ச—மேலும்; mahā-rathaḥ—பத்தாயிரம் சாதாரண வீரர்களின் வலிமையை ஒற்றைக் கையால் பொருத்தக்கூடிய வீரர்கள்;",
+    "bengali": "এই সৈন্যবাহিনীতে রয়েছে, বীররা মহান ধনুকধারী, এবং ভীম ও অর্জুনের সামরিক শক্তিতে সমান: যুযুধন (সাত্যকি) এবং বিরাট এবং মহারথ (মহান রথ-সওয়ার) দ্রুপদ;",
+    "bengali_meaning": "atra-এখানে; শুরাঃ - শক্তিশালী যোদ্ধা; মহা-ইষু-আসাঃ- মহান ধনুক; ভীম-অর্জুন-সমাঃ—ভীম ও অর্জুনের সমান; যুধি - সামরিক শক্তিতে; যুযুধনঃ—যুযুধন; virāṭaḥ—বিরাট; cha-এবং; দ্রুপদঃ—দ্রুপদ; cha—also; মহা-রথঃ- যোদ্ধা যারা এককভাবে দশ হাজার সাধারণ যোদ্ধার শক্তির সাথে মেলে;",
+    "spanish": "En este ejército hay héroes que empuñan grandes arcos e igualan en destreza militar a Bhima y Arjuna: Yuyudhana (Satyaki) y Virata, y el maharatha (gran jinete del carro) Drupada;",
+    "spanish_meaning": "atra-aquí; śhūrāḥ—poderosos guerreros; mahā-iṣhu-āsāḥ—grandes arqueros; bhīma-arjuna-samāḥ—igual a Bheem y Arjun; yudhi—en destreza militar; yuyudhānaḥ—Yuyudhan; virāṭaḥ—Virat; cha—y; drupadaḥ—Drupad; cha—también; mahā-rathaḥ—guerreros que por sí solos podrían igualar la fuerza de diez mil guerreros ordinarios;"
   },
   {
     "num": 5,
-    "sanskrit": "धृष्टकेतुश्चेकितान: काशिराजश्च वीर्यवान् |\nपुरुजित्कुन्तिभोजश्च शैयश्च नरपुङ्गव: ॥5॥\nयुधामन्युश्च विक्रान्त उत्तमौजाश्च वीर्यवान् |",
+    "sanskrit": "धृष्टकेतुश्चेकितान: काशिराजश्च वीर्यवान् |\nपुरुजित्कुन्तिभोजश्च शैयश्च नरपुङ्गव: ॥5॥",
     "audio": "https://bhagavadgitaapi.in/audio/1/5.mp3",
     "hindi": "...धृष्टकेतु और चेकितान तथा बलवान काशिराज, पुरुजित, कुन्तिभोज और मनुष्यों में श्रेष्ठ शैब्य...",
     "english": "Dhrstaketu, Cekitana, and the valiant king of Kasi (Varanasi); Purujit and Kuntibhoja, and Saibya, the choicest among men;",
     "hindi_meaning": "(धृष्टकेतुः) धृष्टकेतु (च) और (चेकितानः) चेकितान (च) तथा (वीर्यवान्) बलवान् (काशिराजः) काशिराज (पुरुजित्) पुरुजित् (कुन्तिभोजः) कुन्तिभोज (च) और (नरपुग्वः) मनुष्योंमें श्रेष्ठ (शैब्यः) शैब्य",
-    "meaning": "dhṛiṣhṭaketuḥ—Dhrishtaketu; chekitānaḥ—Chekitan; kāśhirājaḥ—Kashiraj; cha—and; vīrya-vān—heroic; purujit—Purujit; kuntibhojaḥ—Kuntibhoj; cha—and; śhaibyaḥ—Shaibya; cha—and; nara-puṅgavaḥ—best of men; yudhāmanyuḥ—Yudhamanyu; cha—and; vikrāntaḥ—courageous; uttamaujāḥ—Uttamauja; cha—and; vīrya-vān—gallant;\n"
+    "meaning": "dhṛiṣhṭaketuḥ—Dhrishtaketu; chekitānaḥ—Chekitan; kāśhirājaḥ—Kashiraj; cha—and; vīrya-vān—heroic; purujit—Purujit; kuntibhojaḥ—Kuntibhoj; cha—and; śhaibyaḥ—Shaibya; cha—and; nara-puṅgavaḥ—best of men;\n",
+    "tamil": "திருஷ்டகேது, செகிதன, மற்றும் காசியின் (வாரணாசி) வீரம் மிக்க அரசன்; புருஜித் மற்றும் குந்திபோஜா, மற்றும் சைப்யா, ஆண்களில் சிறந்தவர்;",
+    "tamil_meaning": "திருஷ்டகேது: திருஷ்டகேது; சேகிதான:-சேகிதன்; காஷிராஜ: காசிராஜ்; சா—மற்றும்; வீர்ய-வான்—வீர; புருஜித்-புருஜித்; குந்திபோஜঃ—குந்திபோஜ்; சா—மற்றும்; śhaibyaḥ—ஷைப்யா; சா—மற்றும்; nara-puṅgavaḥ—ஆண்களில் சிறந்தவர்;",
+    "bengali": "ধৃষ্টকেতু, চেকিতনা এবং কাশীর (বারাণসী) বীর রাজা; পুরুজিৎ এবং কুন্তিভোজ, এবং শৈব্য, পুরুষদের মধ্যে সবচেয়ে পছন্দের;",
+    "bengali_meaning": "ধৃষ্টকেতুঃ—ধৃষ্টকেতু; চেকিতানাঃ - চেকিতান; কাশিরাজঃ—কাশীরাজ; cha-এবং; vīrya-vān—বীর্যপূর্ণ; purujit-পুরুজিত; কুন্তিভোজঃ- কুন্তিভোজ; cha-এবং; শৈব্যঃ—শৈব্য; cha-এবং; নর-পুঙ্গবঃ—পুরুষদের মধ্যে শ্রেষ্ঠ;",
+    "spanish": "Dhrstaketu, Cekitana y el valiente rey de Kasi (Varanasi); Purujit, Kuntibhoja y Saibya, los más selectos entre los hombres;",
+    "spanish_meaning": "dhṛiṣhṭaketuḥ—Dhrishtaketu; chekitānaḥ—Chekitan; kāśhirājaḥ—Kashiraj; cha—y; vīrya-vān—heroico; purujit-purujit; kuntibhojaḥ—Kuntibhoj; cha—y; śhaibyaḥ—Shaibya; cha—y; nara-puṅgavaḥ—el mejor de los hombres;"
   },
   {
     "num": 6,
-    "sanskrit": "सौभद्रो द्रौपदेयाश्च सर्व एव महारथा: ॥6॥",
+    "sanskrit": "युधामन्युश्च विक्रान्त उत्तमौजाश्च वीर्यवान् |\nसौभद्रो द्रौपदेयाश्च सर्व एव महारथा: ॥6॥",
     "audio": "https://bhagavadgitaapi.in/audio/1/6.mp3",
     "hindi": "...पराक्रमी युधामन्यु तथा बलवान उत्तमौजा, सुभद्रापुत्र अभिमन्यु एवं द्रौपदी के पाँचों पुत्र - ये सभी महारथी हैं।",
     "english": "And the chivalrous Yudhamanyu, and the valiant Uttamaujas; son of Subhadra (Abhimanyu) and the sons of Draupadi all (of whom) are, verily, maharathas.",
     "hindi_meaning": "(विक्रान्तः) पराक्रमी (युधामन्युः) युधामन्यु (च) तथा (वीर्यवान्) बलवान् (उत्तमौजाः) उत्तमौजा (सौभद्रः) सुभद्रापुत्रा अभिमन्यु (च) एवं (द्रौपदेयाः)द्रौपदीके पाँचों पुत्रा ये (सर्वे, एव)सभी (महारथाः) महारथी हैं।",
-    "meaning": "saubhadraḥ—the son of Subhadra; draupadeyāḥ—the sons of Draupadi; cha—and; sarve—all; eva—indeed; mahā-rathāḥ—warriors who could single handedly match the strength of ten thousand ordinary warriors\n"
+    "meaning": "saubhadraḥ—the son of Subhadra; draupadeyāḥ—the sons of Draupadi; cha—and; sarve—all; eva—indeed; mahā-rathāḥ—warriors who could single handedly match the strength of ten thousand ordinary warriors\n",
+    "tamil": "மற்றும் வீரமிக்க யுதாமன்யு, மற்றும் வீரம் மிக்க உத்தமௌஜஸ்; சுபத்ராவின் மகன் (அபிமன்யு) மற்றும் திரௌபதியின் மகன்கள் அனைவரும் (இவர்களில்) மெய்யாகவே மகாராதர்கள்.",
+    "tamil_meaning": "சௌபத்ரஹ்—சுபத்ராவின் மகன்; திரௌபதியாஹ்—திரௌபதியின் மகன்கள்; சா—மற்றும்; ஸர்வே—அனைத்தையும்; ஏவ—உண்மையில்; மஹா-ரதாஹ்—பத்தாயிரம் சாதாரண போர்வீரர்களின் வலிமையை ஒற்றைக் கையால் பொருத்தக்கூடிய வீரர்கள்",
+    "bengali": "এবং বীর যুধামন্যু এবং বীর উত্তমৌজ; সুভদ্রার পুত্র (অভিমন্যু) এবং দ্রৌপদীর পুত্ররা (যাদের) সকলেই প্রকৃতপক্ষে মহারথ।",
+    "bengali_meaning": "সৌভদ্রঃ- সুভদ্রার পুত্র; দ্রৌপদেয়াঃ—দ্রৌপদীর পুত্র; cha-এবং; সঞ্চয়—সব; ইভা - প্রকৃতপক্ষে; মহা-রথঃ- যোদ্ধা যারা এককভাবে দশ হাজার সাধারণ যোদ্ধার শক্তির সাথে মিল রাখতে পারে",
+    "spanish": "Y el caballeroso Yudhamanyu y los valientes Uttamaujas; hijo de Subhadra (Abhimanyu) y los hijos de Draupadi, todos (los cuales) son, en verdad, maharathas.",
+    "spanish_meaning": "saubhadraḥ—el hijo de Subhadra; draupadeyāḥ—los hijos de Draupadi; cha—y; salvar—todos; eva—en verdad; mahā-rathāḥ—guerreros que por sí solos podrían igualar la fuerza de diez mil guerreros comunes y corrientes"
   },
   {
     "num": 7,
@@ -60,7 +96,13 @@ export const chapter1Shlokas = [
     "hindi": "हे ब्राह्मणश्रेष्ठ! अपने पक्ष में भी जो प्रधान हैं, उनको आप समझ लीजिए। आपकी जानकारी के लिए मेरी सेना के जो-जो सेनापति हैं, उनको बतलाता हूँ।",
     "english": "But, O best among the Brahmanas, please be appraised of those who are foremost among us, the principal warriors of my army. I speak of them to you by way of example.",
     "hindi_meaning": "(द्विजोत्तम) हे ब्राह्मणश्रेष्ठ! (अस्माकम्) अपने पक्षमें (तु) भी (ये) जो (विशिष्टाः) प्रधान हैं (तान्) उनको आप (निबोध) समझ लीजिये। (ते) आपकी (सज्ञार्थम्) जानकारीके लिए (मम) मेरी (सैन्यस्य) सेनाके जो-जो (नायकाः) सेनापति हैं (तान्) उनको (ब्रवीमि) बतलाता हूँ।",
-    "meaning": "asmākam—ours; tu—but; viśhiṣhṭāḥ—special; ye—who; tān—them; nibodha—be informed; dwija-uttama—best of Brahmnis; nāyakāḥ—principal generals; mama—our; sainyasya—of army; sanjñā-artham—for information; tān—them; bravīmi—I recount; te—unto you\n"
+    "meaning": "asmākam—ours; tu—but; viśhiṣhṭāḥ—special; ye—who; tān—them; nibodha—be informed; dwija-uttama—best of Brahmnis; nāyakāḥ—principal generals; mama—our; sainyasya—of army; sanjñā-artham—for information; tān—them; bravīmi—I recount; te—unto you\n",
+    "tamil": "ஆனால், பிராமணர்களில் சிறந்தவனே, என் படையின் முக்கிய வீரர்களான எங்களில் முதன்மையானவர்களை தயவுசெய்து மதிப்பிடுங்கள். அவர்களைப் பற்றி நான் உதாரணத்திற்கு உங்களிடம் பேசுகிறேன்.",
+    "tamil_meaning": "அஸ்மாகம்—நமது; து—ஆனால்; விஷிஷ்டாஹ—சிறப்பு; நீ—யார்; தான்—அவர்கள்; நிபோத—அறிவிக்கப்படும்; த்விஜ-உத்தம—பிராமணர்களில் சிறந்தவர்; nayakāḥ—முதன்மை தளபதிகள்; மம—நமது; சைன்யஸ்ய—படையின்; சஞ்ஞா-அர்த்தம்—தகவலுக்கு; தான்—அவர்கள்; ப்ரவீமி—நான் சொல்கிறேன்; தே-உங்களுக்கு",
+    "bengali": "কিন্তু, হে ব্রাহ্মণদের মধ্যে শ্রেষ্ঠ, দয়া করে আমাদের মধ্যে যারা অগ্রগণ্য, আমার সেনাবাহিনীর প্রধান যোদ্ধা তাদের মূল্যায়ন করুন। আমি উদাহরণের মাধ্যমে তাদের কথা বলছি।",
+    "bengali_meaning": "asmakam - আমাদের; tu—কিন্তু; vishiṣhṭāḥ—বিশেষ; আপনি - কে; তান—তাদের; নিবোধ - অবহিত করা; দ্বিজ-উত্তম—ব্রাহ্মণীদের মধ্যে শ্রেষ্ঠ; nayakāh — প্রধান সেনাপতি; মা—আমাদের; সৈন্যস্য—সৈন্যবাহিনী; sanjñā-artham — তথ্যের জন্য; তান—তাদের; bravīmi - আমি বর্ণনা করি; te-তোমার কাছে",
+    "spanish": "Pero, oh el mejor entre los Brahmanas, por favor, sé apreciado por aquellos que son los más destacados entre nosotros, los principales guerreros de mi ejército. Os hablo de ellos a modo de ejemplo.",
+    "spanish_meaning": "asmākam—nuestro; tu—pero; viśhiṣhṭāḥ—especial; vosotros—quién; tān—ellos; nibodha—estar informado; dwija-uttama—lo mejor de Brahmnis; nāyakāḥ—principales generales; mamá—nuestra; sainyasya—del ejército; sanjñā-artham—para información; tān—ellos; bravīmi—yo cuento; te—a ti"
   },
   {
     "num": 8,
@@ -69,7 +111,13 @@ export const chapter1Shlokas = [
     "hindi": "आप-द्रोणाचार्य और पितामह भीष्म तथा कर्ण और संग्रामविजयी कृपाचार्य तथा वैसे ही अश्वत्थामा, विकर्ण और सोमदत्त का पुत्र भूरिश्रवा।",
     "english": "(They are:) Your venerable self, Bhisma and Karna, and Krpa who is ever victorious in battle; Asvatthama, Vikarna, Saumadatti and Jayadratha.",
     "hindi_meaning": "(भवान्) आप-द्रोणाचार्य (च) और (भीष्मः) पितामह भीष्म (च) तथा (कर्णः) कर्ण (च) और (समितिजयः) संग्रामविजयी (कृपः) कृपाचार्य (च) तथा (तथा) वैसे (एव) ही (अश्वत्थामा) अश्वत्थामा (विकर्णः) विकर्ण (च) और (सौमदत्तिः) सोमदत्तका पुत्रा भूरिश्रवा।",
-    "meaning": "bhavān—yourself; bhīṣhmaḥ—Bheeshma; cha—and; karṇaḥ—Karna; cha—and; kṛipaḥ—Kripa; cha—and; samitim-jayaḥ—victorious in battle; aśhvatthāmā—Ashvatthama; vikarṇaḥ—Vikarna; cha—and; saumadattiḥ—Bhurishrava; tathā—thus; eva—even; cha—also\n"
+    "meaning": "bhavān—yourself; bhīṣhmaḥ—Bheeshma; cha—and; karṇaḥ—Karna; cha—and; kṛipaḥ—Kripa; cha—and; samitim-jayaḥ—victorious in battle; aśhvatthāmā—Ashvatthama; vikarṇaḥ—Vikarna; cha—and; saumadattiḥ—Bhurishrava; tathā—thus; eva—even; cha—also\n",
+    "tamil": "(அவர்கள்:) உங்கள் மரியாதைக்குரிய சுயம், பீஷ்மர் மற்றும் கர்ணன், மற்றும் போரில் எப்போதும் வெற்றி பெற்ற கிருபா; அஸ்வத்தாமா, விகர்ணன், சௌமதத்தி மற்றும் ஜெயத்ரதன்.",
+    "tamil_meaning": "பவான்—நீயே; பீஷ்மঃ—பீஷ்மா; சா—மற்றும்; கர்ண: கர்ணன்; சா—மற்றும்; கிருபா: கிருபா; சா—மற்றும்; சமிதிம்-ஜெயঃ—போரில் வெற்றி; அஷ்வத்தாமா—அஸ்வத்தாமா; விகர்ணঃ—விகர்ணன்; சா—மற்றும்; ஸௌமதத்திঃ—பூரிஷ்ரவ; ததா—இவ்வாறு; ஏவ—கூட; சா—மேலும்",
+    "bengali": "(তারা হলেন:) আপনার পূজ্য স্বয়ং, ভীষ্ম ও কর্ণ এবং কৃপা যিনি যুদ্ধে সর্বদা বিজয়ী হন; অশ্বত্থামা, বিকর্ণ, সৌমদত্তি এবং জয়দ্রথ।",
+    "bengali_meaning": "bhavān—নিজেকে; ভীষ্মঃ- ভীষ্ম; cha-এবং; karṇaḥ—কর্ণ; cha-এবং; কৃপাঃ—কৃপা; cha-এবং; সমিতিম-জয়ঃ—যুদ্ধে বিজয়ী; অশ্বত্থামা—অশ্বত্থামা; vikarṇaḥ—বিকর্ণ; cha-এবং; সৌমদত্তিঃ- ভূরিশ্রব; tathā—এইভাবে; eva—এমনকি; cha — এছাড়াও",
+    "spanish": "(Ellos son:) Tu venerable yo, Bhisma y Karna, y Krpa, que siempre sale victorioso en la batalla; Asvatthama, Vikarna, Saumadatti y Jayadratha.",
+    "spanish_meaning": "bhavān—tú mismo; bhīṣhmaḥ—Bheeshma; cha—y; karṇaḥ—Karna; cha—y; kṛipaḥ—Kripa; cha—y; samitim-jayaḥ—victoriosos en la batalla; aśhvatthāmā—Ashvatthama; vikarṇaḥ—Vikarna; cha—y; saumadattiḥ—Bhurishrava; tathā—así; eva—incluso; cha—también"
   },
   {
     "num": 9,
@@ -78,7 +126,13 @@ export const chapter1Shlokas = [
     "hindi": "और भी मेरे लिए जीवन की आशा त्याग देने वाले बहुत-से शूरवीर अनेक प्रकार के शस्त्रास्त्रों से सुसज्जित और सब-के-सब युद्ध में चतुर हैं।",
     "english": "There are many heroes who have dedicated their lives for my sake, who possess various kinds of weapons and missiles, (and) all of whom are skilled in battle.",
     "hindi_meaning": "(अन्ये) और (च) भी (मदर्थे) मेरे लिये (त्यक्तजीविताः) जीवनकी आशा त्याग देनेवाले (बहवः)बहुत-से (शूराः) शूरवीर (नानाशस्त्राप्रहरणाः) अनेक प्रकारके शस्त्रास्त्रोंसे सुसज्जित और (सर्वे) सब-के-सब (युद्धविशारदाः)युद्धमें चतुर हैं।",
-    "meaning": "anye—others; cha—also; bahavaḥ—many; śhūrāḥ—heroic warriors; mat-arthe—for my sake; tyakta-jīvitāḥ—prepared to lay down their lives; nānā-śhastra-praharaṇāḥ—equipped with various kinds of weapons; sarve—all; yuddha-viśhāradāḥ—skilled in the art of warfare\n"
+    "meaning": "anye—others; cha—also; bahavaḥ—many; śhūrāḥ—heroic warriors; mat-arthe—for my sake; tyakta-jīvitāḥ—prepared to lay down their lives; nānā-śhastra-praharaṇāḥ—equipped with various kinds of weapons; sarve—all; yuddha-viśhāradāḥ—skilled in the art of warfare\n",
+    "tamil": "எனக்காகத் தங்கள் இன்னுயிரை அர்ப்பணித்த, பலவிதமான ஆயுதங்களையும், ஏவுகணைகளையும் உடைய, (மற்றும்) போரில் வல்லவர்கள் எனப் பல மாவீரர்கள் இருக்கிறார்கள்.",
+    "tamil_meaning": "இருக்கும்-மற்றவர்கள்; ச—மேலும்; பஹவঃ—பல; ஷுராஹ்—வீர வீரர்கள்; மத்-அர்த்தே—என் பொருட்டு; tyakta-jīvitāḥ—தங்கள் உயிரைக் கொடுக்கத் தயார்; nānā-shastra-praharaṇāḥ—பல்வேறு வகையான ஆயுதங்களைக் கொண்ட; சேவை செய்கிறது—அனைத்தும்; yuddha-viśhāradāḥ - போர்க் கலையில் திறமையானவர்",
+    "bengali": "এমন অনেক বীর আছেন যারা আমার জন্য তাদের জীবন উৎসর্গ করেছেন, যারা বিভিন্ন ধরণের অস্ত্র ও ক্ষেপণাস্ত্রের অধিকারী, (এবং) তারা সবাই যুদ্ধে দক্ষ।",
+    "bengali_meaning": "হবে—অন্যরা; cha—also; বাহভঃ—অনেক; শুরাঃ - বীর যোদ্ধা; ম্যাট-আর্থে—আমার জন্য; ত্যক্ত-জীবিতাঃ—তাদের জীবন দিতে প্রস্তুত; নানা-শাস্ত্র-প্রহরণাঃ—বিভিন্ন ধরনের অস্ত্রে সজ্জিত; পরিবেশন করে—সব; যুদ্ধ-বিশারদঃ- যুদ্ধবিদ্যায় পারদর্শী",
+    "spanish": "Hay muchos héroes que han dedicado sus vidas por mí, que poseen varios tipos de armas y misiles, (y) todos ellos son hábiles en la batalla.",
+    "spanish_meaning": "serán—otros; cha—también; bahavaḥ—muchos; śhūrāḥ—guerreros heroicos; mat-arthe—por mi bien; tyakta-jīvitāḥ—dispuestos a dar la vida; nānā-śhastra-praharaṇāḥ—equipado con diversas clases de armas; sirve—a todos; yuddha-viśhāradāḥ—hábil en el arte de la guerra"
   },
   {
     "num": 10,
@@ -87,7 +141,13 @@ export const chapter1Shlokas = [
     "hindi": "भीष्म पितामह द्वारा रक्षित हमारी वह सेना सब प्रकार से अजेय है और भीम द्वारा रक्षित इन लोगों की यह सेना जीतने में सुगम है।",
     "english": "Therefore, our army under the complete protection of Bhisma and others is unlimited. But the army of these (enemies), under the protection of Bhima and others is limited.",
     "hindi_meaning": "(भीष्माभिरक्षितम्)भीष्मपितामह द्वारा रक्षित (अस्माकम्)हमारी (तत्)वह (बलम्)सेना (अपर्याप्तम्) सब प्रकारसे अजेय है (तु) और (भीमाभिरक्षितम्) भीमद्वारा रक्षित (एतेषाम्) इन लोगोंकी (इदम्) यह (बलम्) सेना (पर्याप्तम्) जीतनेमें सुगम है।",
-    "meaning": "aparyāptam—unlimited; tat—that; asmākam—ours; balam—strength; bhīṣhma—by Grandsire Bheeshma; abhirakṣhitam—safely marshalled; paryāptam—limited; tu—but; idam—this; eteṣhām—their; balam—strength; bhīma—Bheem; abhirakṣhitam—carefully marshalled\n"
+    "meaning": "aparyāptam—unlimited; tat—that; asmākam—ours; balam—strength; bhīṣhma—by Grandsire Bheeshma; abhirakṣhitam—safely marshalled; paryāptam—limited; tu—but; idam—this; eteṣhām—their; balam—strength; bhīma—Bheem; abhirakṣhitam—carefully marshalled\n",
+    "tamil": "எனவே, பீஷ்மர் மற்றும் பிறரின் முழுமையான பாதுகாப்பில் உள்ள நமது படை வரம்பற்றது. ஆனால் பீமன் மற்றும் பிறரின் பாதுகாப்பில் இவர்களின் (எதிரிகளின்) படை வரம்புக்குட்பட்டது.",
+    "tamil_meaning": "அபர்யாப்தம்—வரம்பற்ற; தத்—அது; அஸ்மாகம்—நமது; பலம்—வலிமை; பீஷ்மா—பெருமான் பீஷ்மாவால்; அபிராக்ஷிதம்—பாதுகாப்பான மார்ஷல்; பர்யாப்தம்—வரையறுக்கப்பட்ட; து—ஆனால்; இடம்—இது; ஏதேஷாம்—அவர்களின்; பலம்—வலிமை; பீமா—பீம்; அபிராக்ஷிதம்—கவனமாக மார்ஷல் செய்யப்பட்ட",
+    "bengali": "অতএব, ভীষ্ম এবং অন্যান্যদের সম্পূর্ণ সুরক্ষায় আমাদের সেনাবাহিনী সীমাহীন। কিন্তু ভীম ও অন্যদের রক্ষায় এদের (শত্রু) সৈন্যবাহিনী সীমিত।",
+    "bengali_meaning": "aparyāptam — সীমাহীন; tat—সেটা; asmakam - আমাদের; বালাম - শক্তি; ভীষ্ম—নাতি ভীষ্ম দ্বারা; অভিরক্ষিতম - নিরাপদে মার্শালড; paryāptam — সীমিত; tu—কিন্তু; idam-এই; ইতেশাম—তাদের; বালাম - শক্তি; ভীম - ভীম; অভিরক্ষিতম—সাবধানে মার্শালড",
+    "spanish": "Por lo tanto, nuestro ejército bajo la completa protección de Bhisma y otros es ilimitado. Pero el ejército de estos (enemigos), bajo la protección de Bhima y otros, es limitado.",
+    "spanish_meaning": "aparyāptam—ilimitado; tat—eso; asmākam—nuestro; balam—fuerza; bhīṣhma—por el abuelo Bheeshma; abhirakṣhitam—reunidos con seguridad; paryāptam—limitado; tu—pero; idam—esto; eteṣhām—su; balam—fuerza; bhīma—Bheem; abhirakṣhitam—cuidadosamente ordenados"
   },
   {
     "num": 11,
@@ -96,7 +156,13 @@ export const chapter1Shlokas = [
     "hindi": "इसलिए सब मोर्चों पर अपनी-अपनी जगह स्थित र��ते हुए आप लोग सभी निःसंदेह भीष्म पितामह की ही सब ओर से रक्षा करें।",
     "english": "However, venerable sirs, all of you without exception, while occupying all the positions in the different directions as allotted (to you respectively), please fully protect Bhisma in particular.",
     "hindi_meaning": "(च) इसलिए (सर्वेषु) सब (अयनेषु) मोर्चोंपर (यथाभागम्) अपनी-अपनी जगह (अवस्थिताः) स्थित रहते हुए (भवन्तः) आपलोग (सर्वे, एव) सभी (हि) निःसन्देह (भीष्मम्) भीष्मपितामहकी (एव) ही (अभिरक्षन्तु) सब ओरसे रक्षा करें।",
-    "meaning": "ayaneṣhu—at the strategic points; cha—also; sarveṣhu—all; yathā-bhāgam—in respective position; avasthitāḥ—situated; bhīṣhmam—to Grandsire Bheeshma; eva—only; abhirakṣhantu—defend; bhavantaḥ—you; sarve—all; eva hi—even as\n"
+    "meaning": "ayaneṣhu—at the strategic points; cha—also; sarveṣhu—all; yathā-bhāgam—in respective position; avasthitāḥ—situated; bhīṣhmam—to Grandsire Bheeshma; eva—only; abhirakṣhantu—defend; bhavantaḥ—you; sarve—all; eva hi—even as\n",
+    "tamil": "இருப்பினும், மதிப்பிற்குரிய ஐயா அவர்களே, நீங்கள் அனைவரும் விதிவிலக்கு இல்லாமல், வெவ்வேறு திசைகளில் (முறையே உங்களுக்கு) அனைத்து பதவிகளையும் ஆக்கிரமித்து, குறிப்பாக பீஷ்மரை முழுமையாகப் பாதுகாக்கவும்.",
+    "tamil_meaning": "அயனேஷு—மூலோபாய புள்ளிகளில்; ச—மேலும்; ஸர்வேஷு—அனைத்து; யதா-பாகம்—அந்தந்த நிலையில்; அவஸ்திதாล—அமைந்துள்ள; பீஷ்மம்—பெருமான் பீஷ்மரிடம்; ஏவ—மட்டும்; அபிரக்ஷந்து—காக்க; பவந்தঃ—நீ; ஸர்வே—அனைத்தையும்; எவா ஹாய்-ஆகவும்",
+    "bengali": "যাইহোক, শ্রদ্ধেয় মহাশয়, আপনি সকলেই ব্যতিক্রম ছাড়া, বরাদ্দকৃত বিভিন্ন দিক (যথাক্রমে আপনার জন্য) সমস্ত পদ দখল করার সময়, বিশেষ করে ভীষ্মকে সম্পূর্ণরূপে রক্ষা করুন।",
+    "bengali_meaning": "অয়নেষু—কৌশলগত পয়েন্টে; cha—also; sarveṣhu—সমস্ত; যথা-ভাগম — নিজ নিজ অবস্থানে; avashitāḥ — অবস্থিত; ভীষ্মম—প্রপৌত্র ভীষ্মের প্রতি; eva-শুধুমাত্র; অভিরক্ষান্তু - রক্ষা করা; ভবন্তঃ—তুমি; সঞ্চয়—সব; ইভা হাই—এমনকি",
+    "spanish": "Sin embargo, venerables señores, todos ustedes sin excepción, mientras ocupan todas las posiciones en las diferentes direcciones asignadas (a ustedes respectivamente), por favor protejan completamente a Bhisma en particular.",
+    "spanish_meaning": "ayaneṣhu—en los puntos estratégicos; cha—también; sarveṣhu—todos; yathā-bhāgam—en la posición respectiva; avasthitāḥ—situado; bhīṣhmam—al abuelo Bheeshma; eva—sólo; abhirakṣhantu—defender; bhavantaḥ—tú; salvar—todos; eva hola—incluso como"
   },
   {
     "num": 12,
@@ -105,7 +171,13 @@ export const chapter1Shlokas = [
     "hindi": "कौरवों में वृद्ध बड़े प्रतापी पितामह भीष्म ने उस दुर्योधन के हृदय में हर्ष उत्पन्न करते हुए उच्च स्वर से सिंह की दहाड़ के समान गरजकर शंख बजाया।",
     "english": "The valiant grandfather, the eldest of the Kurus, loudly sounding a lion-roar, blew the conch to raise his (Duryodhana's) spirits.",
     "hindi_meaning": "(कुरुवृद्धः) कौरवोंमें वृद्ध (प्रतापवान्) बड़े प्रतापी (पितामहः) पितामह भीष्मने (तस्य) उस दुर्योंधन के हृदयमें (हर्षम्) हर्ष (सजनयन्) उत्पन्न करते हुए (उच्चैः) उच्च स्वरसे (सिंहनादम्) सिंहकी दहाड़ के समान (विनद्य) गरजकर (शङ्खम्) शंख (दध्मौ) बजाया।",
-    "meaning": "tasya—his; sañjanayan—causing; harṣham—joy; kuru-vṛiddhaḥ—the grand old man of the Kuru dynasty (Bheeshma); pitāmahaḥ—grandfather; sinha-nādam—lion’s roar; vinadya—sounding; uchchaiḥ—very loudly; śhaṅkham—conch shell; dadhmau—blew; pratāpa-vān—the glorious\n"
+    "meaning": "tasya—his; sañjanayan—causing; harṣham—joy; kuru-vṛiddhaḥ—the grand old man of the Kuru dynasty (Bheeshma); pitāmahaḥ—grandfather; sinha-nādam—lion’s roar; vinadya—sounding; uchchaiḥ—very loudly; śhaṅkham—conch shell; dadhmau—blew; pratāpa-vān—the glorious\n",
+    "tamil": "குருக்களில் மூத்தவரான வீரம் மிக்க தாத்தா, சிங்க கர்ஜனையை உரக்கச் செய்து, தனது (துரியோதனனின்) ஆவியை உயர்த்த சங்கு ஊதினார்.",
+    "tamil_meaning": "தஸ்ய—அவருடைய; சஞ்ஜனயன்—ஏற்படுத்தும்; ஹர்ஷம்—மகிழ்ச்சி; kuru-vṛiddhaḥ—குரு வம்சத்தின் பெரிய முதியவர் (பீஷ்மா); பிதாமஹঃ—தாத்தா; சிங்க-நாடம்—சிங்கத்தின் கர்ஜனை; விநாத்யா—ஒலித்தல்; உச்சைঃ—மிகவும் சத்தமாக; ஷங்கம்— சங்கு; தத்மௌ—ஊதியது; பிரதாப-வான் - புகழுடையவன்",
+    "bengali": "বীর পিতামহ, কুরুদের মধ্যে জ্যেষ্ঠ, জোরে জোরে সিংহ-গর্জন করে, তাঁর (দুর্যোধনের) আত্মাকে জাগিয়ে তুলতে শঙ্খ বাজালেন।",
+    "bengali_meaning": "তস্য—তার; সঞ্জনয়ন—সৃষ্টিকারী; হর্ষম—আনন্দ; kuru-vṛiddha: - কুরু রাজবংশের মহান বৃদ্ধ (ভীষ্ম); পিতামহঃ—দাদা; সিংহ-নাদম—সিংহের গর্জন; vinadya - ধ্বনিত; uchchaiḥ—খুব জোরে; শঙ্খ-শঙ্খ; dadhmau - blew; প্রতাপ-বন— মহিমান্বিত",
+    "spanish": "El valiente abuelo, el mayor de los Kurus, haciendo sonar fuertemente un rugido de león, hizo sonar la caracola para levantar su ánimo (el de Duryodhana).",
+    "spanish_meaning": "tasya—suyo; sañjanayan—causando; harṣham—alegría; kuru-vṛiddhaḥ—el gran anciano de la dinastía Kuru (Bheeshma); pitāmahaḥ—abuelo; sinha-nādam—rugido del león; vinadya—sonando; uchchaiḥ—muy fuerte; śhaṅkham—concha de caracola; dadhmau—sopló; pratāpa-vān—el glorioso"
   },
   {
     "num": 13,
@@ -114,7 +186,13 @@ export const chapter1Shlokas = [
     "hindi": "इसके पश्चात शंख और नगाड़े तथा ढोल, मृदंग और नरसिंघे आदि बाजे एक साथ ही बज उठे। उनका वह शब्द बड़ा भयंकर हुआ।",
     "english": "Just immediately after that conchs and kettledrums, and tabors, trumpets and cow-horns blared forth. That sound became tumultuous.",
     "hindi_meaning": "(ततः) इसके पश्चात् (शङ्खाः) शंख (च) और (भेर्यः) नगारे (च) तथा (पणवानक गोमुखाः) ढोल, मृदंग और नरसिंघे आदि बाजे (सहसा) एक साथ (एव) ही (अभ्यहन्यन्त) बज उठे। उनका (सः) वह (शब्दः) शब्द (तुमुलः) बड़ा भयंकर (अभवत्) हुआ।",
-    "meaning": "tataḥ—thereafter; śhaṅkhāḥ—conches; cha—and; bheryaḥ—bugles; cha—and; paṇava-ānaka—drums and kettledrums; go-mukhāḥ—trumpets; sahasā—suddenly; eva—indeed; abhyahanyanta—blared forth; saḥ—that; śhabdaḥ—sound; tumulaḥ—overwhelming; abhavat—was\n"
+    "meaning": "tataḥ—thereafter; śhaṅkhāḥ—conches; cha—and; bheryaḥ—bugles; cha—and; paṇava-ānaka—drums and kettledrums; go-mukhāḥ—trumpets; sahasā—suddenly; eva—indeed; abhyahanyanta—blared forth; saḥ—that; śhabdaḥ—sound; tumulaḥ—overwhelming; abhavat—was\n",
+    "tamil": "உடனே சங்குகளும், கெட்டி மேளங்களும், தாவல்களும், எக்காளங்களும், பசுக் கொம்புகளும் முழங்கின. அந்த சத்தம் ஆரவாரமாக மாறியது.",
+    "tamil_meaning": "ததঃ—அதன்பின்; ஷாங்காஹ்—சங்குகள்; சா—மற்றும்; ப்ரேயঃ—குமிழ்கள்; சா—மற்றும்; paṇava-ānaka—டிரம்ஸ் மற்றும் கெட்டில்ட்ரம்ஸ்; go-mukhāḥ—எக்காளம்; சஹாஸா—திடீரென்று; ஏவ—உண்மையில்; அப்யஹன்யந்த—வெளியேறினார்; ஸঃ—அந்த; ஷப்தঃ—ஒலி; துமுலঃ—அதிகமான; அபவத்—இருந்தது",
+    "bengali": "ঠিক তার পরপরই শঙ্খ এবং কেটলিড্রাম, এবং ট্যাবর, ভেরী এবং গরুর শিং বেজে উঠল। সেই আওয়াজ হয়ে উঠল উত্তাল।",
+    "bengali_meaning": "tatah - তারপরে; শঙ্খ: শঙ্খ; cha-এবং; bheryaḥ—বগুলা; cha-এবং; পাণব-আনাক—ড্রামস এবং কেটলিড্রাম; গো-মুখঃ- তূরী; সহসা—হঠাৎ; ইভা - প্রকৃতপক্ষে; abhyahanyanta - blared forth; saḥ—যে; শব্দ: শব্দ; tumulaḥ — অপ্রতিরোধ্য; abhavat - ছিল",
+    "spanish": "Inmediatamente después resonaron caracolas, timbales, tambores, trompetas y cuernos de vaca. Ese sonido se volvió tumultuoso.",
+    "spanish_meaning": "tataḥ—después; śhaṅkhāḥ—caracolas; cha—y; bheryaḥ—claretas; cha—y; paṇava-ānaka—tambores y timbales; go-mukhāḥ—trompetas; sahasā—de repente; eva—en verdad; abhyahanyanta—proclamó a todo volumen; saḥ—eso; śhabdaḥ—sonido; tumulaḥ—abrumador; abhavat—era"
   },
   {
     "num": 14,
@@ -123,7 +201,13 @@ export const chapter1Shlokas = [
     "hindi": "इसके अनन्तर सफेद घोड़ों से युक्त उत्तम रथ में बैठे हुए श्रीकृष्ण महाराज और अर्जुन ने भी अलौकिक शंख बजाए।",
     "english": "Then, Madhava (Krishna) and the son of Pandu (Arjuna), stationed in their magnificent chariot with white horses attached to it, loudly blew their divine conchs.",
     "hindi_meaning": "(ततः) इसके अनन्तर (श्वेतैः) सफेद (हयैः) घोड़ोंसे (युक्ते) युक्त (महति) उत्तम (स्यन्दने) रथमें (स्थितौ) बैठे हुए (माधवः) श्रीकृष्ण महाराज (च) और (पाण्डवः) अर्जुनने (एव) भी (दिव्यौ) अलौकिक (शङ्खौ) शंख (प्रदध्मतुः) बजाये।",
-    "meaning": "tataḥ—then; śhvetaiḥ—by white; hayaiḥ—horses; yukte—yoked; mahati—glorious; syandane—chariot; sthitau—seated; mādhavaḥ—Shree Krishna, the husband of the goddess of fortune, Lakshmi; pāṇḍavaḥ—Arjun; cha—and; eva—also; divyau—Divine; śhaṅkhau—conch shells; pradadhmatuḥ—blew\n"
+    "meaning": "tataḥ—then; śhvetaiḥ—by white; hayaiḥ—horses; yukte—yoked; mahati—glorious; syandane—chariot; sthitau—seated; mādhavaḥ—Shree Krishna, the husband of the goddess of fortune, Lakshmi; pāṇḍavaḥ—Arjun; cha—and; eva—also; divyau—Divine; śhaṅkhau—conch shells; pradadhmatuḥ—blew\n",
+    "tamil": "அப்போது, ​​மாதவனும் (கிருஷ்ணனும்) பாண்டுவின் மகனும் (அர்ஜுனனும்) வெள்ளைக் குதிரைகள் பொருத்தப்பட்டிருந்த அற்புதமான தேரில் அமர்ந்து, தங்கள் தெய்வீக சங்குகளை உரத்த குரலில் ஊதினார்கள்.",
+    "tamil_meaning": "ததঃ—பின்னர்; ஷ்வேதை:-வெள்ளையால்; ஹயை: குதிரைகள்; யுக்தே— நுகத்தடி; மஹதி—புகழ் வாய்ந்த; சயந்தனே—தேர்; ஸ்தித்தௌ—அமர்ந்துள்ள; மாதவ:- ஸ்ரீ கிருஷ்ணர், அதிர்ஷ்ட தெய்வமான லட்சுமியின் கணவர்; பாண்டவஂ—அர்ஜுன்; சா—மற்றும்; ஏவ—மேலும்; திவ்யௌ—தெய்வீக; ஷங்கௌ—சங்கு குண்டுகள்; பிரதாத்மது: ஊதியது",
+    "bengali": "তারপর, মাধব (কৃষ্ণ) এবং পাণ্ডুর পুত্র (অর্জুন), তাদের মহিমান্বিত রথে স্থির হয়ে শ্বেতবর্ণের ঘোড়াগুলিকে জোরে জোরে তাদের দিব্য শঙ্খ বাজালেন।",
+    "bengali_meaning": "tataḥ—তারপর; শ্বেতাইঃ—শ্বেত দ্বারা; হায়াইঃ- ঘোড়া; yukte - yoked; মহতি — মহিমান্বিত; স্যন্দনে—রথ; স্থিতঃ- উপবিষ্ট; মাধবঃ- শ্রী কৃষ্ণ, ভাগ্যের দেবী লক্ষ্মীর স্বামী; পাণ্ডবঃ—অর্জুন; cha-এবং; eva - এছাড়াও; divyau - ঐশ্বরিক; শঙ্খ-শঙ্খ; প্রদধমতুঃ- উড়িয়ে দেওয়া",
+    "spanish": "Entonces, Madhava (Krishna) y el hijo de Pandu (Arjuna), estacionados en su magnífico carro con caballos blancos atados a él, hicieron sonar ruidosamente sus divinas caracolas.",
+    "spanish_meaning": "tataḥ—entonces; śhvetaiḥ—por blanco; hayaiḥ—caballos; yukte—unidos; mahati—glorioso; syandane—carro; sthitau—sentado; mādhavaḥ—Shree Krishna, el esposo de la diosa de la fortuna, Lakshmi; pāṇḍavaḥ—Arjun; cha—y; eva—también; divyau—Divino; śhaṅkhau—conchas de caracola; pradadhmatuḥ—sopló"
   },
   {
     "num": 15,
@@ -132,7 +216,13 @@ export const chapter1Shlokas = [
     "hindi": "श्रीकृष्ण महाराज ने पाञ्चजन्य नामक, अर्जुन ने देवदत्त नामक और भयानक कर्मवाले भीमसेन ने पौण्ड्र नामक महाशंख बजाया।",
     "english": "Hrsikesa (Krishna) blew the conch Pancajanya; Dhananjaya (Arjuna) (the conch) Devadatta; and Vrkodara (Bhima) of terrible deeds blew the great conch Paundra;",
     "hindi_meaning": "(हृषीकेशः) श्रीकृष्ण महाराजने (पाचजन्यम्) पाजन्य नामक (धनजयः) अर्जुनने (देवदत्तम्) देवदत्त नामक और (भीमकर्मा) भयानक कर्मवाले (वृकोदरः) भीमसेनने (पौण्ड्रम्) पौण्ड्र नामक (महाशङ्खम्) महाशंख (दध्मौ) बजाया।",
-    "meaning": "pāñchajanyam—the conch shell named Panchajanya; hṛiṣhīka-īśhaḥ—Shree Krishna, the Lord of the mind and senses; devadattam—the conch shell named Devadutta; dhanam-jayaḥ—Arjun, the winner of wealth; pauṇḍram—the conch named Paundra; dadhmau—blew; mahā-śhaṅkham—mighty conch; bhīma-karmā—one who performs herculean tasks; vṛika-udaraḥ—Bheem, the voracious eater\n"
+    "meaning": "pāñchajanyam—the conch shell named Panchajanya; hṛiṣhīka-īśhaḥ—Shree Krishna, the Lord of the mind and senses; devadattam—the conch shell named Devadutta; dhanam-jayaḥ—Arjun, the winner of wealth; pauṇḍram—the conch named Paundra; dadhmau—blew; mahā-śhaṅkham—mighty conch; bhīma-karmā—one who performs herculean tasks; vṛika-udaraḥ—Bheem, the voracious eater\n",
+    "tamil": "ஹர்சிகேசா (கிருஷ்ணர்) சங்கு பாஞ்சஜன்யத்தை ஊதினார்; தனஞ்சய (அர்ஜுனன்) (சங்கு) தேவதத்தா; பயங்கரமான செயல்களின் வ்ர்கோதரன் (பீமன்) பெரிய சங்கு பவுண்டரை ஊதினான்;",
+    "tamil_meaning": "பாஞ்சஜன்யம்—பாஞ்சஜன்யா என்ற சங்கு; ஹ்ரீஷிக-ஈஷா: மனம் மற்றும் புலன்களின் இறைவன் ஸ்ரீ கிருஷ்ணர்; தேவதத்தம்—தேவதுத்தன் என்ற சங்கு; தானம்-ஜெய:-அர்ஜுன், செல்வத்தை வென்றவன்; பௌண்டரம்—பௌண்ட்ரா என்ற சங்கு; தத்மௌ—ஊதியது; mahā-śhaṅkham—வலிமையான சங்கு; பீம-கர்மா—கடுமையான பணிகளைச் செய்பவர்; vṛika-udaraḥ—பீம், பசியுடன் உண்பவர்",
+    "bengali": "হৃষীকেশ (কৃষ্ণ) পঞ্চজন্য শঙ্খ বাজালেন; ধনঞ্জয় (অর্জুন) (শঙ্খ) দেবদত্ত; এবং ভয়ঙ্কর কর্মের ভ্রকোদার (ভীম) মহান শঙ্খ ফুঁকিয়েছিল পাউন্ড্র;",
+    "bengali_meaning": "পঞ্চজন্যম-পাঞ্চজন্য নামক শঙ্খ; হৃষীক-ঈশাঃ-শ্রী কৃষ্ণ, মন ও ইন্দ্রিয়ের প্রভু; দেবদত্তম - দেবদত্ত নামক শঙ্খ; ধনম-জয়ঃ—অর্জুন, সম্পদের বিজয়ী; পৌন্ডরাম - পাউন্ড্র নামক শঙ্খ; dadhmau - blew; মহা-শঙ্খম — পরাক্রমশালী শঙ্খ; ভীম-কর্ম—একজন যিনি কঠিন কাজ করেন; vṛika-udarah - ভীম, ভোজনকারী",
+    "spanish": "Hrsikesa (Krishna) sopló la caracola Pancajanya; Dhananjaya (Arjuna) (la caracola) Devadatta; y Vrkodara (Bhima) de hechos terribles hizo sonar la gran caracola Paundra;",
+    "spanish_meaning": "pāñchajanyam—la caracola llamada Panchajanya; hṛiṣhīka-īśhaḥ—Shree Krishna, el Señor de la mente y los sentidos; devadattam—la caracola llamada Devadutta; dhanam-jayaḥ—Arjun, el ganador de riquezas; pauṇḍram—la caracola llamada Paundra; dadhmau—sopló; mahā-śhaṅkham—poderosa caracola; bhīma-karmā—aquel que realiza tareas hercúleas; vṛika-udaraḥ—Bheem, el devorador voraz"
   },
   {
     "num": 16,
@@ -141,7 +231,13 @@ export const chapter1Shlokas = [
     "hindi": "कुन्तीपुत्र राजा युधिष्ठिर ने अनन्तविजय नामक और नकुल तथा सहदेव ने सुघोष और मणिपुष्पक नामक शंख बजाए।",
     "english": "King Yudhisthira, son of Kunti, (blew) the Anantavijaya; Nakula and Sahadeva, the Sughosa and the Manipuspaka (respectively).",
     "hindi_meaning": "(कुन्तीपुत्राः) कुन्तीपुत्रा (राजा) राजा (युधिष्ठिरः) युधिष्ठिरने (अनन्तविजयम्) अनन्तविजय नामक और (नकुलः) नकुल (च) तथा (सहदेवः) सहदेवने (सुघोषमणिपुष्पकौ) सुघोष और मणिपुष्पक नामक शंख बजाये।",
-    "meaning": "ananta-vijayam—the conch named Anantavijay; rājā—king; kuntī-putraḥ—son of Kunti; yudhiṣhṭhiraḥ—Yudhishthir; nakulaḥ—Nakul; sahadevaḥ—Sahadev; cha—and; sughoṣha-maṇipuṣhpakau—the conche shells named Sughosh and Manipushpak;\n"
+    "meaning": "ananta-vijayam—the conch named Anantavijay; rājā—king; kuntī-putraḥ—son of Kunti; yudhiṣhṭhiraḥ—Yudhishthir; nakulaḥ—Nakul; sahadevaḥ—Sahadev; cha—and; sughoṣha-maṇipuṣhpakau—the conche shells named Sughosh and Manipushpak;\n",
+    "tamil": "குந்தியின் மகனான மன்னன் யுதிஷ்டிரன், அனந்தவிஜயத்தை ஊதினான்; நகுலன் மற்றும் சகாதேவன், சுகோசன் மற்றும் மணிபுஷ்பக (முறையே).",
+    "tamil_meaning": "அனந்த-விஜயம்—அனந்தவிஜய் என்ற சங்கு; ராஜா—ராஜா; kuntī-putraḥ—குந்தியின் மகன்; யுதிஷ்டிரஹ்—யுதிஷ்டிர்; நகுலঃ—நகுல்; ஸஹதேவঃ—சஹதேவா; சா—மற்றும்; சுகோஷ-மணிபுஷ்பகௌ—சுகோஷ் மற்றும் மணிபுஷ்பக் என்று பெயரிடப்பட்ட சங்குகள்;",
+    "bengali": "কুন্তীর পুত্র রাজা যুধিষ্ঠির, অনন্তবিজয়কে উড়িয়ে দিলেন; নকুল ও সহদেব, সুঘোষ ও মণিপুস্পক (যথাক্রমে)।",
+    "bengali_meaning": "অনন্ত-বিজয়ম—অনন্তবিজয় নামের শঙ্খ; rājā—রাজা; কুন্তী-পুত্রঃ—কুন্তীর পুত্র; যুধিষ্ঠিরঃ-যুধিষ্ঠির; নকুলঃ- নকুল; সহদেবঃ- সহদেব; cha-এবং; সুঘোষ-মণিপুষ্পকৌ—সুঘোষ ও মণিপুষ্পক নামের শঙ্খের খোলস;",
+    "spanish": "El rey Yudhisthira, hijo de Kunti, (hizo sonar) el Anantavijaya; Nakula y Sahadeva, Sughosa y Manipuspaka (respectivamente).",
+    "spanish_meaning": "ananta-vijayam—la caracola llamada Anantavijay; rājā—rey; kuntī-putraḥ—hijo de Kunti; yudhiṣhṭhiraḥ—Yudhisthir; nakulaḥ—Nakul; sahadevaḥ—Sahadeva; cha—y; sughoṣha-maṇipuṣhpakau—las caracolas llamadas Sughosh y Manipushpak;"
   },
   {
     "num": 17,
@@ -150,7 +246,11 @@ export const chapter1Shlokas = [
     "hindi": "श्रेष्ठ धनुष वाले काशिराज और महारथी शिखण्डी एवं धृष्टद्युम्न तथा राजा विराट और अजेय सात्यकि,...।",
     "english": "And the King of Kasi, wielding a great bow, and the great chariot-rider Sikhandi, Dhrstadyumna and Virata, and Satyaki the unconquered;",
     "hindi_meaning": "(परमेष्वासः) श्रेष्ठ धनुषवाले (काश्यः) काशिराज (च) और (महारथः) महारथी (शिखण्डी) शिखण्डी (च) एवं (धृष्टद्युम्नः) धृष्टद्युम्न (च) तथा (विराटः) राजा विराट (च) और (अपराजितः) अजेय (सात्यकिः) सात्यकि",
-    "meaning": "kāśhyaḥ—King of Kashi; cha—and; parama-iṣhu-āsaḥ—the excellent archer; śhikhaṇḍī—Shikhandi; cha—also; mahā-rathaḥ—warriors who could single handedly match the strength of ten thousand ordinary warriors; dhṛiṣhṭadyumnaḥ—Dhrishtadyumna; virāṭaḥ—Virat; cha—and; sātyakiḥ—Satyaki; cha—and; aparājitaḥ—invincible;\n"
+    "meaning": "kāśhyaḥ—King of Kashi; cha—and; parama-iṣhu-āsaḥ—the excellent archer; śhikhaṇḍī—Shikhandi; cha—also; mahā-rathaḥ—warriors who could single handedly match the strength of ten thousand ordinary warriors; dhṛiṣhṭadyumnaḥ—Dhrishtadyumna; virāṭaḥ—Virat; cha—and; sātyakiḥ—Satyaki; cha—and; aparājitaḥ—invincible;\n",
+    "tamil": "காசியின் மன்னன், பெரும் வில் ஏந்தியவனும், சிறந்த தேர் ஏந்திய சிகண்டி, திருஷ்டத்யும்னன் மற்றும் விராடன், மற்றும் வெற்றி பெறாத சாத்யகி;",
+    "tamil_meaning": "காஷ்ய: காசியின் அரசன்; சா—மற்றும்; பரம-இஷு-ஆச: சிறந்த வில்லாளி; ஷிகண்டி—ஷிகண்டி; ச—மேலும்; mahā-rathaḥ—பத்தாயிரம் சாதாரண போர்வீரர்களின் வலிமையை ஒற்றைக் கையால் பொருத்தக்கூடிய வீரர்கள்; திருஷ்டத்யும்ன: திருஷ்டத்யும்னன்; விரதஹ—விராட்; சா—மற்றும்; sātyakiḥ—சாத்யகி; சா—மற்றும்; அபராஜிதঃ—வெல்லமுடியாது;",
+    "bengali": "এবং কাশীর রাজা, একটি মহান ধনুক, এবং মহান রথ-সওয়ার শিখণ্ডী, ধৃষ্টদ্যুম্ন এবং বিরাট এবং অজিত সাত্যকি;",
+    "bengali_meaning": "কাশ্যঃ- কাশীর রাজা; cha-এবং; পরম-ইষু-আসাঃ- চমৎকার তীরন্দাজ; শিখণ্ডি—শিখণ্ডী; cha—also; মহা-রথঃ- যোদ্ধা যারা এককভাবে দশ হাজার সাধারণ যোদ্ধার শক্তির সাথে মেলে; ধৃষ্টদ্যুম্নঃ—ধৃষ্টদ্যুম্ন; virāṭaḥ—বিরাট; cha-এবং; সাত্যকিঃ—সাত্যকি; cha-এবং; অপরাজিতাঃ- অপরাজেয়;"
   },
   {
     "num": 18,
@@ -172,16 +272,16 @@ export const chapter1Shlokas = [
   },
   {
     "num": 20,
-    "sanskrit": "अथ व्यवस्थितान्दृष्ट्वा धार्तराष्ट्रान् कपिध्वज: |\nप्रवृत्ते शस्त्रसम्पाते धनुरुद्यम्य पाण्डव: ॥20॥\nहृषीकेशं तदा वाक्यमिदमाह महीपते |",
+    "sanskrit": "अथ व्यवस्थितान्दृष्ट्वा धार्तराष्ट्रान् कपिध्वज: |\nप्रवृत्ते शस्त्रसम्पाते धनुरुद्यम्य पाण्डव: ॥20॥",
     "audio": "https://bhagavadgitaapi.in/audio/1/20.mp3",
     "hindi": "हे राजन्‌! इसके बाद कपिध्वज अर्जुन ने मोर्चा बाँधकर डटे हुए धृतराष्ट्र-संबंधियों को देखकर, उस शस्त्र चलने की तैयारी के समय धनुष उठाकर हृषीकेश श्रीकृष्ण महाराज से यह वचन कहा।",
     "english": "O king, thereafter, seeing Dhrtarastra's men standing in their positions, when all the weapons were ready for action, the son of Pandu (Arjuna) who had the insignia of Hanuman on his chariot-flag, raising up his bow, said the following to Hrsikesa.",
     "hindi_meaning": "(महीपते) हे राजन्! (अथ) इसके बाद (कपिध्वजः) कपिध्वज (पाण्डवः) अर्जुनने (व्यवस्थितान्) मोर्चा बाँधकर डटे हुए (धार्तराष्ट्रान्) धृतराष्ट्र सम्बन्धियोंको (दृष्टवा) देखकर (तदा) उस (शस्त्रासम्पाते) शस्त्रा चलनेकी तैयारीके (प्रवृत्ते) समय (धनुः) धनुष (उद्यम्य) उठाकर (हृषीकेशम्) हृषीकेश श्रीकृष्ण महाराजसे (इदम्) यह (वाक्यम्) वचन (आह) कहा।",
-    "meaning": "atha—thereupon; vyavasthitān—arrayed; dṛiṣhṭvā—seeing; dhārtarāṣhṭrān—Dhritarashtra’s sons; kapi-dwajaḥ—the Monkey Bannered; pravṛitte—about to commence; śhastra-sampāte—to use the weapons; dhanuḥ—bow; udyamya—taking up; pāṇḍavaḥ—Arjun, the son of Pandu; hṛiṣhīkeśham—to Shree Krishna; tadā—at that time; vākyam—words; idam—these; āha—said; mahī-pate—King\n"
+    "meaning": "atha—thereupon; vyavasthitān—arrayed; dṛiṣhṭvā—seeing; dhārtarāṣhṭrān—Dhritarashtra's sons; kapi-dwajaḥ—the Monkey Bannered; pravṛitte—about to commence; śhastra-sampāte—to use the weapons; dhanuḥ—bow; udyamya—taking up; pāṇḍavaḥ—Arjun, the son of Pandu; hṛiṣhīkeśham—to Shree Krishna; tadā—at that time; vākyam—words; idam—these; āha—said; mahī-pate—King\n"
   },
   {
     "num": 21,
-    "sanskrit": "अर्जुन उवाच |\nसेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत ॥21॥",
+    "sanskrit": "हृषीकेशं तदा वाक्यमिदमाह महीपते |\nअर्जुन उवाच |\nसेनयोरुभयोर्मध्ये रथं स्थापय मेऽच्युत ॥21॥",
     "audio": "https://bhagavadgitaapi.in/audio/1/21.mp3",
     "hindi": "हे अच्युत! मेरे रथ को दोनों सेनाओं के बीच में खड़ा कीजिए।",
     "english": "Arjuna said: O Acyuta, please place my chariot between both the armies.",
@@ -226,7 +326,7 @@ export const chapter1Shlokas = [
   },
   {
     "num": 26,
-    "sanskrit": "तत्रापश्यत्स्थितान् पार्थ: पितृ नथ पितामहान् |\nआचार्यान्मातुलान्भ्रातृ न्पुत्रान्पौत्रान्सखींस्तथा ॥26॥\nश्वशुरान्सुहृदश्चैव सेनयोरुभयोरपि |",
+    "sanskrit": "तत्रापश्यत्स्थितान् पार्थ: पितृ नथ पितामहान् |\nआचार्यान्मातुलान्भ्रातृ न्पुत्रान्पौत्रान्सखींस्तथा ॥26॥",
     "audio": "https://bhagavadgitaapi.in/audio/1/26.mp3",
     "hindi": "इसके बाद पृथापुत्र अर्जुन ने उन दोनों ही सेनाओं में स्थित ताऊ-चाचों को, दादों-परदादों को, गुरुओं को, मामाओं को, भाइयों को, पुत्रों को, पौत्रों को तथा मित्रों को, ससुरों को और सुहृदों को भी देखा।",
     "english": "Then Partha (Arjuna) saw, marshalled among both the armies, (his) uncles as also grandfathers, teachers, maternal uncles, brothers (and (cousins), sons, grandsons, as well as comrades and fathers-in-law and friends.",
@@ -235,7 +335,7 @@ export const chapter1Shlokas = [
   },
   {
     "num": 27,
-    "sanskrit": "तान्समीक्ष्य स कौन्तेय: सर्वान्बन्धूनवस्थितान् ॥27॥\nकृपया परयाविष्टो विषीदन्निदमब्रवीत् |",
+    "sanskrit": "श्वशुरान्सुहृदश्चैव सेनयोरुभयोरपि |\nतान्समीक्ष्य स कौन्तेय: सर्वान्बन्धूनवस्थितान् ॥27॥",
     "audio": "https://bhagavadgitaapi.in/audio/1/27.mp3",
     "hindi": "उन उपस्थित सम्पूर्ण बंधुओं को देखकर वे कुंतीपुत्र अर्जुन अत्यन्त करुणा से युक्त होकर शोक करते हुए यह वचन बोले।",
     "english": "The son of Kunti (Ajuna), seeing all those relatives arrayed (there), became overwhelmed by supreme compassion and said this sorrowfully:",
@@ -244,7 +344,7 @@ export const chapter1Shlokas = [
   },
   {
     "num": 28,
-    "sanskrit": "अर्जुन उवाच |\nदृष्ट्वेमं स्वजनं कृष्ण युयुत्सुं समुपस्थितम् ॥28॥",
+    "sanskrit": "कृपया परयाविष्टो विषीदन्निदमब्रवीत् |\nअर्जुन उवाच |\nदृष्ट्वेमं स्वजनं कृष्ण युयुत्सुं समुपस्थितम् ॥28॥",
     "audio": "https://bhagavadgitaapi.in/audio/1/28.mp3",
     "hindi": "अर्जुन बोले- हे कृष्ण! युद्ध क्षेत्र में डटे हुए युद्ध के अभिलाषी इस स्वजनसमुदाय को देखकर मेरे अंग शिथिल हुए जा रहे हैं।",
     "english": "Arjuna said: O Krsna, seeing these relatives and friends who have assembled here with the intention of fighting, my limbs give way and my mouth becomes completely dry.",

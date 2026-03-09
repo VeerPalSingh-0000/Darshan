@@ -290,7 +290,7 @@ const Gita = () => {
   return (
     <div className="bg-[#FAFAF8] dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen">
       {/* ═══════════ 1. HERO (IMPRESSIVE SCALE + KRISHNA/ARJUNA IMAGE) ═══════════ */}
-      <section className="relative min-h-[80vh] md:min-h-screen flex items-end md:items-center justify-center text-center text-white overflow-hidden">
+      <section className="relative min-h-[80vh] md:min-h-screen flex items-end md:items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={gitaHeroImg}
@@ -298,15 +298,15 @@ const Gita = () => {
             className="w-full h-full object-cover object-[center_20%] md:object-center transform scale-[1.02]"
             loading="eager"
           />
-          {/* Deep cinematic overlays — stronger bottom gradient on mobile for readability */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0c0906] via-[#0c0906]/70 via-40% to-transparent md:from-[#130f0c] md:via-black/50 md:to-[#130f0c]/70" />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-black/40 md:from-black/60 md:to-black/60" />
+          {/* Light mode: soft warm wash — Dark mode: deep cinematic */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FDF8F0] via-[#FDF8F0]/70 via-40% to-[#FDF8F0]/40 dark:from-[#0c0906] dark:via-[#0c0906]/70 dark:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FDF8F0]/50 via-transparent to-[#FDF8F0]/50 dark:from-black/40 dark:via-transparent dark:to-black/40 md:dark:from-black/60 md:dark:to-black/60" />
 
           {/* Subtle slow pulsing glowing orb behind text */}
           <motion.div
             animate={{ opacity: [0.3, 0.5, 0.3], scale: [1, 1.1, 1] }}
             transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-amber-500/20 rounded-full blur-[100px] md:blur-[120px] pointer-events-none"
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-amber-400/10 dark:bg-amber-500/20 rounded-full blur-[100px] md:blur-[120px] pointer-events-none"
           />
         </div>
 
@@ -316,16 +316,16 @@ const Gita = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1.2, ease: [0.16, 1, 0.3, 1] }}
         >
-          <p className="text-sm md:text-base font-mono tracking-[0.8em] uppercase text-amber-400 mb-8 drop-shadow-2xl font-semibold">
+          <p className="text-sm md:text-base font-mono tracking-[0.8em] uppercase text-amber-700 dark:text-amber-400 mb-8 drop-shadow-2xl font-semibold">
             ✦ श्रीमद्भगवद्गीता ✦
           </p>
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[10rem] font-serif tracking-tighter leading-[0.9] mb-8 drop-shadow-2xl">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-[10rem] font-serif tracking-tighter leading-[0.9] mb-8 text-slate-900 dark:text-white drop-shadow-2xl">
             Bhagavad <br className="md:hidden" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-b from-amber-200 via-orange-300 to-amber-600">
+            <span className="text-transparent bg-clip-text bg-gradient-to-b from-amber-600 via-orange-500 to-amber-700 dark:from-amber-200 dark:via-orange-300 dark:to-amber-600">
               Gītā
             </span>
           </h1>
-          <p className="text-lg md:text-2xl text-slate-200/90 font-light leading-relaxed max-w-3xl mx-auto drop-shadow-lg mb-14">
+          <p className="text-lg md:text-2xl text-slate-700 dark:text-slate-200/90 font-light leading-relaxed max-w-3xl mx-auto drop-shadow-lg mb-14">
             The Song of the Divine — 700 verses of timeless counsel on duty,
             devotion, and discernment, revealed on the battlefield of life.
           </p>
@@ -338,7 +338,7 @@ const Gita = () => {
             </Link>
             <a
               href="#today"
-              className="inline-flex items-center justify-center gap-3 border border-white/30 bg-white/5 text-white font-bold px-10 py-5 rounded-full text-base hover:bg-white/15 backdrop-blur-xl transition-all"
+              className="inline-flex items-center justify-center gap-3 border border-slate-400 dark:border-white/30 bg-slate-100/60 dark:bg-white/5 text-slate-800 dark:text-white font-bold px-10 py-5 rounded-full text-base hover:bg-slate-200/80 dark:hover:bg-white/15 backdrop-blur-xl transition-all"
             >
               Today's Wisdom <ChevronRightIcon className="w-5 h-5" />
             </a>
@@ -350,12 +350,12 @@ const Gita = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1.8, duration: 1 }}
-          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-white/40"
+          className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center text-slate-400 dark:text-white/40"
         >
           <span className="text-[10px] uppercase tracking-[0.4em] font-mono mb-3">
             Descend
           </span>
-          <div className="w-[1px] h-16 bg-gradient-to-b from-white/40 to-transparent"></div>
+          <div className="w-[1px] h-16 bg-gradient-to-b from-slate-400 dark:from-white/40 to-transparent"></div>
         </motion.div>
       </section>
 
@@ -624,16 +624,17 @@ const Gita = () => {
             )}
           </motion.div>
 
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.05 }}
-            variants={stagger}
-          >
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <AnimatePresence>
               {displayedChapters.map((c) => (
-                <motion.div key={c.num} variants={cardAnim} layout>
+                <motion.div
+                  key={c.num}
+                  initial="hidden"
+                  whileInView="visible"
+                  viewport={{ once: true, amount: 0.1 }}
+                  variants={cardAnim}
+                  layout
+                >
                   <Link
                     to={`/gita/chapters/adhyay${c.num}`}
                     className="group block h-full"
@@ -663,7 +664,7 @@ const Gita = () => {
                 </motion.div>
               ))}
             </AnimatePresence>
-          </motion.div>
+          </div>
         </div>
       </section>
 

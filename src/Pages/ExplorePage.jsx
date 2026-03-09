@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
+import philosophyHeroImg from "../assets/Images/indian-philosophy-hero.png";
 
 import { schools } from "../data/schoolsOfThought";
 
@@ -125,51 +126,67 @@ const ExplorePage = () => {
 
   return (
     <div className="bg-[#FAFAF8] dark:bg-slate-950 min-h-screen transition-colors duration-300">
-      {/* ─── HEADER ─── */}
-      <header className="pt-28 pb-16 bg-white dark:bg-slate-900 border-b border-slate-100 dark:border-slate-800">
-        <div className="container mx-auto px-6 max-w-5xl text-center">
+      {/* ─── HERO SECTION ─── */}
+      <section className="relative min-h-[70vh] flex items-center justify-center text-center overflow-hidden">
+        <div className="absolute inset-0">
+          <img
+            src={philosophyHeroImg}
+            alt="Indian Philosophy Hero"
+            className="w-full h-full object-cover object-center transform scale-[1.02]"
+            loading="eager"
+          />
+          {/* Gradients to blend with background and text */}
+          <div className="absolute inset-0 bg-gradient-to-t from-[#FAFAF8] via-[#FAFAF8]/60 to-[#FAFAF8]/20 dark:from-slate-950 dark:via-slate-950/70 dark:to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#FAFAF8]/30 via-transparent to-[#FAFAF8]/30 dark:from-black/40 dark:via-transparent dark:to-black/40" />
+
+          {/* Glowing orb effect */}
+          <motion.div
+            animate={{ opacity: [0.2, 0.4, 0.2], scale: [1, 1.1, 1] }}
+            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] md:w-[800px] h-[500px] md:h-[800px] bg-amber-400/10 dark:bg-amber-500/20 rounded-full blur-[100px] md:blur-[120px] pointer-events-none"
+          />
+        </div>
+
+        <div className="container relative z-10 mx-auto px-6 max-w-5xl">
           <motion.div initial="hidden" animate="visible" variants={fadeIn}>
-            <p className="text-[11px] font-mono tracking-[0.4em] uppercase text-amber-600 dark:text-amber-500 mb-4">
-              Indian Philosophy
+            <p className="text-[12px] md:text-sm font-mono tracking-[0.6em] uppercase text-amber-700 dark:text-amber-500 mb-6 font-semibold drop-shadow-sm">
+              ✦ Indian Philosophy ✦
             </p>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif text-slate-900 dark:text-white leading-tight mb-5">
-              Schools of Darśana
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-serif text-slate-900 dark:text-white leading-tight mb-6 drop-shadow-md">
+              Darśana: The Vision
             </h1>
-            <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 max-w-xl mx-auto leading-relaxed mb-10">
-              Six{" "}
-              <span className="text-amber-700 dark:text-amber-400 font-medium">
-                orthodox
+            <p className="text-base sm:text-xl text-slate-700 dark:text-slate-200 max-w-2xl mx-auto leading-relaxed mb-10 drop-shadow-sm">
+              Journey through the{" "}
+              <span className="text-amber-700 dark:text-amber-400 font-semibold text-xl">
+                ṣaḍ-darśana
               </span>{" "}
-              and three{" "}
-              <span className="text-indigo-600 dark:text-indigo-400 font-medium">
-                heterodox
-              </span>{" "}
-              traditions that form the intellectual bedrock of Indian thought.
+              and beyond—the ancient paths of insight that illuminate the nature
+              of reality.
             </p>
 
             {/* Filter pills */}
-            <div className="inline-flex items-center bg-slate-100 dark:bg-slate-800 rounded-full p-1 gap-0.5">
+            <div className="inline-flex items-center bg-white/40 dark:bg-slate-900/40 backdrop-blur-md border border-slate-200 dark:border-slate-800 rounded-full p-1 gap-0.5 shadow-sm">
               {["All", "Āstika", "Nāstika"].map((f) => (
                 <button
                   key={f}
                   onClick={() => setFilter(f)}
-                  className={`px-5 py-2 rounded-full text-xs font-semibold transition-all duration-200 ${
+                  className={`px-6 py-2.5 rounded-full text-xs font-bold transition-all duration-300 ${
                     filter === f
-                      ? "bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-sm"
-                      : "text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300"
+                      ? "bg-white dark:bg-slate-700 text-slate-900 dark:text-white shadow-md scale-105"
+                      : "text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-slate-200"
                   }`}
                 >
                   {f === "All"
-                    ? "All (9)"
+                    ? "Explore All"
                     : f === "Āstika"
-                      ? "Āstika (6)"
-                      : "Nāstika (3)"}
+                      ? "Orthodox (6)"
+                      : "Heterodox (3)"}
                 </button>
               ))}
             </div>
           </motion.div>
         </div>
-      </header>
+      </section>
 
       {/* ─── SCHOOL CARDS ─── */}
       <section className="py-14 sm:py-20">

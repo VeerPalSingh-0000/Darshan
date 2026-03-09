@@ -36,10 +36,10 @@ const GayatriMantra = () => {
   };
 
   return (
-    <div className="relative overflow-hidden bg-slate-950 py-16 sm:py-20 font-sans border-y border-white/5">
+    <div className="relative overflow-hidden bg-slate-100 dark:bg-slate-950 py-16 sm:py-20 font-sans border-y border-black/5 dark:border-white/5 transition-colors duration-300">
       {/* Static Subtle Background */}
       <div className="absolute inset-0 pointer-events-none">
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-900/10 rounded-full blur-[100px]" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-amber-200/40 dark:bg-amber-900/10 rounded-full blur-[100px]" />
       </div>
 
       <div className="relative container mx-auto px-6">
@@ -49,15 +49,15 @@ const GayatriMantra = () => {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            className="relative bg-white/[0.02] rounded-[32px] border border-white/10 p-8 md:p-12 shadow-2xl"
+            className="relative bg-white/60 dark:bg-white/[0.02] backdrop-blur-sm rounded-[32px] border border-slate-200 dark:border-white/10 p-8 md:p-12 shadow-xl dark:shadow-2xl"
           >
-            <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mb-10 pb-8 border-b border-white/5">
+            <div className="flex flex-col sm:flex-row items-center justify-between gap-8 mb-10 pb-8 border-b border-slate-100 dark:border-white/5">
               {/* Text Content */}
               <div className="text-center sm:text-left">
-                <h1 className="text-4xl font-serif text-amber-100 mb-2 tracking-tight">
+                <h1 className="text-4xl font-serif text-slate-900 dark:text-amber-100 mb-2 tracking-tight">
                   गायत्री मंत्र
                 </h1>
-                <p className="text-amber-500/40 text-[11px] font-mono uppercase tracking-[0.4em]">
+                <p className="text-amber-700/60 dark:text-amber-500/40 text-[11px] font-mono uppercase tracking-[0.4em]">
                   The Universal Prayer
                 </p>
               </div>
@@ -70,7 +70,7 @@ const GayatriMantra = () => {
                   ${
                     isPlaying
                       ? "bg-amber-500 text-white shadow-[0_4px_20px_rgba(245,158,11,0.3)]"
-                      : "bg-white/5 text-amber-400 hover:bg-white/10 border border-amber-400/20 shadow-lg"
+                      : "bg-slate-200 dark:bg-white/5 text-amber-700 dark:text-amber-400 hover:bg-slate-300 dark:hover:bg-white/10 border border-amber-400/20 shadow-lg"
                   } disabled:opacity-50`}
               >
                 {!isLoaded ? (
@@ -88,18 +88,18 @@ const GayatriMantra = () => {
             {/* Mantra Text - Static & Elegant */}
             <div className="text-center space-y-6">
               <p
-                className={`font-serif text-3xl sm:text-5xl transition-colors duration-1000 ${isPlaying ? "text-amber-200" : "text-white/90"}`}
+                className={`font-serif text-3xl sm:text-5xl transition-colors duration-1000 ${isPlaying ? "text-amber-600 dark:text-amber-200" : "text-slate-800 dark:text-white/90"}`}
               >
                 ॐ भूर्भुवः स्वः
               </p>
               <div className="space-y-3">
                 <p
-                  className={`font-serif text-xl sm:text-3xl transition-colors duration-1000 ${isPlaying ? "text-amber-100" : "text-white/60"}`}
+                  className={`font-serif text-xl sm:text-3xl transition-colors duration-1000 ${isPlaying ? "text-amber-700 dark:text-amber-100" : "text-slate-600 dark:text-white/60"}`}
                 >
                   तत्सवितुर्वरेण्यं भर्गो देवस्य धीमहि
                 </p>
                 <p
-                  className={`font-serif text-xl sm:text-3xl transition-colors duration-1000 ${isPlaying ? "text-amber-100" : "text-white/60"}`}
+                  className={`font-serif text-xl sm:text-3xl transition-colors duration-1000 ${isPlaying ? "text-amber-700 dark:text-amber-100" : "text-slate-600 dark:text-white/60"}`}
                 >
                   धियो यो नः प्रचोदयात् ॥
                 </p>
@@ -107,7 +107,7 @@ const GayatriMantra = () => {
 
               {/* Subtle Translated Meaning */}
               <div className="pt-8">
-                <p className="text-xs text-white/20 italic font-light tracking-wide max-w-sm mx-auto leading-relaxed">
+                <p className="text-xs text-slate-400 dark:text-white/20 italic font-light tracking-wide max-w-sm mx-auto leading-relaxed">
                   "We meditate on that divine light. May it awaken our
                   intellect."
                 </p>

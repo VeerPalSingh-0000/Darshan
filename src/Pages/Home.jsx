@@ -11,6 +11,8 @@ import {
 
 import GayatriMantra from "../Components/GayatriMantra";
 import SutraWidget from "../Components/SutraWidget";
+import AntiGravityCanvas from "../Components/ui/particle-effect-for-hero";
+import { useTheme } from "../context/ThemeContext";
 import { schools } from "../data/schoolsOfThought.jsx";
 
 // ─── Animation Variants ───────────────────────────────────────────────────────
@@ -77,42 +79,32 @@ const features = [
 // ─── Home Component ───────────────────────────────────────────────────────────
 const Home = () => {
   const featuredSchools = schools.slice(0, 6);
+  const { isDarkMode } = useTheme();
 
   return (
     <div className="min-h-screen bg-[#F8F5F2] dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
       {/* ═══════════════ 1. HERO ═══════════════ */}
-      <section className="relative min-h-screen flex items-center justify-center text-center text-white px-4 overflow-hidden">
-        <div className="absolute inset-0">
-          <img
-            src="https://images.unsplash.com/photo-1698167646833-b705453b235e?q=80&w=1332&auto=format&fit=crop"
-            alt="Himalayan sunrise"
-            className="w-full h-full object-cover scale-105"
-            loading="eager"
-          />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/20" />
-        </div>
-        {/* Ambient particles */}
-        <div className="absolute inset-0 pointer-events-none overflow-hidden">
-          {[...Array(20)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-1 bg-white/20 rounded-full"
-              style={{
-                left: `${Math.random() * 100}%`,
-                top: `${Math.random() * 100}%`,
-              }}
-              animate={{ y: [0, -30, 0], opacity: [0, 0.5, 0] }}
-              transition={{
-                duration: 6 + Math.random() * 6,
-                delay: Math.random() * 4,
-                repeat: Infinity,
-              }}
-            />
-          ))}
-        </div>
+      <section
+        className={`relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden ${
+          isDarkMode ? "bg-black text-white" : "bg-white text-slate-900"
+        }`}
+      >
+        {/* Interactive particle background */}
+        <AntiGravityCanvas
+          accentColor={isDarkMode ? "#d97706" : "#7c3aed"}
+          particleColor={isDarkMode ? "#ffffff" : "#000000"}
+          glowColor={isDarkMode ? "217, 119, 6" : "124, 58, 237"}
+        />
+        <div
+          className={`absolute inset-0 z-[1] pointer-events-none ${
+            isDarkMode
+              ? "bg-gradient-to-t from-black/60 via-transparent to-black/30"
+              : "bg-gradient-to-t from-white/40 via-transparent to-white/20"
+          }`}
+        />
 
         <motion.div
-          className="relative z-10 max-w-4xl mx-auto"
+          className="relative z-10 max-w-4xl mx-auto pointer-events-none"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, ease: [0.22, 1, 0.36, 1] }}
@@ -121,17 +113,19 @@ const Home = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3 }}
-            className="text-xs font-mono tracking-[0.5em] uppercase text-amber-400/80 mb-6"
+            className="text-xs font-mono tracking-[0.5em] uppercase text-amber-500 dark:text-amber-400/80 mb-6"
           >
             ✦ Indian Philosophy ✦
           </motion.p>
           <h1 className="text-6xl md:text-9xl font-serif tracking-wide uppercase leading-none mb-6">
-            <span className="block">The Seeker's</span>
-            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-300 to-yellow-200">
+            <span className="block text-slate-900 dark:text-white">
+              The Seeker's
+            </span>
+            <span className="block text-transparent bg-clip-text bg-gradient-to-r from-violet-600 via-purple-500 to-indigo-500 dark:from-amber-300 dark:via-orange-300 dark:to-yellow-200">
               Path
             </span>
           </h1>
-          <p className="mt-2 text-lg md:text-xl max-w-2xl mx-auto text-slate-300/90 font-light leading-relaxed">
+          <p className="mt-2 text-lg md:text-xl max-w-2xl mx-auto text-slate-600 dark:text-slate-300/90 font-light leading-relaxed">
             Journey through millennia of profound wisdom. Explore the diverse
             philosophies of India and uncover timeless truths about reality,
             consciousness, and the self.
@@ -140,17 +134,17 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.6 }}
-            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center"
+            className="mt-10 flex flex-col sm:flex-row gap-4 justify-center pointer-events-auto"
           >
             <Link
               to="/explore"
-              className="inline-flex items-center gap-3 bg-gradient-to-r from-amber-500 to-orange-500 text-white font-bold tracking-wider uppercase py-4 px-10 rounded-full text-sm hover:shadow-[0_0_40px_rgba(245,158,11,0.4)] transition-all duration-300"
+              className="inline-flex items-center gap-3 bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-amber-500 dark:to-orange-500 text-white font-bold tracking-wider uppercase py-4 px-10 rounded-full text-sm hover:shadow-[0_0_40px_rgba(124,58,237,0.4)] dark:hover:shadow-[0_0_40px_rgba(245,158,11,0.4)] transition-all duration-300"
             >
               <SparklesIcon className="w-4 h-4" /> Begin Exploring
             </Link>
             <Link
               to="/quiz"
-              className="inline-flex items-center gap-3 border-2 border-white/30 text-white font-bold tracking-wider uppercase py-4 px-10 rounded-full text-sm hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
+              className="inline-flex items-center gap-3 border-2 border-slate-300 dark:border-white/30 text-slate-800 dark:text-white font-bold tracking-wider uppercase py-4 px-10 rounded-full text-sm hover:bg-slate-100 dark:hover:bg-white/10 backdrop-blur-sm transition-all duration-300"
             >
               Which School Are You? <ArrowRightIcon className="w-4 h-4" />
             </Link>
@@ -167,9 +161,9 @@ const Home = () => {
           <motion.div
             animate={{ y: [0, 8, 0] }}
             transition={{ duration: 2, repeat: Infinity }}
-            className="w-6 h-10 rounded-full border-2 border-white/30 flex items-start justify-center pt-2"
+            className="w-6 h-10 rounded-full border-2 border-slate-300 dark:border-white/30 flex items-start justify-center pt-2"
           >
-            <div className="w-1 h-2 bg-white/60 rounded-full" />
+            <div className="w-1 h-2 bg-slate-400 dark:bg-white/60 rounded-full" />
           </motion.div>
         </motion.div>
       </section>

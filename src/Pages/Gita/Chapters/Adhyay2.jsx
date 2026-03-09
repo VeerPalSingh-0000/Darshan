@@ -281,7 +281,7 @@ const Adhyay2 = () => {
                       >
                         <div className="flex items-center gap-3 mb-4">
                           <div className="w-1 h-6 bg-gradient-to-b from-emerald-500 to-green-500 rounded-full" />
-                          <h3 className="font-bold text-slate-800 text-lg">
+                          <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg">
                             {selectedLanguage === "hindi"
                               ? "भावार्थ (Hindi Meaning)"
                               : selectedLanguage === "english"
@@ -289,8 +289,8 @@ const Adhyay2 = () => {
                                 : `${selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)} Meaning`}
                           </h3>
                         </div>
-                        <div className="bg-gradient-to-r from-emerald-50/20 to-green-50/20 p-6 rounded-xl border border-slate-100">
-                          <p className="text-slate-700 leading-relaxed text-lg font-medium italic">
+                        <div className="bg-gradient-to-r from-emerald-50/20 to-green-50/20 p-6 rounded-xl border border-slate-100 dark:from-emerald-900/10 dark:to-green-900/10 dark:border-slate-800">
+                          <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg font-medium italic">
                             {selectedLanguage === "hindi"
                               ? shloka.hindi_meaning
                               : selectedLanguage === "english"
