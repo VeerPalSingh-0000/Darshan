@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import SEO from "../../../components/SEO";
+import SEO from "../../../Components/SEO";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import {
   BookOpenIcon,

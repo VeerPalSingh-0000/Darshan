@@ -15,7 +15,7 @@ import {
 import gitaHeroImg from "../Schools-images/gita_hero.png";
 import AskKrishnaWidget from "./AskKrishnaWidget";
 import SemanticSearch from "./SemanticSearch";
-import SEO from "../../components/SEO";
+import SEO from "../../Components/SEO";
 
 /* ═══════════════════════════════════════════════════════════════════════════ */
 /*  GITA VERSES DATA                                                          */
