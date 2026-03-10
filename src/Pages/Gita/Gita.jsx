@@ -13,6 +13,9 @@ import {
   SparklesIcon,
 } from "@heroicons/react/24/outline";
 import gitaHeroImg from "../Schools-images/gita_hero.png";
+import AskKrishnaWidget from "./AskKrishnaWidget";
+import SemanticSearch from "./SemanticSearch";
+import SEO from "../../components/SEO";
 
 /* ═══════════════════════════════════════════════════════════════════════════ */
 /*  GITA VERSES DATA                                                          */
@@ -289,6 +292,10 @@ const Gita = () => {
 
   return (
     <div className="bg-[#FAFAF8] dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300 min-h-screen">
+      <SEO
+        title="The Bhagavad Gītā"
+        description="Experience the Bhagavad Gītā like never before. Explore ancient wisdom, divine translations, and a beautifully crafted AI spiritual guide."
+      />
       {/* ═══════════ 1. HERO (IMPRESSIVE SCALE + KRISHNA/ARJUNA IMAGE) ═══════════ */}
       <section className="relative min-h-[80vh] md:min-h-screen flex items-end md:items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0">
@@ -596,6 +603,9 @@ const Gita = () => {
         </div>
       </section>
 
+      {/* ═══════════ 3.5 SEMANTIC SEARCH ═══════════ */}
+      <SemanticSearch />
+
       {/* ═══════════ 4. CHAPTERS ═══════════ */}
       <section className="py-32 sm:py-48 bg-[#FAFAF8] dark:bg-[#070b12]">
         <div className="container mx-auto px-6 max-w-7xl">
@@ -705,6 +715,9 @@ const Gita = () => {
           </motion.div>
         </div>
       </section>
+
+      {/* Floating Ask Krishna AI Widget */}
+      <AskKrishnaWidget />
     </div>
   );
 };

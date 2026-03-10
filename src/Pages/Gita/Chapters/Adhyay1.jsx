@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import SEO from "../../../components/SEO";
 import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import {
   BookOpenIcon,
@@ -91,6 +92,10 @@ const Adhyay1 = () => {
 
   return (
     <div className="bg-gradient-to-br from-amber-50/30 via-[#F8F5F2] to-orange-50/20 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-800 dark:text-slate-100 min-h-screen font-sans transition-colors duration-300">
+      <SEO
+        title={`Bhagavad Gītā Chapter 1: अर्जुनविषादयोगः - Darshanam`}
+        description={`Explore Bhagavad Gītā Chapter 1 - The Yoga of Arjuna's Dejection. Read translations, listen to audio, and discover the meaning.`}
+      />
       {/* Page Header */}
       <motion.section
         className="relative py-20 sm:py-28 text-center overflow-hidden"

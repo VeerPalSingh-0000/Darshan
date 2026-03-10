@@ -76,6 +76,14 @@ const Adhyay17 = () => {
 
   return (
     <div className="bg-gradient-to-br from-amber-50/30 via-[#F8F5F2] to-orange-50/20 dark:from-slate-950 dark:via-slate-900 dark:to-slate-950 text-slate-800 dark:text-slate-100 min-h-screen font-sans transition-colors duration-300">
+      <SEO 
+        title={`Bhagavad Gītā Chapter 17: श्रद्धात्रयविभागयोगः - Darshanam`} 
+        description={`Explore Bhagavad Gītā Chapter 17 - Shraddhatraya Vibhaga Yoga - Threefold Faith. Read translations, listen to audio, and discover the meaning.`} 
+      />
+      <SEO 
+        title={`Bhagavad Gītā Chapter 17: श्रद्धात्रयविभागयोगः - Darshanam`} 
+        description={`Explore Bhagavad Gītā Chapter 17 - Shraddhatraya Vibhaga Yoga - Threefold Faith. Read translations, listen to audio, and discover the meaning.`} 
+      />
       <motion.section
         className="relative py-20 sm:py-28 text-center overflow-hidden"
         initial="hidden"
