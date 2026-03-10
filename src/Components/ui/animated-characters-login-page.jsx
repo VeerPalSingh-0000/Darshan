@@ -5,7 +5,6 @@ import { Input } from "@/Components/ui/input";
 import { Label } from "@/Components/ui/label";
 import { Checkbox } from "@/Components/ui/checkbox";
 import { Eye, EyeOff, Sparkles, ArrowRight, Shield } from "lucide-react";
-import { cn } from "@/lib/utils";
 
 /* ─── Module-level mouse — ONE passive listener, ZERO React re-renders ─── */
 const mousePos = { x: 0, y: 0 };

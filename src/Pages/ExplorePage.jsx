@@ -83,16 +83,7 @@ const SchoolCard = ({ school }) => (
   </motion.div>
 );
 
-const FeatureCard = ({
-  emoji,
-  title,
-  desc,
-  path,
-  btn,
-  gradient,
-  btnClass,
-  delay = 0,
-}) => (
+const FeatureCard = ({ emoji, title, desc, path, btn, gradient, btnClass }) => (
   <motion.div variants={cardAnim}>
     <div
       className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${gradient} p-7 sm:p-8 h-full`}

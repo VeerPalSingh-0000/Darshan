@@ -19,7 +19,7 @@ const AntiGravityCanvas = ({
 }) => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
-  const [debugInfo, setDebugInfo] = useState({ count: 0, fps: 0 });
+  const [_debugInfo, setDebugInfo] = useState({ count: 0, fps: 0 });
 
   const particlesRef = useRef([]);
   const backgroundParticlesRef = useRef([]);

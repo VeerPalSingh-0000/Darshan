@@ -527,7 +527,7 @@ const Home = () => {
                 title: "Yoga of Devotion",
                 desc: "Surrender with love; see the Divine in all beings and serve as worship.",
               },
-            ].map(({ Icon, title, desc }, i) => (
+            ].map(({ Icon, title, desc }) => (
               <motion.div
                 key={title}
                 variants={cardUp}

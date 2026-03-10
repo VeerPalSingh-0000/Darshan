@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useRef, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useCallback } from "react";
+import { AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   ArrowLeftIcon,
@@ -163,9 +163,6 @@ const SutraOfDay = () => {
     setDirection(dir);
     setCurrentIdx((prev) => (prev + dir + sutras.length) % sutras.length);
   };
-
-  // Auto-rotate daily dot
-  const dayDots = sutras.map((_, i) => i === todayIdx);
 
   const copyText = useCallback(async () => {
     const text = `${sutra.sanskrit}\n${sutra.roman}\n\n"${sutra.translation}"\n\n${sutra.meaning}\n\n— ${sutra.source} · ${sutra.philosopher}\n[${sutra.school} Philosophy · Darshanam]`;
@@ -498,22 +495,16 @@ const SutraOfDay = () => {
                 }}
                 className={`rounded-full transition-all duration-300 ${i === currentIdx ? "w-6 h-2" : "w-2 h-2"}`}
                 style={{
-                  backgroundColor:
-                    i === currentIdx
-                      ? sutra.accent
-                      : i === todayIdx
-                        ? sutra.accent + "60"
-                        : undefined,
                   background:
                     i === currentIdx
                       ? `linear-gradient(90deg, ${sutra.accent}dd, ${sutra.accent})`
                       : undefined,
                   backgroundColor:
-                    i !== currentIdx
-                      ? i === todayIdx
+                    i === currentIdx
+                      ? sutra.accent
+                      : i === todayIdx
                         ? sutra.accent + "50"
-                        : "#cbd5e1"
-                      : undefined,
+                        : "#cbd5e1",
                 }}
               />
             ))}

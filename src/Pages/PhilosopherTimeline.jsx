@@ -2,8 +2,6 @@ import React, { useState, useRef, useEffect } from "react";
 import {
   motion,
   AnimatePresence,
-  useScroll,
-  useTransform,
 } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -529,7 +527,6 @@ const PhilosopherTimeline = () => {
               // Alternate above/below the centre line to avoid overlap
               const above = idx % 2 === 0;
               const nodeTop = above ? 80 : 278;
-              const connectorTop = above ? nodeTop + 120 : nodeTop - 24;
 
               return (
                 <div key={p.id}>

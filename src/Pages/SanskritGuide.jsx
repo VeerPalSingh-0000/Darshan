@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useRef } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState, useCallback } from "react";
+import { AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   SpeakerWaveIcon,

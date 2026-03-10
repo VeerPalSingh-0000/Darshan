@@ -18,7 +18,7 @@ function stopGlobal() {
   if (gOwner) {
     try {
       gOwner(false);
-    } catch (_) {}
+    } catch {}
     gOwner = null;
   }
 }
