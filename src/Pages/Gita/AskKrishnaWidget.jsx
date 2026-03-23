@@ -37,23 +37,6 @@ const AskKrishnaWidget = () => {
     setInputVal("");
     setIsTyping(true);
 
-    const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-
-    if (!apiKey) {
-      setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
-          {
-            role: "krishna",
-            content:
-              "Oh seeker, my divine vision is clouded. Please set your VITE_GEMINI_API_KEY in the .env file so I may guide you.",
-          },
-        ]);
-        setIsTyping(false);
-      }, 1500);
-      return;
-    }
-
     try {
       // Correcting history format for system instructions support
       const contents = messages.slice(1).map((msg) => ({
@@ -62,23 +45,20 @@ const AskKrishnaWidget = () => {
       }));
       contents.push({ role: "user", parts: [{ text: userText }] });
 
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=${apiKey}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            systemInstruction: {
-              parts: [
-                {
-                  text: "You are Lord Krishna from the Bhagavad Gita speaking to Arjuna or a modern seeker. Your purpose is to guide users through their modern problems (like anxiety, duty, relationships, stress) using the teachings of the Bhagavad Gita. Always quote or allude to a specific verse from the Gita. Speak in a compassionate, slightly archaic, yet highly accessible tone.",
-                },
-              ],
-            },
-            contents: contents,
-          }),
-        },
-      );
+      const response = await fetch("/.netlify/functions/gemini-proxy", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          systemInstruction: {
+            parts: [
+              {
+                text: "You are Lord Krishna from the Bhagavad Gita speaking to Arjuna or a modern seeker. Your purpose is to guide users through their modern problems (like anxiety, duty, relationships, stress) using the teachings of the Bhagavad Gita. Always quote or allude to a specific verse from the Gita. Speak in a compassionate, slightly archaic, yet highly accessible tone.",
+              },
+            ],
+          },
+          contents: contents,
+        }),
+      });
 
       const data = await response.json();
 
