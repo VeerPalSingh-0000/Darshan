@@ -6,55 +6,72 @@
 [dev]
   functions = "netlify/functions"
 
-# === CACHE HEADERS FOR STATIC ASSETS ===
+# === DISABLE COMPRESSION FOR PRE-COMPRESSED ASSETS ===
 
-# Images - Immutable 1 year cache
+# Images - Do NOT compress (already optimized)
 [[headers]]
   for = "/assets/*.png"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "identity"
     X-Content-Type-Options = "nosniff"
 
 [[headers]]
   for = "/assets/*.jpg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "identity"
     X-Content-Type-Options = "nosniff"
 
 [[headers]]
   for = "/assets/*.jpeg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "identity"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/assets/*.gif"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "identity"
     X-Content-Type-Options = "nosniff"
 
 [[headers]]
   for = "/assets/*.webp"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "identity"
     X-Content-Type-Options = "nosniff"
 
-# Audio - Immutable 1 year cache (DO NOT COMPRESS)
+# Audio files - Do NOT compress (already compressed with MP3 codec)
 [[headers]]
   for = "/assets/*.mp3"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "identity"
     X-Content-Type-Options = "nosniff"
+    Content-Type = "audio/mpeg"
+
+[[headers]]
+  for = "/assets/*.wav"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "identity"
+
+[[headers]]
+  for = "/assets/*.m4a"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    Content-Encoding = "identity"
 
 [[headers]]
   for = "/audio/**"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
-    X-Content-Type-Options = "nosniff"
+    Content-Encoding = "identity"
 
-# === SECURITY & PERFORMANCE HEADERS FOR HTML/CSS/JS ===
-[[headers]]
-  for = "/"
-  [headers.values]
-    X-Content-Type-Options = "nosniff"
-    X-Frame-Options = "SAMEORIGIN"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-
+# === HTML FILES ===
 [[headers]]
   for = "/*.html"
   [headers.values]
@@ -64,14 +81,24 @@
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
 
+# === JAVASCRIPT & CSS (Text files - enable compression) ===
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
 [[headers]]
   for = "/assets/*.css"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
     X-Content-Type-Options = "nosniff"
 
+# === SECURITY & PERFORMANCE ===
 [[headers]]
-  for = "/assets/*.js"
+  for = "/"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
     X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
