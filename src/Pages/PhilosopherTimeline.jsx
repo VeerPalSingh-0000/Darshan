@@ -1,15 +1,12 @@
 import React, { useState, useRef, useEffect } from "react";
-import {
-  motion,
-  AnimatePresence,
-} from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   ArrowLeftIcon,
   XMarkIcon,
   ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/24/outline";
-import ScrollToTop from "../Components/ScrollToTop";
+import BackToPhilosophy from "../Components/BackToPhilosophy";
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 // year: negative = BCE, positive = CE
@@ -337,6 +334,7 @@ const PhilosopherTimeline = () => {
   return (
     <div className="min-h-screen bg-[#f8f6ff] dark:bg-[#07060f] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans">
       <ScrollToTop />
+      <BackToPhilosophy />
 
       {/* ── Header ── */}
       <div className="relative overflow-hidden">

@@ -7,6 +7,7 @@ import {
   SparklesIcon,
 } from "@heroicons/react/24/outline";
 import ScrollToTop from "../Components/ScrollToTop";
+import BackToPhilosophy from "../Components/BackToPhilosophy";
 
 // ─── Quiz Data ────────────────────────────────────────────────────────────────
 // Each answer scores points for a school. Schools:
@@ -584,6 +585,7 @@ const PhilosophyQuiz = () => {
   return (
     <div className="min-h-screen bg-[#f8f5ff] dark:bg-[#06050f] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans relative overflow-hidden">
       <ScrollToTop />
+      <BackToPhilosophy />
 
       {/* Ambient particles */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">

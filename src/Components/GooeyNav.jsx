@@ -20,6 +20,17 @@ const GooeyNav = ({
   const getActiveFromRoute = useCallback(() => {
     const idx = items.findIndex((item) => {
       if (item.href === "/") return location.pathname === "/";
+      // Philosophy nav item should also highlight for /schools/* and /timeline, /quiz, /sanskrit, /sutra routes
+      if (item.href === "/explore") {
+        return (
+          location.pathname.startsWith("/explore") ||
+          location.pathname.startsWith("/schools") ||
+          location.pathname.startsWith("/timeline") ||
+          location.pathname.startsWith("/quiz") ||
+          location.pathname.startsWith("/sanskrit") ||
+          location.pathname.startsWith("/sutra")
+        );
+      }
       return location.pathname.startsWith(item.href);
     });
     return idx >= 0 ? idx : initialActiveIndex;

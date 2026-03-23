@@ -270,10 +270,21 @@ const Navbar = () => {
                 <div className="space-y-1">
                   {navItems.map((item) => {
                     const Icon = item.icon;
-                    const isActive =
-                      item.to === "/"
-                        ? location.pathname === "/"
-                        : location.pathname.startsWith(item.to);
+                    let isActive;
+                    if (item.to === "/") {
+                      isActive = location.pathname === "/";
+                    } else if (item.to === "/explore") {
+                      // Philosophy should be active for explore, school pages, and related routes
+                      isActive =
+                        location.pathname.startsWith("/explore") ||
+                        location.pathname.startsWith("/schools") ||
+                        location.pathname.startsWith("/timeline") ||
+                        location.pathname.startsWith("/quiz") ||
+                        location.pathname.startsWith("/sanskrit") ||
+                        location.pathname.startsWith("/sutra");
+                    } else {
+                      isActive = location.pathname.startsWith(item.to);
+                    }
                     return (
                       <NavLink key={item.to} to={item.to}>
                         <motion.div

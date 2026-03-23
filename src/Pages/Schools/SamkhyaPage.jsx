@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
+import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import kapilaImg from "../Schools-images/kapila.png";
 import purushaImg from "../Schools-images/purusha.png";
 import prakritiImg from "../Schools-images/prakriti.png";
@@ -74,8 +75,7 @@ const SamkhyaPage = () => {
 
   return (
     <div className="bg-[#fdfbf7] dark:bg-[#0b0f19] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-amber-500/30">
-      <ScrollToTop />
-
+      <ScrollToTop /> <BackToPhilosophy />
       {/* Hero Section */}
       <motion.section
         className="relative min-h-[85vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden"
@@ -146,7 +146,6 @@ const SamkhyaPage = () => {
           <ChevronDownIcon className="w-5 h-5" />
         </motion.div>
       </motion.section>
-
       {/* Main Content */}
       <div className="container mx-auto px-6 py-24 max-w-6xl">
         {/* Introduction to Duality */}

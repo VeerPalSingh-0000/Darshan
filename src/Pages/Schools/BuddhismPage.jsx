@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
+import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import buddhismImg from "../Schools-images/buddhism_hero.png";
 
 const BuddhismPage = () => {
@@ -62,6 +63,7 @@ const BuddhismPage = () => {
   return (
     <div className="bg-[#fefce8] dark:bg-[#05080a] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-amber-500/30">
       <ScrollToTop />
+      <BackToPhilosophy />
 
       {/* Hero */}
       <motion.section

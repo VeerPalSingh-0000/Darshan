@@ -10,6 +10,7 @@ import {
 } from "@heroicons/react/24/outline";
 import { SpeakerWaveIcon as SpeakerSolid } from "@heroicons/react/24/solid";
 import ScrollToTop from "../Components/ScrollToTop";
+import BackToPhilosophy from "../Components/BackToPhilosophy";
 
 // ─── Sanskrit Terms Database ───────────────────────────────────────────────
 // phonetic: simplified English approximation fed to SpeechSynthesis
@@ -722,6 +723,7 @@ const SanskritGuide = () => {
   return (
     <div className="min-h-screen bg-[#f8f6ff] dark:bg-[#07060e] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans">
       <ScrollToTop />
+      <BackToPhilosophy />
 
       {/* ── Hero ─────────────────────────────────────────── */}
       <div className="relative overflow-hidden">

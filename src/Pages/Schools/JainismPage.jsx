@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
+import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import jainismImg from "../Schools-images/jainism_hero.png";
 
 const JainismPage = () => {
@@ -61,8 +62,7 @@ const JainismPage = () => {
 
   return (
     <div className="bg-[#f0fdf4] dark:bg-[#0a0f0a] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-emerald-500/30">
-      <ScrollToTop />
-
+      <ScrollToTop /> <BackToPhilosophy />
       {/* Hero */}
       <motion.section
         className="relative min-h-[85vh] flex flex-col items-center justify-center text-center px-4 overflow-hidden"
@@ -130,7 +130,6 @@ const JainismPage = () => {
           <ChevronDownIcon className="w-5 h-5" />
         </motion.div>
       </motion.section>
-
       <div className="container mx-auto px-6 py-24 max-w-6xl">
         {/* Introduction */}
         <motion.section
