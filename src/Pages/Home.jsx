@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import {
@@ -7,6 +7,8 @@ import {
   FireIcon,
   HeartIcon,
   SparklesIcon,
+  PlayIcon,
+  ChevronDownIcon,
 } from "@heroicons/react/24/outline";
 
 import GayatriMantra from "../Components/GayatriMantra";
@@ -80,6 +82,7 @@ const features = [
 const Home = () => {
   const featuredSchools = schools.slice(0, 6);
   const { isDarkMode } = useTheme();
+  const [activeAccordion, setActiveAccordion] = useState(null);
 
   return (
     <div className="min-h-screen bg-[#F8F5F2] dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
@@ -550,6 +553,197 @@ const Home = () => {
 
       {/* ═══════════════ 7. GĀYATRĪ MANTRA ═══════════════ */}
       <GayatriMantra />
+
+      {/* ═══════════════ TRUST METRICS ═══════════════ */}
+      <section
+        className={`py-20 px-4 ${isDarkMode ? "bg-slate-900" : "bg-slate-50"}`}
+      >
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.15, delayChildren: 0.1 },
+              },
+            }}
+          >
+            {[
+              { num: "9", label: "Philosophical Schools" },
+              { num: "3000+", label: "Years of Wisdom" },
+              { num: "∞", label: "Eternal Truths" },
+              { num: "10K+", label: "Knowledge Seekers" },
+            ].map((stat, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.1 }}
+              >
+                <p className="text-3xl md:text-5xl font-serif text-violet-600 dark:text-amber-400 mb-2">
+                  {stat.num}
+                </p>
+                <p className="text-sm md:text-base text-slate-600 dark:text-slate-400 font-medium">
+                  {stat.label}
+                </p>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
+
+      {/* ═══════════════ PREMIUM CTA SECTION ═══════════════ */}
+      <section
+        className={`relative py-32 px-4 overflow-hidden ${
+          isDarkMode
+            ? "bg-gradient-to-r from-slate-900 via-black to-slate-900"
+            : "bg-gradient-to-r from-violet-600 via-purple-600 to-indigo-600"
+        }`}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8 }}
+          className="max-w-3xl mx-auto text-center text-white"
+        >
+          <h2 className="text-4xl md:text-5xl font-serif mb-6">
+            Ready to Transform Your Mind?
+          </h2>
+          <p className="text-lg md:text-xl mb-10 text-white/90">
+            Join thousands of seekers exploring the timeless wisdom of Indian
+            philosophy. Begin your journey of self-discovery today.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <Link
+              to="/explore"
+              className={`inline-flex items-center gap-3 font-bold tracking-wider uppercase py-4 px-10 rounded-full text-sm transition-all duration-300 hover:-translate-y-1 ${
+                isDarkMode
+                  ? "bg-amber-500 text-slate-900 hover:bg-amber-400 hover:shadow-[0_10px_40px_rgba(245,158,11,0.3)]"
+                  : "bg-white text-purple-600 hover:shadow-[0_10px_40px_rgba(255,255,255,0.3)]"
+              }`}
+            >
+              <SparklesIcon className="w-5 h-5" /> Begin Your Journey
+            </Link>
+            <Link
+              to="/quiz"
+              className="inline-flex items-center gap-3 font-bold tracking-wider uppercase py-4 px-10 rounded-full text-sm border-2 border-white/30 text-white hover:bg-white/10 transition-all duration-300"
+            >
+              <FireIcon className="w-5 h-5" /> Take the Quiz
+            </Link>
+          </div>
+        </motion.div>
+      </section>
+
+      {/* ═══════════════ FAQ SECTION ═══════════════ */}
+      <section className={`py-28 px-4 ${isDarkMode ? "bg-black" : "bg-white"}`}>
+        <div className="max-w-3xl mx-auto">
+          <motion.div
+            className="text-center mb-20"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0, y: 20 },
+              visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+            }}
+          >
+            <p className="text-xs font-mono tracking-[0.5em] uppercase text-amber-500 dark:text-amber-400 mb-4">
+              ✦ Questions & Answers ✦
+            </p>
+            <h2 className="text-4xl md:text-5xl font-serif text-slate-900 dark:text-white mb-4">
+              Frequently Asked Questions
+            </h2>
+            <div className="w-20 h-1 bg-gradient-to-r from-violet-600 to-indigo-600 dark:from-amber-500 dark:to-orange-500 mx-auto rounded-full" />
+          </motion.div>
+
+          <motion.div
+            className="space-y-4"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            variants={{
+              hidden: { opacity: 0 },
+              visible: {
+                opacity: 1,
+                transition: { staggerChildren: 0.1, delayChildren: 0.05 },
+              },
+            }}
+          >
+            {[
+              {
+                q: "What is Darśana?",
+                a: "Darśana means 'to see' or 'to perceive'. It refers to the philosophical systems of India that provide different perspectives on reality, consciousness, and the path to liberation (Mokṣa).",
+              },
+              {
+                q: "How many schools of philosophy are there?",
+                a: "There are 9 primary schools (Darśanas) recognized in Indian philosophy: Samkhya, Yoga, Nyaya, Vaishesika, Mimamsa, Vedanta, Jainism, Buddhism, and Carvaka.",
+              },
+              {
+                q: "Do I need to follow all schools?",
+                a: "No. Each school offers different paths and insights. Our quiz will help you discover which philosophy aligns with your worldview and values.",
+              },
+              {
+                q: "Is this only for Sanskrit scholars?",
+                a: "Absolutely not! Our platform makes ancient wisdom accessible to everyone with clear explanations, audio guides, and interactive tools.",
+              },
+            ].map((faq, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
+              >
+                <button
+                  onClick={() =>
+                    setActiveAccordion(activeAccordion === i ? null : i)
+                  }
+                  className={`w-full text-left p-6 rounded-xl border transition-all duration-300 ${
+                    activeAccordion === i
+                      ? isDarkMode
+                        ? "bg-slate-800 border-amber-500"
+                        : "bg-slate-100 border-violet-600"
+                      : isDarkMode
+                        ? "bg-slate-900/50 border-slate-700 hover:border-slate-600"
+                        : "bg-slate-50 border-slate-200 hover:border-slate-300"
+                  }`}
+                >
+                  <div className="flex items-center justify-between">
+                    <h3 className="font-serif text-lg text-slate-900 dark:text-white">
+                      {faq.q}
+                    </h3>
+                    <motion.div
+                      animate={{ rotate: activeAccordion === i ? 180 : 0 }}
+                      transition={{ duration: 0.3 }}
+                    >
+                      <ChevronDownIcon className="w-5 h-5 text-slate-600 dark:text-slate-400" />
+                    </motion.div>
+                  </div>
+                  <motion.div
+                    initial={{ opacity: 0, height: 0 }}
+                    animate={{
+                      opacity: activeAccordion === i ? 1 : 0,
+                      height: activeAccordion === i ? "auto" : 0,
+                    }}
+                    transition={{ duration: 0.3 }}
+                    className="overflow-hidden"
+                  >
+                    <p className="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </motion.div>
+                </button>
+              </motion.div>
+            ))}
+          </motion.div>
+        </div>
+      </section>
 
       {/* ═══════════════ 8. FINAL CTA ═══════════════ */}
       <section className="py-24 bg-white dark:bg-slate-900">

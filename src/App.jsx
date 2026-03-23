@@ -100,11 +100,10 @@ function App() {
       <ThemeProvider>
         <AuthProvider>
           <Routes>
-            {/* --- Route for Auth Page (No Navbar/Footer) --- */}
-            <Route path="/login" element={<AuthPage />} />
-
-            {/* --- Routes with Main Layout (Includes Navbar/Footer) --- */}
+            {/* --- LANDING PAGE (Public - First thing new users see) --- */}
             <Route element={<MainLayout />}>
+              <Route path="/" element={<Home />} />
+              <Route path="/explore" element={<ExplorePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route
                 path="/resources/sacred-texts"
@@ -130,207 +129,36 @@ function App() {
               <Route path="/sanskrit" element={<SanskritGuide />} />
               <Route path="/sutra" element={<SutraOfDay />} />
 
-              <Route
-                path="/"
-                element={
-                  <ProtectedRoute>
-                    <Home />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/explore"
-                element={
-                  <ProtectedRoute>
-                    <ExplorePage />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita"
-                element={
-                  <ProtectedRoute>
-                    <Gita />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters"
-                element={
-                  <ProtectedRoute>
-                    <GitaChapters />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/verses"
-                element={
-                  <ProtectedRoute>
-                    <GitaVerses />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/resources"
-                element={
-                  <ProtectedRoute>
-                    <GitaResources />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/guide"
-                element={
-                  <ProtectedRoute>
-                    <GitaGuide />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay1"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay1 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay2"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay2 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay3"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay3 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay4"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay4 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay5"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay5 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay6"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay6 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay7"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay7 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay8"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay8 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay9"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay9 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay10"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay10 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay11"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay11 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay12"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay12 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay13"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay13 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay14"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay14 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay15"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay15 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay16"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay16 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay17"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay17 />
-                  </ProtectedRoute>
-                }
-              />
-              <Route
-                path="/gita/chapters/adhyay18"
-                element={
-                  <ProtectedRoute>
-                    <Adhyay18 />
-                  </ProtectedRoute>
-                }
-              />
+              {/* --- GITA PAGES (Public - Open for all) --- */}
+              <Route path="/gita" element={<Gita />} />
+              <Route path="/gita/chapters" element={<GitaChapters />} />
+              <Route path="/gita/verses" element={<GitaVerses />} />
+              <Route path="/gita/resources" element={<GitaResources />} />
+              <Route path="/gita/guide" element={<GitaGuide />} />
+              <Route path="/gita/chapters/adhyay1" element={<Adhyay1 />} />
+              <Route path="/gita/chapters/adhyay2" element={<Adhyay2 />} />
+              <Route path="/gita/chapters/adhyay3" element={<Adhyay3 />} />
+              <Route path="/gita/chapters/adhyay4" element={<Adhyay4 />} />
+              <Route path="/gita/chapters/adhyay5" element={<Adhyay5 />} />
+              <Route path="/gita/chapters/adhyay6" element={<Adhyay6 />} />
+              <Route path="/gita/chapters/adhyay7" element={<Adhyay7 />} />
+              <Route path="/gita/chapters/adhyay8" element={<Adhyay8 />} />
+              <Route path="/gita/chapters/adhyay9" element={<Adhyay9 />} />
+              <Route path="/gita/chapters/adhyay10" element={<Adhyay10 />} />
+              <Route path="/gita/chapters/adhyay11" element={<Adhyay11 />} />
+              <Route path="/gita/chapters/adhyay12" element={<Adhyay12 />} />
+              <Route path="/gita/chapters/adhyay13" element={<Adhyay13 />} />
+              <Route path="/gita/chapters/adhyay14" element={<Adhyay14 />} />
+              <Route path="/gita/chapters/adhyay15" element={<Adhyay15 />} />
+              <Route path="/gita/chapters/adhyay16" element={<Adhyay16 />} />
+              <Route path="/gita/chapters/adhyay17" element={<Adhyay17 />} />
+              <Route path="/gita/chapters/adhyay18" element={<Adhyay18 />} />
             </Route>
+
+            {/* --- LOGIN PAGE (No Navbar/Footer) --- */}
+            <Route path="/login" element={<AuthPage />} />
+
+            {/* --- 404 Page --- */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </AuthProvider>
