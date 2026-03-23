@@ -75,6 +75,8 @@ const JainismPage = () => {
             src={jainismImg}
             alt="Lord Mahavira in meditation"
             className="w-full h-full object-cover opacity-60"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#f0fdf4] via-[#f0fdf4]/80 to-transparent dark:from-[#0a0f0a] dark:via-[#0a0f0a]/80 dark:to-transparent"></div>
           <motion.div

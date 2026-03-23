@@ -140,6 +140,8 @@ const NyayaPage = () => {
             src={nyayaImg}
             alt="Sage Gautama with the lamp of logic"
             className="w-full h-full object-cover opacity-60"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#f0fdfa] via-[#f0fdfa]/80 to-transparent dark:from-[#060b10] dark:via-[#060b10]/80 dark:to-transparent"></div>
           <motion.div

@@ -107,6 +107,8 @@ const Navbar = () => {
                   src={darsana}
                   alt="Darśana"
                   className="h-12 md:h-16 w-auto transition-transform duration-300"
+                  loading="eager"
+                  decoding="async"
                 />
               </Link>
             </motion.div>
@@ -141,6 +143,8 @@ const Navbar = () => {
                           src={currentUser.photoURL}
                           alt=""
                           className="w-8 h-8 rounded-xl object-cover ring-2 ring-violet-500/20"
+                          loading="lazy"
+                          decoding="async"
                           onError={(e) => {
                             e.target.style.display = "none";
                             if (e.target.nextSibling)

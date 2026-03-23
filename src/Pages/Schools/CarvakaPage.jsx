@@ -65,6 +65,8 @@ const CarvakaPage = () => {
             src={carvakaImg}
             alt="The sensory joy of earthly life"
             className="w-full h-full object-cover opacity-60"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#fff1f2] via-[#fff1f2]/80 to-transparent dark:from-[#120805] dark:via-[#120805]/80 dark:to-transparent"></div>
           <motion.div

@@ -65,6 +65,8 @@ const MimamsaPage = () => {
             src={mimamsaImg}
             alt="The sacred Vedic sacrifice"
             className="w-full h-full object-cover opacity-60"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#fff1f1] via-[#fff1f1]/80 to-transparent dark:from-[#0f0a0a] dark:via-[#0f0a0a]/80 dark:to-transparent"></div>
           <motion.div

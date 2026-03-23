@@ -81,6 +81,8 @@ const YogaPage = () => {
             src={yogaImg}
             alt="Yogi in deep meditation"
             className="w-full h-full object-cover opacity-60"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#f0f9ff] via-[#f0f9ff]/80 to-transparent dark:from-[#050b14] dark:via-[#050b14]/80 dark:to-transparent"></div>
           <motion.div

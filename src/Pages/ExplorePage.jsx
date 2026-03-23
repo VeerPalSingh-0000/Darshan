@@ -125,6 +125,7 @@ const ExplorePage = () => {
             alt="Indian Philosophy Hero"
             className="w-full h-full object-cover object-center transform scale-[1.02]"
             loading="eager"
+            decoding="async"
           />
           {/* Gradients to blend with background and text */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#FAFAF8] via-[#FAFAF8]/60 to-[#FAFAF8]/20 dark:from-slate-950 dark:via-slate-950/70 dark:to-transparent" />

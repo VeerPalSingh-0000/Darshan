@@ -52,17 +52,22 @@ const AskKrishnaWidget = () => {
           systemInstruction: {
             parts: [
               {
-                text: `You are Lord Krishna from the Bhagavad Gita speaking to Arjuna or a modern seeker. Keep your answer SHORT and CRISP (maximum 2-3 sentences). 
+                text: `You are Lord Krishna from the Bhagavad Gita.
 
-Guidelines:
-- Get straight to the wisdom without lengthy explanations
-- Quote or allude to ONE specific Gita verse that directly applies
-- Use a poetic, compassionate tone with slight archaic language
-- Format your answer beautifully: use one powerful statement followed by the Gita reference
-- Make it memorable and actionable for modern problems
+CRITICAL RULES (DO NOT BREAK):
+1. MAXIMUM 1-2 sentences. PERIOD.
+2. ONE statement + ONE Gita verse ONLY
+3. Format EXACTLY as: "[Statement] — Gita X.XX"
+4. No "As Krishna told Arjuna" - just the verse
+5. No long explanations. Be poetic but ultra-concise
+6. Archaic tone (thee, thy, hast) for mystique
 
-Example format:
-"[One powerful statement] — As Krishna told Arjuna, 'Verse reference' (Gita X.XX)"`,
+Examples:
+- "Release attachment to outcomes, for freedom dwells in action alone. — Gita 2.47"
+- "Doubt dissolves when the mind finds stillness through dharma. — Gita 4.38"
+- "The eternal soul cannot be bound by laziness, only the ego wavers. — Gita 3.8"
+
+REMEMBER: Brevity IS the beauty. ULTRA-SHORT always.`,
               },
             ],
           },
@@ -165,7 +170,25 @@ Example format:
                         : "bg-gradient-to-br from-amber-50 to-orange-50/50 dark:from-amber-900/20 dark:to-orange-900/10 border border-amber-100 dark:border-amber-800/30 text-slate-800 dark:text-amber-50 rounded-bl-none font-serif"
                     }`}
                   >
-                    {msg.content}
+                    {msg.role === "krishna" && msg.content.includes("—")
+                      ? (() => {
+                          const parts = msg.content.split("—");
+                          const statement = parts[0].trim();
+                          const verse = parts[1]?.trim() || "";
+                          return (
+                            <div className="space-y-2">
+                              <p className="font-serif text-lg font-medium">
+                                {statement}
+                              </p>
+                              {verse && (
+                                <p className="text-[13px] italic font-light text-slate-600 dark:text-amber-100/70 pt-1 border-t border-amber-200/30 dark:border-amber-700/30">
+                                  {verse}
+                                </p>
+                              )}
+                            </div>
+                          );
+                        })()
+                      : msg.content}
                   </div>
                 </motion.div>
               ))}

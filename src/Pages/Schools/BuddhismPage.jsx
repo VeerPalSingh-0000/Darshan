@@ -75,6 +75,8 @@ const BuddhismPage = () => {
             src={buddhismImg}
             alt="The Buddha under the Bodhi tree"
             className="w-full h-full object-cover opacity-60"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#fefce8] via-[#fefce8]/80 to-transparent dark:from-[#05080a] dark:via-[#05080a]/80 dark:to-transparent"></div>
           <motion.div

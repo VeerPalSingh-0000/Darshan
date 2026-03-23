@@ -88,6 +88,8 @@ const SamkhyaPage = () => {
             src={kapilaImg}
             alt="Sage Kapila in meditation"
             className="w-full h-full object-cover opacity-60"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#fdfbf7] via-[#fdfbf7]/80 to-transparent dark:from-[#0b0f19] dark:via-[#0b0f19]/80 dark:to-transparent"></div>
           <motion.div
@@ -183,6 +185,8 @@ const SamkhyaPage = () => {
                     src={purushaImg}
                     alt="Purusha"
                     className="absolute inset-0 w-full h-full object-cover opacity-40 group-hover/purusha:opacity-60 transition-opacity duration-700"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <span className="relative z-10 text-2xl md:text-3xl font-serif text-blue-600 dark:text-blue-400 tracking-[0.2em] md:tracking-[0.4em] drop-shadow-2xl">
                     PURUṢA
@@ -193,6 +197,8 @@ const SamkhyaPage = () => {
                     src={prakritiImg}
                     alt="Prakriti"
                     className="absolute inset-0 w-full h-full object-cover opacity-60 group-hover/prakriti:opacity-80 transition-opacity duration-700"
+                    loading="lazy"
+                    decoding="async"
                   />
                   <span className="relative z-10 text-2xl md:text-3xl font-serif text-amber-600 dark:text-amber-500 tracking-[0.2em] md:tracking-[0.4em] drop-shadow-2xl">
                     PRAKṚTI

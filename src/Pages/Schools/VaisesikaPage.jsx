@@ -75,6 +75,8 @@ const VaisesikaPage = () => {
             src={vaisesikaImg}
             alt="Sage Kanada and the atoms of the universe"
             className="w-full h-full object-cover opacity-60"
+            loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#f5f3ff] via-[#f5f3ff]/80 to-transparent dark:from-[#0c0c14] dark:via-[#0c0c14]/80 dark:to-transparent"></div>
           <motion.div

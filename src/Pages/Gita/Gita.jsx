@@ -304,6 +304,7 @@ const Gita = () => {
             alt="Sri Krishna and Arjuna on the Chariot"
             className="w-full h-full object-cover object-[center_20%] md:object-center transform scale-[1.02]"
             loading="eager"
+            decoding="async"
           />
           {/* Light mode: soft warm wash — Dark mode: deep cinematic */}
           <div className="absolute inset-0 bg-gradient-to-t from-[#FDF8F0] via-[#FDF8F0]/70 via-40% to-[#FDF8F0]/40 dark:from-[#0c0906] dark:via-[#0c0906]/70 dark:to-transparent" />
