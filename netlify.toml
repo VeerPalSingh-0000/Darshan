@@ -6,33 +6,72 @@
 [dev]
   functions = "netlify/functions"
 
-# Image optimization for faster loading
+# === CACHE HEADERS FOR STATIC ASSETS ===
+
+# Images - Immutable 1 year cache
 [[headers]]
-  for = "/*.png"
+  for = "/assets/*.png"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
 
 [[headers]]
-  for = "/*.jpg"
+  for = "/assets/*.jpg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
 
 [[headers]]
-  for = "/*.jpeg"
+  for = "/assets/*.jpeg"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
 
 [[headers]]
-  for = "/*.webp"
+  for = "/assets/*.webp"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
 
-# Compress assets aggressively
+# Audio - Immutable 1 year cache (DO NOT COMPRESS)
 [[headers]]
-  for = "/*"
+  for = "/assets/*.mp3"
   [headers.values]
-    Content-Encoding = "gzip"
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/audio/**"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+# === SECURITY & PERFORMANCE HEADERS FOR HTML/CSS/JS ===
+[[headers]]
+  for = "/"
+  [headers.values]
     X-Content-Type-Options = "nosniff"
     X-Frame-Options = "SAMEORIGIN"
     X-XSS-Protection = "1; mode=block"
     Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    Cache-Control = "public, max-age=3600"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/assets/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
+
+[[headers]]
+  for = "/assets/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+    X-Content-Type-Options = "nosniff"
