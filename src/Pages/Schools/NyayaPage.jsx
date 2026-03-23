@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
