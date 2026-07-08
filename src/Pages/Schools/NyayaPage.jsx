@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
+import SEO from "../../Components/SEO";
+
 import nyayaImg from "../Schools-images/nyaya_hero.png";
 
 const NyayaPage = () => {
@@ -127,6 +129,10 @@ const NyayaPage = () => {
 
   return (
     <div className="bg-[#f0fdfa] dark:bg-[#060b10] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-teal-500/30">
+      <SEO
+        title="Nyaya Philosophy"
+        description="Learn about Nyaya, the Hindu school of logic and epistemology founded by Sage Gautama. Explore its 16 Padarthas and rules of logical reasoning."
+      />
       <ScrollToTop /> <BackToPhilosophy />
       {/* Hero */}
       <motion.section

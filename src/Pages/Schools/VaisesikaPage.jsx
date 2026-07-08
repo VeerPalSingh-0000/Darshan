@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
+import SEO from "../../Components/SEO";
+
 import vaisesikaImg from "../Schools-images/vaisesika_hero.png";
 
 const VaisesikaPage = () => {
@@ -62,6 +64,10 @@ const VaisesikaPage = () => {
 
   return (
     <div className="bg-[#f5f3ff] dark:bg-[#0c0c14] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-purple-500/30">
+      <SEO
+        title="Vaisheshika Philosophy"
+        description="Explore Vaisheshika, the atomistic school of Indian philosophy founded by Sage Kanada. Learn about its physics, category classification (Padarthas), and atom theory (Paramanu)."
+      />
       <ScrollToTop /> <BackToPhilosophy />
       {/* Hero */}
       <motion.section

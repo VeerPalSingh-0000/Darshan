@@ -16,6 +16,8 @@ import SutraWidget from "../Components/SutraWidget";
 import AntiGravityCanvas from "../Components/ui/particle-effect-for-hero";
 import { useTheme } from "../context/ThemeContext";
 import { schools } from "../data/schoolsOfThought.jsx";
+import SEO from "../Components/SEO";
+
 
 // ─── Animation Variants ───────────────────────────────────────────────────────
 const fadeIn = {
@@ -86,6 +88,7 @@ const Home = () => {
 
   return (
     <div className="min-h-screen bg-[#F8F5F2] dark:bg-slate-950 text-slate-800 dark:text-slate-100 transition-colors duration-300">
+      <SEO />
       {/* ═══════════════ 1. HERO ═══════════════ */}
       <section
         className={`relative min-h-screen flex items-center justify-center text-center px-4 overflow-hidden ${

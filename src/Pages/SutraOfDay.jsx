@@ -12,6 +12,8 @@ import {
 } from "@heroicons/react/24/outline";
 import ScrollToTop from "../Components/ScrollToTop";
 import BackToPhilosophy from "../Components/BackToPhilosophy";
+import SEO from "../Components/SEO";
+
 
 import { sutras } from "../data/sutras";
 
@@ -213,6 +215,10 @@ const SutraOfDay = () => {
 
   return (
     <div className="min-h-screen bg-[#f8f5ff] dark:bg-[#06050e] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans">
+      <SEO
+        title="Sutra of the Day"
+        description="Reflect on today's Sanskrit sutra, its translation, detailed meaning, and philosophical commentary."
+      />
       <ScrollToTop />
       <BackToPhilosophy />
 

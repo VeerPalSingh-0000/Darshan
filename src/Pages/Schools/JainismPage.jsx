@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
+import SEO from "../../Components/SEO";
+
 import jainismImg from "../Schools-images/jainism_hero.png";
 
 const JainismPage = () => {
@@ -62,6 +64,10 @@ const JainismPage = () => {
 
   return (
     <div className="bg-[#f0fdf4] dark:bg-[#0a0f0a] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-emerald-500/30">
+      <SEO
+        title="Jain Philosophy"
+        description="Explore Jain philosophy, a non-theistic tradition of India. Learn about its core principles: Anekantavada (plurality of viewpoints), Syadvada, and Ahimsa (non-violence)."
+      />
       <ScrollToTop /> <BackToPhilosophy />
       {/* Hero */}
       <motion.section

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
+import SEO from "../../Components/SEO";
+
 import yogaImg from "../Schools-images/yoga_hero.png";
 
 const YogaPage = () => {
@@ -68,6 +70,10 @@ const YogaPage = () => {
 
   return (
     <div className="bg-[#f0f9ff] dark:bg-[#050b14] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-emerald-500/30">
+      <SEO
+        title="Yoga Philosophy"
+        description="Explore the Yoga school of Indian philosophy founded by Sage Patanjali. Learn about mind control, meditation, and the eight limbs (Ashtanga) of Yoga."
+      />
       <ScrollToTop /> <BackToPhilosophy />
       {/* Hero Section */}
       <motion.section

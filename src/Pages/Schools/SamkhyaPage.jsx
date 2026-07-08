@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
+import SEO from "../../Components/SEO";
+
 import kapilaImg from "../Schools-images/kapila.png";
 import purushaImg from "../Schools-images/purusha.png";
 import prakritiImg from "../Schools-images/prakriti.png";
@@ -75,6 +77,10 @@ const SamkhyaPage = () => {
 
   return (
     <div className="bg-[#fdfbf7] dark:bg-[#0b0f19] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-amber-500/30">
+      <SEO
+        title="Samkhya Philosophy"
+        description="Explore Samkhya, the oldest orthodox school of Indian philosophy, founded by Sage Kapila. Learn about Purusha (pure consciousness), Prakriti (matter), and the 25 tattvas."
+      />
       <ScrollToTop /> <BackToPhilosophy />
       {/* Hero Section */}
       <motion.section

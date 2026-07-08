@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
+import SEO from "../../Components/SEO";
+
 import buddhismImg from "../Schools-images/buddhism_hero.png";
 
 const BuddhismPage = () => {
@@ -62,6 +64,10 @@ const BuddhismPage = () => {
 
   return (
     <div className="bg-[#fefce8] dark:bg-[#05080a] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-amber-500/30">
+      <SEO
+        title="Buddhist Philosophy"
+        description="Explore Buddhist philosophy, a major heterodox tradition. Learn about Gautama Buddha's Four Noble Truths, the Eightfold Path, and Pratityasamutpada."
+      />
       <ScrollToTop />
       <BackToPhilosophy />
 

@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
+import SEO from "../../Components/SEO";
+
 import carvakaImg from "../Schools-images/carvaka_hero.png";
 
 const CarvakaPage = () => {
@@ -52,6 +54,10 @@ const CarvakaPage = () => {
 
   return (
     <div className="bg-[#fff1f2] dark:bg-[#120805] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-rose-500/30">
+      <SEO
+        title="Carvaka Philosophy"
+        description="Learn about Carvaka (Lokayata), the ancient school of Indian materialism and skepticism. Explore its rejection of after-life, karma, and reliance on direct perception."
+      />
       <ScrollToTop /> <BackToPhilosophy />
       {/* Hero */}
       <motion.section

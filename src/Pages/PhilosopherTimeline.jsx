@@ -7,6 +7,10 @@ import {
   ArrowTopRightOnSquareIcon,
 } from "@heroicons/react/24/outline";
 import BackToPhilosophy from "../Components/BackToPhilosophy";
+import ScrollToTop from "../Components/ScrollToTop";
+import SEO from "../Components/SEO";
+
+
 
 // ─── Data ─────────────────────────────────────────────────────────────────────
 // year: negative = BCE, positive = CE
@@ -333,6 +337,10 @@ const PhilosopherTimeline = () => {
 
   return (
     <div className="min-h-screen bg-[#f8f6ff] dark:bg-[#07060f] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans">
+      <SEO
+        title="Timeline of Indian Philosophers"
+        description="Explore the historical timeline of ancient Indian philosophers, from Kapila and Gautama to Adi Shankara and beyond, across different philosophical traditions."
+      />
       <ScrollToTop />
       <BackToPhilosophy />
 

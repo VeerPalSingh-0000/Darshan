@@ -8,6 +8,8 @@ import {
 } from "@heroicons/react/24/outline";
 import ScrollToTop from "../Components/ScrollToTop";
 import BackToPhilosophy from "../Components/BackToPhilosophy";
+import SEO from "../Components/SEO";
+
 
 // ─── Quiz Data ────────────────────────────────────────────────────────────────
 // Each answer scores points for a school. Schools:
@@ -584,6 +586,10 @@ const PhilosophyQuiz = () => {
 
   return (
     <div className="min-h-screen bg-[#f8f5ff] dark:bg-[#06050f] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans relative overflow-hidden">
+      <SEO
+        title="Self-Discovery Philosophy Quiz"
+        description="Take a 10-question self-discovery quiz to find out which school of Indian philosophy aligns with your worldview."
+      />
       <ScrollToTop />
       <BackToPhilosophy />
 

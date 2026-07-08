@@ -5,6 +5,8 @@ import { ArrowRightIcon } from "@heroicons/react/24/solid";
 import philosophyHeroImg from "../assets/Images/indian-philosophy-hero.png";
 
 import { schools } from "../data/schoolsOfThought";
+import SEO from "../Components/SEO";
+
 
 /* ═══════════════════════════════════════════════════════════════════════════ */
 /*  ANIMATION                                                                 */
@@ -117,6 +119,10 @@ const ExplorePage = () => {
 
   return (
     <div className="bg-[#FAFAF8] dark:bg-slate-950 min-h-screen transition-colors duration-300">
+      <SEO
+        title="Explore Indian Philosophy"
+        description="A deep dive into the nine major schools of Indian philosophy, including Samkhya, Yoga, Nyaya, Vaisheshika, Mimamsa, Vedanta, Buddhism, Jainism, and Carvaka."
+      />
       {/* ─── HERO SECTION ─── */}
       <section className="relative min-h-[70vh] flex items-center justify-center text-center overflow-hidden">
         <div className="absolute inset-0">

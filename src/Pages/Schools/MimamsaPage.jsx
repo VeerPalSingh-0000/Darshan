@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
+import SEO from "../../Components/SEO";
+
 import mimamsaImg from "../Schools-images/mimamsa_hero.png";
 
 const MimamsaPage = () => {
@@ -52,6 +54,10 @@ const MimamsaPage = () => {
 
   return (
     <div className="bg-[#fff1f1] dark:bg-[#0f0a0a] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-red-500/30">
+      <SEO
+        title="Purva Mimamsa Philosophy"
+        description="Explore Purva Mimamsa, the orthodox school of Indian philosophy focused on Vedic hermeneutics, ritual action (Karma), and duty (Dharma)."
+      />
       <ScrollToTop /> <BackToPhilosophy />
       {/* Hero */}
       <motion.section

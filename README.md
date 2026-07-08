@@ -189,7 +189,7 @@ Darśana follows a modern, minimalist aesthetic:
 
 ## 🌐 Live Demo
 
-Visit [Darshanam](https://darshanam.netlify.app) to explore the platform.
+Visit [Darshanam](https://darshanmoksha.netlify.app) to explore the platform.
 
 ---
 
@@ -200,7 +200,53 @@ Visit [Darshanam](https://darshanam.netlify.app) to explore the platform.
 #### Bhagavad Gita (18 Adhyays)
 
 1. **Arjuna Visada Yoga** - The Yoga of Arjuna's Despair
-2. **Sankhya Yoga** - The Yoga of Knowledge
+2. **Sankhya Yoga** - The Yoga of Knowledgeveer-pal-singh@veer-asus:~/projects/Darshan$ npx netlify dev
+⬥ Injecting environment variable values for all scopes
+⬥ Ignored general context env var: LANG (defined in process)
+⬥ Injected .env.local file env vars: VITE_GEMINI_API_KEY, VITE_FIREBASE_API_KEY, VITE_FIREBASE_AUTH_DOMAIN, VITE_FIREBASE_PROJECT_ID, VITE_FIREBASE_STORAGE_BUCKET, VITE_FIREBASE_MESSAGING_SENDER_ID, VITE_FIREBASE_APP_ID, VITE_FIREBASE_MEASUREMENT_ID
+⬥ Setting up local dev server
+
+⬥ Starting Vite dev server
+
+> darshanam@0.0.0 dev
+> vite
+
+
+  VITE v7.1.1  ready in 626 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose
+✔ Vite dev server ready on port 5173
+
+   ╭─────────────────────── ⬥  ────────────────────────╮
+   │                                                   │
+   │   Local dev server ready: http://localhost:8888   │
+   │                                                   │
+   ╰───────────────────────────────────────────────────╯
+
+▲ [WARNING] The CommonJS "exports" variable is treated as a global variable in an ECMAScript module and may not work as expected [commonjs-variable-in-esm]
+
+    netlify/functions/gemini-proxy.js:1:0:
+      1 │ exports.handler = async (event) => {
+        ╵ ~~~~~~~
+
+  This file is considered to be an ECMAScript module because the enclosing "package.json" file sets
+  the type of this file to "module":
+
+    package.json:5:10:
+      5 │   "type": "module",
+        ╵           ~~~~~~~~
+
+  Node's package format requires that CommonJS files in a "type": "module" package use the ".cjs"
+  file extension.
+
+⬥ Loaded function gemini-proxy
+(node:71799) [DEP0060] DeprecationWarning: The `util._extend` API is deprecated. Please use Object.assign() instead.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+Request from ::ffff:127.0.0.1: POST /.netlify/functions/gemini-proxy
+Response with status 400 in 2880 ms.
+^C
+veer-pal-singh@veer-asus:~/projects/Darshan$ 
 3. **Karma Yoga** - The Yoga of Action
    ... and 15 more chapters of divine wisdom
 

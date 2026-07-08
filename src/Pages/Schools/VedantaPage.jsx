@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
+import SEO from "../../Components/SEO";
+
 import vedantaImg from "../Schools-images/vedanta_hero.png";
 
 const VedantaPage = () => {
@@ -57,6 +59,10 @@ const VedantaPage = () => {
 
   return (
     <div className="bg-[#fff7ed] dark:bg-[#0a060f] text-slate-800 dark:text-slate-200 transition-colors duration-300 font-sans selection:bg-orange-500/30">
+      <SEO
+        title="Vedanta Philosophy"
+        description="Dive into Vedanta (Uttara Mimamsa), the end of the Vedas. Learn about Advaita, Vishishtadvaita, and Dvaita philosophies regarding Brahman, Atman, and Maya."
+      />
       <ScrollToTop /> <BackToPhilosophy />
       {/* Hero */}
       <motion.section
