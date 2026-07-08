@@ -6,7 +6,7 @@ import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import SEO from "../../Components/SEO";
 
-import jainismImg from "../Schools-images/jainism_hero.png";
+import jainismImg from "../Schools-images/jainism_hero.webp";
 
 const JainismPage = () => {
   const [activeVow, setActiveVow] = useState(null);

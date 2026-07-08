@@ -6,7 +6,7 @@ import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import SEO from "../../Components/SEO";
 
-import buddhismImg from "../Schools-images/buddhism_hero.png";
+import buddhismImg from "../Schools-images/buddhism_hero.webp";
 
 const BuddhismPage = () => {
   const [activeTruth, setActiveTruth] = useState(null);

@@ -6,7 +6,7 @@ import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import SEO from "../../Components/SEO";
 
-import vaisesikaImg from "../Schools-images/vaisesika_hero.png";
+import vaisesikaImg from "../Schools-images/vaisesika_hero.webp";
 
 const VaisesikaPage = () => {
   const [activePadartha, setActivePadartha] = useState(null);

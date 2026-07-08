@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ArrowRightIcon } from "@heroicons/react/24/solid";
-import philosophyHeroImg from "../assets/Images/indian-philosophy-hero.png";
+import philosophyHeroImg from "../assets/Images/indian-philosophy-hero.webp";
 
 import { schools } from "../data/schoolsOfThought";
 import SEO from "../Components/SEO";

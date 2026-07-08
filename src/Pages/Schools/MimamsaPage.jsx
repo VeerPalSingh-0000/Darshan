@@ -6,7 +6,7 @@ import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import SEO from "../../Components/SEO";
 
-import mimamsaImg from "../Schools-images/mimamsa_hero.png";
+import mimamsaImg from "../Schools-images/mimamsa_hero.webp";
 
 const MimamsaPage = () => {
   const [activeConcept, setActiveConcept] = useState(null);

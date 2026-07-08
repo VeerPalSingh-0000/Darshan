@@ -28,3 +28,7 @@ public/audio/
 
 # Local Netlify folder
 .netlify
+
+# Local backups of original high-res PNG images
+png_backups/
+

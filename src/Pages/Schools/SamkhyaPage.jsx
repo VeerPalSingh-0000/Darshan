@@ -6,9 +6,9 @@ import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import SEO from "../../Components/SEO";
 
-import kapilaImg from "../Schools-images/kapila.png";
-import purushaImg from "../Schools-images/purusha.png";
-import prakritiImg from "../Schools-images/prakriti.png";
+import kapilaImg from "../Schools-images/kapila.webp";
+import purushaImg from "../Schools-images/purusha.webp";
+import prakritiImg from "../Schools-images/prakriti.webp";
 
 const SamkhyaPage = () => {
   const [activeTattva, setActiveTattva] = useState(null);

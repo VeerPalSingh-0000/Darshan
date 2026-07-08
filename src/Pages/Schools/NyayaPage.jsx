@@ -6,7 +6,7 @@ import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import SEO from "../../Components/SEO";
 
-import nyayaImg from "../Schools-images/nyaya_hero.png";
+import nyayaImg from "../Schools-images/nyaya_hero.webp";
 
 const NyayaPage = () => {
   const [activePadartha, setActivePadartha] = useState(null);

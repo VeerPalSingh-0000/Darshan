@@ -12,7 +12,7 @@ import {
   EyeIcon,
   SparklesIcon,
 } from "@heroicons/react/24/outline";
-import gitaHeroImg from "../Schools-images/gita_hero.png";
+import gitaHeroImg from "../Schools-images/gita_hero.webp";
 import AskKrishnaWidget from "./AskKrishnaWidget";
 import SemanticSearch from "./SemanticSearch";
 import SEO from "../../Components/SEO";

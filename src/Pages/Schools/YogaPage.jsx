@@ -6,7 +6,7 @@ import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import SEO from "../../Components/SEO";
 
-import yogaImg from "../Schools-images/yoga_hero.png";
+import yogaImg from "../Schools-images/yoga_hero.webp";
 
 const YogaPage = () => {
   const [activeLimb, setActiveLimb] = useState(null);

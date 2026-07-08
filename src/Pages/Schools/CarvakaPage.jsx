@@ -6,7 +6,7 @@ import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import SEO from "../../Components/SEO";
 
-import carvakaImg from "../Schools-images/carvaka_hero.png";
+import carvakaImg from "../Schools-images/carvaka_hero.webp";
 
 const CarvakaPage = () => {
   const [activeTenet, setActiveTenet] = useState(null);

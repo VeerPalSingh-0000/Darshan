@@ -17,7 +17,7 @@ import {
   LogIn,
 } from "lucide-react";
 
-import darsana from "../assets/Images/darsana.png";
+import darsana from "../assets/Images/darsana.webp";
 import { useAuth } from "../context/AuthContext";
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";

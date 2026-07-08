@@ -6,7 +6,7 @@ import ScrollToTop from "../../Components/ScrollToTop";
 import BackToPhilosophy from "../../Components/BackToPhilosophy";
 import SEO from "../../Components/SEO";
 
-import vedantaImg from "../Schools-images/vedanta_hero.png";
+import vedantaImg from "../Schools-images/vedanta_hero.webp";
 
 const VedantaPage = () => {
   const [activeConcept, setActiveConcept] = useState(null);
