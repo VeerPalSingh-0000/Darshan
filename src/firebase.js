@@ -6,14 +6,15 @@ import { getAuth } from 'firebase/auth';
 // Replace this with your own Firebase project's configuration object.
 // You can find this in your Firebase project settings.
 const firebaseConfig = {
-  apiKey: "AIzaSyAGwOxPWFk6gqvMVXavNn3fFasJgOP_QCk",
-  authDomain: "darsana-2f361.firebaseapp.com",
-  projectId: "darsana-2f361",
-  storageBucket: "darsana-2f361.firebasestorage.app",
-  messagingSenderId: "692897519529",
-  appId: "1:692897519529:web:03207af130b5c147e416b8",
-  measurementId: "G-JLV89SKVKR"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
 };
+
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);

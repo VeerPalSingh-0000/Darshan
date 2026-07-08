@@ -25,3 +25,6 @@ dist-ssr
 *.exe
 public/audio/gita/
 public/audio/
+
+# Local Netlify folder
+.netlify

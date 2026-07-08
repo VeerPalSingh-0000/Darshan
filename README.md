@@ -58,7 +58,7 @@ Beautiful aesthetics in both themes for optimal viewing experience
 | **Frontend**   | React 19, React Router 7, Vite          |
 | **Styling**    | Tailwind CSS 4, Framer Motion           |
 | **Backend**    | Netlify Functions (Serverless)          |
-| **APIs**       | Google Generative AI (Gemini 2.5 Flash) |
+| **APIs**       | Google Generative AI (Gemini 3.5 Flash) |
 | **Build Tool** | Vite, PWA Plugin                        |
 | **Icons**      | Heroicons React                         |
 | **Animation**  | Framer Motion 12                        |
