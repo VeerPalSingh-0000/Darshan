@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import SEO from "../../../Components/SEO";
-import { ArrowLeftIcon } from "@heroicons/react/24/outline";
+import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import {
   BookOpenIcon,
   BookmarkIcon as BookmarkSolidIcon,
@@ -48,64 +48,12 @@ const listItemVariants = {
   },
 };
 
-// --- Helper Component to format Word-by-Word Meanings ---
-const WordMeaningDisplay = ({ text, language }) => {
-  if (!text) return null;
-
-  let parsed = [];
-  try {
-    if (language === "english" || language === "spanish" || language === "bengali" || language === "tamil") {
-      const pairs = text.split(';').map(p => p.trim()).filter(Boolean);
-      parsed = pairs.map((pair) => {
-        const parts = pair.split(/—|-/);
-        const word = parts[0]?.trim();
-        const meaning = parts.slice(1).join('-')?.trim();
-        return { word, meaning: meaning || "" };
-      }).filter(p => p.word);
-    } else if (language === "hindi") {
-      const parts = text.split('(').map(p => p.trim()).filter(Boolean);
-      parsed = parts.map((part) => {
-        const [word, ...meaningParts] = part.split(')');
-        return { word: word?.trim(), meaning: meaningParts.join(')')?.trim() };
-      }).filter(p => p.word);
-    }
-  } catch (e) {
-    parsed = [];
-  }
-
-  if (parsed.length === 0 || !parsed[0].meaning) {
-    return (
-      <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg font-medium italic">
-        {text}
-      </p>
-    );
-  }
-
-  return (
-    <div className="flex flex-wrap gap-3 mt-1">
-      {parsed.map((item, idx) => (
-        <div 
-          key={idx} 
-          className="group relative flex items-center gap-3 bg-white/60 dark:bg-slate-800/40 backdrop-blur-md border border-slate-200/60 dark:border-slate-700/50 rounded-full pl-4 pr-5 py-2 shadow-sm hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 hover:border-emerald-300/60 dark:hover:border-emerald-600/50"
-        >
-          <span className="font-bold text-emerald-800 dark:text-emerald-400 text-[15px] tracking-wide whitespace-nowrap">
-            {item.word}
-          </span>
-          <div className="h-4 w-[2px] rounded-full bg-slate-200 dark:bg-slate-600/70 group-hover:bg-emerald-300 dark:group-hover:bg-emerald-500/50 transition-colors"></div>
-          <span className="text-slate-700 dark:text-slate-300 font-medium italic text-[15px]">
-            {item.meaning}
-          </span>
-        </div>
-      ))}
-    </div>
-  );
-};
-
 const Adhyay1 = () => {
   const { currentUser } = useAuth();
   const [bookmarks, setBookmarks] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [selectedLanguage, setSelectedLanguage] = useState("hindi");
+  const [showBackground, setShowBackground] = useState(false);
 
   // --- Fetch bookmarks from Firestore when user logs in ---
   useEffect(() => {
@@ -250,6 +198,174 @@ const Adhyay1 = () => {
         </div>
       </motion.section>
 
+      {/* ═══ Background of the Mahabharata — for newcomers ═══ */}
+      <section className="relative pb-10 sm:pb-14">
+        <div className="container mx-auto px-4 max-w-5xl">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.7 }}
+          >
+            <button
+              onClick={() => setShowBackground(!showBackground)}
+              className="w-full group relative overflow-hidden bg-gradient-to-r from-amber-50 via-orange-50/80 to-yellow-50/60 dark:from-amber-950/40 dark:via-orange-950/30 dark:to-yellow-950/20 backdrop-blur-sm border border-amber-200/60 dark:border-amber-800/40 rounded-2xl p-6 shadow-md hover:shadow-lg transition-all duration-500 hover:border-amber-300 dark:hover:border-amber-600/50 text-left"
+            >
+              <div className="absolute -top-4 -right-4 w-40 h-40 bg-gradient-to-bl from-amber-200/15 dark:from-amber-500/5 to-transparent rounded-bl-full" />
+              <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-orange-200/10 dark:from-orange-500/5 to-transparent rounded-tr-full" />
+              <div className="relative z-10 flex items-center justify-between">
+                <div className="flex items-center gap-4">
+                  <div className="flex items-center justify-center w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-100 to-orange-100 dark:from-amber-900/50 dark:to-orange-900/40 border border-amber-200/50 dark:border-amber-700/40 shadow-sm">
+                    <span className="text-2xl">📜</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-amber-900 dark:text-amber-300 tracking-wide">
+                      {selectedLanguage === "hindi" ? "महाभारत की पृष्ठभूमि" : "Background of the Mahābhārata"}
+                    </h3>
+                    <p className="text-sm text-amber-700/70 dark:text-amber-400/60 mt-0.5 font-medium">
+                      {selectedLanguage === "hindi"
+                        ? "नए पाठकों के लिए — यह कहानी क्या है?"
+                        : "New to this? — A brief introduction to the story"}
+                    </p>
+                  </div>
+                </div>
+                <motion.div
+                  animate={{ rotate: showBackground ? 180 : 0 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <ChevronDownIcon className="w-6 h-6 text-amber-600 dark:text-amber-400" />
+                </motion.div>
+              </div>
+            </button>
+
+            {/* Expandable Background Content */}
+            <motion.div
+              initial={false}
+              animate={{
+                height: showBackground ? "auto" : 0,
+                opacity: showBackground ? 1 : 0,
+              }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+              className="overflow-hidden"
+            >
+              <div className="mt-4 bg-white/80 dark:bg-slate-900/90 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800 rounded-2xl shadow-lg p-8 md:p-10 space-y-8">
+
+                {/* ─── The Story ─── */}
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-1.5 h-7 bg-gradient-to-b from-amber-400 to-orange-500 rounded-full" />
+                    <h4 className="font-bold text-slate-800 dark:text-slate-100 text-lg">
+                      {selectedLanguage === "hindi" ? "🏛️ कहानी संक्षेप में" : "🏛️ The Story in Brief"}
+                    </h4>
+                  </div>
+                  <div className="bg-gradient-to-br from-amber-50/50 to-orange-50/30 dark:from-amber-950/20 dark:to-orange-950/10 p-6 rounded-2xl border border-amber-100/40 dark:border-amber-900/30 space-y-4">
+                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-[15px]">
+                      {selectedLanguage === "hindi"
+                        ? "महाभारत दुनिया का सबसे बड़ा महाकाव्य है। यह हस्तिनापुर (आज के दिल्ली के पास) के एक राजपरिवार की कहानी है। इस परिवार में दो भाई थे — धृतराष्ट्र (जो जन्म से अंधे थे) और पाण्डु। धृतराष्ट्र बड़े थे पर अंधे होने के कारण राजा नहीं बन सके, इसलिए पाण्डु राजा बने। पाण्डु की असमय मृत्यु के बाद, उनके पाँच पुत्रों (पाण्डव — युधिष्ठिर, भीम, अर्जुन, नकुल, सहदेव) को राज्य मिलना चाहिए था।"
+                        : "The Mahābhārata is the world's longest epic poem. It tells the story of a royal family in the kingdom of Hastinapura (near modern-day Delhi, India). This family had two brothers — Dhritarashtra (born blind) and Pandu. Because Dhritarashtra was blind, Pandu became king instead. After Pandu's early death, his five sons (the Pandavas — Yudhishthira, Bhima, Arjuna, Nakula, and Sahadeva) were the rightful heirs to the throne."}
+                    </p>
+                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-[15px]">
+                      {selectedLanguage === "hindi"
+                        ? "लेकिन धृतराष्ट्र के सौ पुत्रों (कौरव — जिनमें दुर्योधन सबसे बड़ा था) ने राज्य देने से मना कर दिया। दुर्योधन ने ईर्ष्या और लालच में आकर पाण्डवों को छल से जुए में हराया, उन्हें 13 साल के वनवास पर भेजा, और वनवास पूरा होने के बाद भी राज्य लौटाने से इनकार कर दिया। भगवान कृष्ण ने शांति दूत बनकर बातचीत की कोशिश की, लेकिन दुर्योधन ने कहा — 'सुई की नोक जितनी भी ज़मीन नहीं दूँगा'।"
+                        : "However, Dhritarashtra's one hundred sons (the Kauravas — led by the eldest, Duryodhana) refused to share power. Driven by jealousy and greed, Duryodhana cheated the Pandavas in a rigged game of dice, sent them into 13 years of exile, and even after the exile was completed, refused to return even a single village. Lord Krishna himself went as a peace messenger, but Duryodhana declared — 'I won't give them land equal to the tip of a needle.'"}
+                    </p>
+                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-[15px]">
+                      {selectedLanguage === "hindi"
+                        ? "जब सभी शांतिपूर्ण प्रयास विफल हो गए, तो युद्ध अपरिहार्य हो गया। दोनों पक्षों की विशाल सेनाएँ कुरुक्षेत्र (हरियाणा, भारत) के मैदान में एकत्र हुईं। यह 18 दिनों तक चलने वाला भयंकर युद्ध था।"
+                        : "When all peaceful efforts failed, war became inevitable. The massive armies of both sides assembled on the plains of Kurukshetra (in modern-day Haryana, India). This devastating war would last 18 days."}
+                    </p>
+                  </div>
+                </div>
+
+                {/* ─── Key Characters ─── */}
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-1.5 h-7 bg-gradient-to-b from-indigo-400 to-violet-500 rounded-full" />
+                    <h4 className="font-bold text-slate-800 dark:text-slate-100 text-lg">
+                      {selectedLanguage === "hindi" ? "👥 मुख्य पात्र" : "👥 Key Characters"}
+                    </h4>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {[
+                      {
+                        emoji: "🦚",
+                        name: selectedLanguage === "hindi" ? "श्री कृष्ण" : "Lord Krishna",
+                        desc: selectedLanguage === "hindi"
+                          ? "भगवान विष्णु के अवतार। अर्जुन के सारथी और मार्गदर्शक। गीता का ज्ञान इन्होंने ही दिया।"
+                          : "Incarnation of Lord Vishnu. Arjuna's charioteer and guide. He is the one who delivers the teachings of the Gita."
+                      },
+                      {
+                        emoji: "🏹",
+                        name: selectedLanguage === "hindi" ? "अर्जुन" : "Arjuna",
+                        desc: selectedLanguage === "hindi"
+                          ? "पाँच पाण्डवों में तीसरे भाई और सबसे महान धनुर्धर। कृष्ण के परम मित्र।"
+                          : "The third of the five Pandava brothers and the greatest archer of his time. Krishna's dearest friend."
+                      },
+                      {
+                        emoji: "👑",
+                        name: selectedLanguage === "hindi" ? "दुर्योधन" : "Duryodhana",
+                        desc: selectedLanguage === "hindi"
+                          ? "धृतराष्ट्र का ज्येष्ठ पुत्र और कौरवों का नेता। लालच और ईर्ष्या से प्रेरित।"
+                          : "The eldest son of Dhritarashtra and leader of the Kauravas. Driven by greed and jealousy."
+                      },
+                      {
+                        emoji: "🙈",
+                        name: selectedLanguage === "hindi" ? "धृतराष्ट्र" : "Dhritarashtra",
+                        desc: selectedLanguage === "hindi"
+                          ? "कौरवों के अंधे पिता। पुत्रमोह के कारण अन्याय रोकने में असमर्थ रहे।"
+                          : "The blind father of the Kauravas. His attachment to his sons prevented him from stopping injustice."
+                      },
+                      {
+                        emoji: "👁️",
+                        name: selectedLanguage === "hindi" ? "संजय" : "Sanjaya",
+                        desc: selectedLanguage === "hindi"
+                          ? "धृतराष्ट्र के सारथी। उन्हें दिव्य दृष्टि प्राप्त थी जिससे वे महल में बैठे युद्ध का आँखों देखा हाल सुना सके।"
+                          : "Dhritarashtra's charioteer. He was granted divine vision to narrate the events of the war from the palace."
+                      },
+                      {
+                        emoji: "⚔️",
+                        name: selectedLanguage === "hindi" ? "भीष्म" : "Bhishma",
+                        desc: selectedLanguage === "hindi"
+                          ? "कुरुवंश के पितामह और महान योद्धा। कर्तव्य से बंधे कौरवों की ओर से लड़ रहे थे।"
+                          : "The grand patriarch of the Kuru dynasty. A legendary warrior fighting for the Kauravas out of duty, not conviction."
+                      },
+                    ].map((char, idx) => (
+                      <div
+                        key={idx}
+                        className="flex items-start gap-3 p-4 bg-gradient-to-br from-slate-50/60 to-indigo-50/30 dark:from-slate-800/50 dark:to-indigo-950/20 rounded-xl border border-slate-200/40 dark:border-slate-700/30 hover:border-indigo-200/60 dark:hover:border-indigo-700/40 transition-all duration-300"
+                      >
+                        <span className="text-2xl mt-0.5">{char.emoji}</span>
+                        <div>
+                          <p className="font-bold text-slate-800 dark:text-slate-200 text-[15px]">{char.name}</p>
+                          <p className="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mt-0.5">{char.desc}</p>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+
+                {/* ─── Setting of the Gita ─── */}
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-1.5 h-7 bg-gradient-to-b from-emerald-400 to-green-500 rounded-full" />
+                    <h4 className="font-bold text-slate-800 dark:text-slate-100 text-lg">
+                      {selectedLanguage === "hindi" ? "🕉️ गीता कहाँ से शुरू होती है?" : "🕉️ Where Does the Gita Begin?"}
+                    </h4>
+                  </div>
+                  <div className="bg-gradient-to-br from-emerald-50/40 to-green-50/20 dark:from-emerald-950/20 dark:to-green-950/10 p-6 rounded-2xl border border-emerald-100/40 dark:border-emerald-900/30">
+                    <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-[15px]">
+                      {selectedLanguage === "hindi"
+                        ? "भगवद्गीता का उपदेश ठीक युद्ध शुरू होने से पहले का है। दोनों सेनाएँ आमने-सामने खड़ी हैं। अर्जुन अपने रथ पर खड़े हैं, कृष्ण उनके सारथी हैं। जब अर्जुन दोनों तरफ अपने ही परिवार के लोगों — दादा भीष्म, गुरु द्रोण, भाइयों, चचेरे भाइयों — को देखते हैं, तो वे भावनात्मक रूप से टूट जाते हैं और हथियार रखने की बात करते हैं। यहीं से कृष्ण उन्हें कर्तव्य, धर्म, आत्मा, और जीवन के गहरे रहस्यों का ज्ञान देते हैं — यही भगवद्गीता है। अध्याय 1 में अर्जुन की यह दुविधा और विषाद (grief) विस्तार से दिखाया गया है।"
+                        : "The Bhagavad Gita begins on the battlefield, moments before the war starts. Both armies stand face-to-face. Arjuna stands in his chariot with Krishna as his charioteer. When Arjuna sees his own family on both sides — his grandfather Bhishma, his teacher Drona, his cousins and loved ones — he is emotionally shattered and wants to drop his weapons and refuse to fight. This is where Krishna begins his timeless teachings about duty, righteousness, the soul, and the deepest secrets of life — this is the Bhagavad Gita. Chapter 1 focuses entirely on Arjuna's inner crisis and despair."}
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Shlokas List */}
       <section className="relative pb-20 sm:pb-24">
         <div className="container mx-auto px-4 max-w-5xl">
@@ -342,12 +458,10 @@ const Adhyay1 = () => {
                       </div>
                     </motion.div>
 
-                    {/* Word-by-Word Meaning */}
-                    {(selectedLanguage === "hindi" && shloka.hindi_meaning) ||
-                      (selectedLanguage === "english" && shloka.meaning) ||
-                      shloka[`${selectedLanguage}_meaning`] ? (
+                    {/* Context & Background — beginner-friendly explanation */}
+                    {shloka.translations && shloka.translations[selectedLanguage] && shloka.translations[selectedLanguage].literal_meaning && (
                       <motion.div
-                        key={`meaning-${shloka.num}`}
+                        key={`context-${shloka.num}`}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "100px" }}
@@ -357,41 +471,13 @@ const Adhyay1 = () => {
                           <div className="w-1.5 h-7 bg-gradient-to-b from-emerald-400 to-green-500 rounded-full shadow-sm shadow-emerald-400/30" />
                           <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg tracking-wide">
                             {selectedLanguage === "hindi"
-                              ? "शब्दार्थ (Word-by-Word Meaning)"
-                              : selectedLanguage === "english"
-                                ? "Word-by-Word Meaning"
-                                : `${selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)} Meaning`}
+                              ? "📖 सरल संदर्भ — यहाँ क्या हो रहा है?"
+                              : "📖 Context — What's Happening Here?"}
                           </h3>
                         </div>
                         <div className="relative bg-gradient-to-br from-emerald-50/30 to-green-50/20 dark:from-emerald-950/20 dark:to-green-950/10 p-6 rounded-2xl border border-emerald-100/40 dark:border-emerald-900/30 backdrop-blur-sm">
-                          <WordMeaningDisplay 
-                            text={selectedLanguage === "hindi" ? shloka.hindi_meaning : (selectedLanguage === "english" ? shloka.meaning : shloka[`${selectedLanguage}_meaning`])} 
-                            language={selectedLanguage} 
-                          />
-                        </div>
-                      </motion.div>
-                    ) : (
-                      <motion.div
-                        key={`meaning-${shloka.num}`}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "100px" }}
-                        transition={{ delay: 0.4 }}
-                      >
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-1.5 h-7 bg-gradient-to-b from-emerald-400 to-green-500 rounded-full shadow-sm shadow-emerald-400/30" />
-                          <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg tracking-wide">
-                            {selectedLanguage.charAt(0).toUpperCase() +
-                              selectedLanguage.slice(1)}{" "}
-                            Meaning
-                          </h3>
-                        </div>
-                        <div className="bg-gradient-to-br from-emerald-50/30 to-green-50/20 dark:from-emerald-950/20 dark:to-green-950/10 p-6 rounded-2xl border border-emerald-100/40 dark:border-emerald-900/30">
-                          <p className="text-slate-500 dark:text-slate-400 leading-relaxed text-lg italic">
-                            Meaning for{" "}
-                            {selectedLanguage.charAt(0).toUpperCase() +
-                              selectedLanguage.slice(1)}{" "}
-                            will be available soon.
+                          <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg font-medium">
+                            {shloka.translations[selectedLanguage].literal_meaning}
                           </p>
                         </div>
                       </motion.div>
