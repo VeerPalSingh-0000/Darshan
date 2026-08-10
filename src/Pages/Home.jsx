@@ -334,23 +334,24 @@ const Home = () => {
               <motion.div
                 key={school.name}
                 variants={cardUp}
-                className="group bg-white dark:bg-slate-900 p-7 rounded-2xl border border-slate-200/80 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-600 hover:shadow-[0_8px_40px_rgba(245,158,11,0.12)] transition-all duration-300 flex flex-col text-center items-center"
               >
-                <div className="bg-amber-500/10 p-4 rounded-2xl group-hover:bg-amber-500/20 transition-colors">
-                  {school.icon}
-                </div>
-                <h3 className="text-xl font-serif tracking-wider uppercase mt-5 mb-2.5 text-slate-800 dark:text-slate-100">
-                  {school.name}
-                </h3>
-                <p className="text-slate-500 dark:text-slate-400 flex-grow text-sm leading-relaxed">
-                  {school.description}
-                </p>
                 <Link
                   to={school.path}
-                  className="mt-5 font-bold text-sm text-amber-700 dark:text-amber-500 hover:text-amber-900 inline-flex items-center group/link"
+                  className="group bg-white dark:bg-slate-900 p-7 rounded-2xl border border-slate-200/80 dark:border-slate-800 hover:border-amber-400 dark:hover:border-amber-600 hover:shadow-[0_8px_40px_rgba(245,158,11,0.12)] transition-all duration-300 flex flex-col text-center items-center h-full cursor-pointer"
                 >
-                  Learn More{" "}
-                  <ArrowRightIcon className="ml-2 h-3.5 w-3.5 group-hover/link:translate-x-1 transition-transform" />
+                  <div className="bg-amber-500/10 p-4 rounded-2xl group-hover:bg-amber-500/20 transition-colors">
+                    {school.icon}
+                  </div>
+                  <h3 className="text-xl font-serif tracking-wider uppercase mt-5 mb-2.5 text-slate-800 dark:text-slate-100 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                    {school.name}
+                  </h3>
+                  <p className="text-slate-500 dark:text-slate-400 flex-grow text-sm leading-relaxed">
+                    {school.description}
+                  </p>
+                  <span className="mt-5 font-bold text-sm text-amber-700 dark:text-amber-500 group-hover:text-amber-900 dark:group-hover:text-amber-400 inline-flex items-center">
+                    Learn More{" "}
+                    <ArrowRightIcon className="ml-2 h-3.5 w-3.5 group-hover:translate-x-1 transition-transform" />
+                  </span>
                 </Link>
               </motion.div>
             ))}

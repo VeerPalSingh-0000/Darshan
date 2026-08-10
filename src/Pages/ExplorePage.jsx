@@ -87,25 +87,26 @@ const SchoolCard = ({ school }) => (
 
 const FeatureCard = ({ emoji, title, desc, path, btn, gradient, btnClass }) => (
   <motion.div variants={cardAnim}>
-    <div
-      className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${gradient} p-7 sm:p-8 h-full`}
-    >
-      <div className="relative z-10 flex items-start gap-5">
-        <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-2xl shrink-0">
-          {emoji}
-        </div>
-        <div>
-          <h3 className="text-lg font-semibold text-white mb-1.5">{title}</h3>
-          <p className="text-white/50 text-sm leading-relaxed mb-4">{desc}</p>
-          <Link
-            to={path}
-            className={`inline-flex items-center gap-1.5 font-bold px-5 py-2.5 rounded-full text-xs transition-all ${btnClass}`}
-          >
-            {btn} <ArrowRightIcon className="w-3 h-3" />
-          </Link>
+    <Link to={path} className="group block h-full cursor-pointer">
+      <div
+        className={`relative overflow-hidden rounded-2xl bg-gradient-to-br ${gradient} p-7 sm:p-8 h-full transition-transform duration-300 hover:scale-[1.02]`}
+      >
+        <div className="relative z-10 flex items-start gap-5">
+          <div className="w-12 h-12 rounded-xl bg-white/10 border border-white/15 flex items-center justify-center text-2xl shrink-0">
+            {emoji}
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold text-white mb-1.5">{title}</h3>
+            <p className="text-white/80 text-sm leading-relaxed mb-4">{desc}</p>
+            <span
+              className={`inline-flex items-center gap-1.5 font-bold px-5 py-2.5 rounded-full text-xs transition-all ${btnClass}`}
+            >
+              {btn} <ArrowRightIcon className="w-3 h-3 group-hover:translate-x-1 transition-transform" />
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   </motion.div>
 );
 

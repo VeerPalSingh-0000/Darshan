@@ -62,9 +62,7 @@ const Adhyay15 = () => {
       alert("Please log in to save your bookmarks.");
       return;
     }
-    const newBookmarks = bookmarks.includes(shlokaNum)
-      ? bookmarks.filter((num) => num !== shlokaNum)
-      : [...bookmarks, shlokaNum];
+    const newBookmarks = bookmarks.includes(shlokaNum) ? [] : [shlokaNum];
     setBookmarks(newBookmarks);
     try {
       const docRef = doc(db, "userBookmarks", currentUser.uid);
@@ -182,6 +180,22 @@ const Adhyay15 = () => {
 
       <section className="relative pb-20 sm:pb-24">
         <div className="container mx-auto px-4 max-w-5xl">
+          {bookmarks.length > 0 && (
+            <div className="flex justify-end mb-6">
+              <button
+                onClick={() => {
+                  const el = document.getElementById(`verse-${bookmarks[0]}`);
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }}
+                className="flex items-center gap-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-200 rounded-lg hover:bg-amber-200 dark:hover:bg-amber-900/60 transition-colors shadow-sm"
+              >
+                <BookmarkSolidIcon className="w-5 h-5" />
+                <span className="font-medium">Go to Bookmark (Verse {bookmarks[0]})</span>
+              </button>
+            </div>
+          )}
           <motion.div
             className="space-y-10"
             variants={listContainerVariants}
@@ -191,6 +205,7 @@ const Adhyay15 = () => {
             {chapter15Shlokas.map((shloka) => (
               <motion.div
                 key={shloka.num}
+                id={`verse-${shloka.num}`}
                 className="group relative bg-white/80 dark:bg-slate-900/90 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800 rounded-2xl shadow-lg hover:shadow-xl overflow-hidden transition-all duration-500 hover:border-amber-200 dark:hover:border-amber-900/50"
                 variants={listItemVariants}
                 whileHover={{ y: -4 }}

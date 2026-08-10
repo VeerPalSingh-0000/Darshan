@@ -114,7 +114,6 @@ const GitaResources = () => {
             {commentaries.map((item, i) => (
               <motion.div
                 key={item.title}
-                className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200/80 dark:border-slate-800 hover:shadow-lg hover:border-amber-300 dark:hover:border-amber-500 transition-all duration-300 flex flex-col"
                 variants={{
                   hidden: { opacity: 0, y: 24 },
                   visible: {
@@ -124,28 +123,30 @@ const GitaResources = () => {
                   },
                 }}
               >
-                <div className="flex-grow">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-                    by {item.author}
-                  </p>
-                  <p className="mt-3 text-slate-600 dark:text-slate-300 text-[15px] leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-                <div className="mt-6">
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-amber-700 hover:text-amber-900 group"
-                  >
-                    View Resource
-                    <LinkIcon className="h-4 w-4 transform transition-transform group-hover:-translate-y-px group-hover:translate-x-px" />
-                  </a>
-                </div>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200/80 dark:border-slate-800 hover:shadow-lg hover:border-amber-300 dark:hover:border-amber-500 transition-all duration-300 flex flex-col h-full cursor-pointer"
+                >
+                  <div className="flex-grow">
+                    <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                      by {item.author}
+                    </p>
+                    <p className="mt-3 text-slate-600 dark:text-slate-300 text-[15px] leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                  <div className="mt-6">
+                    <span className="inline-flex items-center gap-2 text-sm font-bold text-amber-700 dark:text-amber-500 group-hover:text-amber-900 dark:group-hover:text-amber-400">
+                      View Resource
+                      <LinkIcon className="h-4 w-4 transform transition-transform group-hover:-translate-y-px group-hover:translate-x-px" />
+                    </span>
+                  </div>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -165,7 +166,6 @@ const GitaResources = () => {
             {[...websites, ...apps].map((item, i) => (
               <motion.div
                 key={item.title}
-                className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200/80 dark:border-slate-800 hover:shadow-lg hover:border-amber-300 dark:hover:border-amber-500 transition-all duration-300 flex flex-col"
                 variants={{
                   hidden: { opacity: 0, y: 24 },
                   visible: {
@@ -175,28 +175,30 @@ const GitaResources = () => {
                   },
                 }}
               >
-                <div className="flex-grow">
-                  <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
-                    from {item.creator}
-                  </p>
-                  <p className="mt-3 text-slate-600 dark:text-slate-300 text-[15px] leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-                <div className="mt-6">
-                  <a
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 text-sm font-bold text-amber-700 hover:text-amber-900 group"
-                  >
-                    Visit Website or App
-                    <LinkIcon className="h-4 w-4 transform transition-transform group-hover:-translate-y-px group-hover:translate-x-px" />
-                  </a>
-                </div>
+                <a
+                  href={item.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200/80 dark:border-slate-800 hover:shadow-lg hover:border-amber-300 dark:hover:border-amber-500 transition-all duration-300 flex flex-col h-full cursor-pointer"
+                >
+                  <div className="flex-grow">
+                    <h3 className="text-lg font-semibold text-slate-900 dark:text-slate-100 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mt-1">
+                      from {item.creator}
+                    </p>
+                    <p className="mt-3 text-slate-600 dark:text-slate-300 text-[15px] leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                  <div className="mt-6">
+                    <span className="inline-flex items-center gap-2 text-sm font-bold text-amber-700 dark:text-amber-500 group-hover:text-amber-900 dark:group-hover:text-amber-400">
+                      View Resource
+                      <LinkIcon className="h-4 w-4 transform transition-transform group-hover:-translate-y-px group-hover:translate-x-px" />
+                    </span>
+                  </div>
+                </a>
               </motion.div>
             ))}
           </div>

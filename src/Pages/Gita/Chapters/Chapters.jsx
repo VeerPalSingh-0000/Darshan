@@ -166,7 +166,6 @@ const Chapters = () => {
             {allChapters.map((c, i) => (
               <motion.div
                 key={c.num}
-                className="bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200/80 dark:border-slate-800 hover:shadow-lg hover:border-amber-300 dark:hover:border-amber-700 transition-all duration-300 flex flex-col"
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: true, amount: 0.3 }}
@@ -179,29 +178,31 @@ const Chapters = () => {
                   },
                 }}
               >
-                <div className="flex-grow">
-                  <div className="text-amber-700 dark:text-amber-500 font-semibold tracking-wide">
-                    Chapter {c.num}
+                <Link
+                  to={`/gita/chapters/adhyay${c.num}`}
+                  className="group bg-white dark:bg-slate-900 p-6 rounded-xl border border-slate-200/80 dark:border-slate-800 hover:shadow-lg hover:border-amber-300 dark:hover:border-amber-700 transition-all duration-300 flex flex-col h-full cursor-pointer"
+                >
+                  <div className="flex-grow">
+                    <div className="text-amber-700 dark:text-amber-500 font-semibold tracking-wide">
+                      Chapter {c.num}
+                    </div>
+                    <h2 className="mt-2 text-xl font-semibold text-slate-900 dark:text-slate-100 group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">
+                      {c.title}
+                    </h2>
+                    <h3 className="mt-1 text-base text-slate-500 dark:text-slate-400 italic">
+                      {c.translation}
+                    </h3>
+                    <p className="mt-3 text-slate-600 dark:text-slate-400 text-sm leading-6">
+                      {c.desc}
+                    </p>
                   </div>
-                  <h2 className="mt-2 text-xl font-semibold text-slate-900 dark:text-slate-100">
-                    {c.title}
-                  </h2>
-                  <h3 className="mt-1 text-base text-slate-500 dark:text-slate-400 italic">
-                    {c.translation}
-                  </h3>
-                  <p className="mt-3 text-slate-600 dark:text-slate-400 text-sm leading-6">
-                    {c.desc}
-                  </p>
-                </div>
-                <div className="mt-6 text-right">
-                  <Link
-                    to={`/gita/chapters/adhyay${c.num}`}
-                    className="font-bold text-sm text-amber-700 dark:text-amber-500 hover:text-amber-900 dark:hover:text-amber-400 inline-flex items-center group"
-                  >
-                    Read More
-                    <ArrowRightIcon className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
-                  </Link>
-                </div>
+                  <div className="mt-6 text-right">
+                    <span className="font-bold text-sm text-amber-700 dark:text-amber-500 group-hover:text-amber-900 dark:group-hover:text-amber-400 inline-flex items-center">
+                      Read More
+                      <ArrowRightIcon className="ml-2 h-4 w-4 transform group-hover:translate-x-1 transition-transform" />
+                    </span>
+                  </div>
+                </Link>
               </motion.div>
             ))}
           </div>

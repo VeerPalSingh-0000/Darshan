@@ -6,8 +6,6 @@ import { ArrowLeftIcon, ChevronDownIcon } from "@heroicons/react/24/outline";
 import {
   BookOpenIcon,
   BookmarkIcon as BookmarkSolidIcon,
-  LightBulbIcon,
-  WrenchScrewdriverIcon,
   SparklesIcon,
 } from "@heroicons/react/24/solid";
 import { BookmarkIcon as BookmarkOutlineIcon } from "@heroicons/react/24/outline";
@@ -48,6 +46,45 @@ const listItemVariants = {
   },
 };
 
+// --- Speaker Name Translations ---
+const speakerMap = {
+  "Lord Krishna": {
+    hindi: "श्रीकृष्ण",
+    english: "Lord Krishna",
+    tamil: "ஸ்ரீ கிருஷ்ணர்",
+    bengali: "শ্রীকৃষ্ণ",
+    spanish: "Señor Krishna",
+  },
+  "Arjuna": {
+    hindi: "अर्जुन",
+    english: "Arjuna",
+    tamil: "அர்ஜுனன்",
+    bengali: "অর্জুন",
+    spanish: "Arjuna",
+  },
+  "Sanjaya": {
+    hindi: "संजय",
+    english: "Sanjaya",
+    tamil: "சஞ்சயன்",
+    bengali: "সঞ্জয়",
+    spanish: "Sanjaya",
+  },
+  "Dhritarashtra": {
+    hindi: "धृतराष्ट्र",
+    english: "Dhritarashtra",
+    tamil: "திருதராஷ்டிரன்",
+    bengali: "ধৃতরাষ্ট্র",
+    spanish: "Dhritarashtra",
+  },
+  "Duryodhana": {
+    hindi: "दुर्योधन",
+    english: "Duryodhana",
+    tamil: "துரியோதனன்",
+    bengali: "দুর্যোধন",
+    spanish: "Duryodhana",
+  },
+};
+
 const Adhyay1 = () => {
   const { currentUser } = useAuth();
   const [bookmarks, setBookmarks] = useState([]);
@@ -82,9 +119,7 @@ const Adhyay1 = () => {
       alert("Please log in to save your bookmarks.");
       return;
     }
-    const newBookmarks = bookmarks.includes(shlokaNum)
-      ? bookmarks.filter((num) => num !== shlokaNum)
-      : [...bookmarks, shlokaNum];
+    const newBookmarks = bookmarks.includes(shlokaNum) ? [] : [shlokaNum];
     setBookmarks(newBookmarks);
     try {
       const docRef = doc(db, "userBookmarks", currentUser.uid);
@@ -369,6 +404,22 @@ const Adhyay1 = () => {
       {/* Shlokas List */}
       <section className="relative pb-20 sm:pb-24">
         <div className="container mx-auto px-4 max-w-5xl">
+          {bookmarks.length > 0 && (
+            <div className="flex justify-end mb-6">
+              <button
+                onClick={() => {
+                  const el = document.getElementById(`verse-${bookmarks[0]}`);
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }}
+                className="flex items-center gap-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-200 rounded-lg hover:bg-amber-200 dark:hover:bg-amber-900/60 transition-colors shadow-sm"
+              >
+                <BookmarkSolidIcon className="w-5 h-5" />
+                <span className="font-medium">Go to Bookmark (Verse {bookmarks[0]})</span>
+              </button>
+            </div>
+          )}
           <motion.div
             className="space-y-10"
             variants={listContainerVariants}
@@ -378,6 +429,7 @@ const Adhyay1 = () => {
             {chapter1Shlokas.map((shloka) => (
               <motion.div
                 key={shloka.num}
+                id={`verse-${shloka.num}`}
                 className="group relative bg-white/80 dark:bg-slate-900/90 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800 rounded-2xl shadow-lg hover:shadow-xl overflow-hidden transition-all duration-500 hover:border-amber-200 dark:hover:border-amber-900/50"
                 variants={listItemVariants}
                 whileHover={{ y: -4 }}
@@ -426,7 +478,7 @@ const Adhyay1 = () => {
                   {shloka.speaker && (
                     <div className="flex justify-center mb-8">
                       <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/50 text-slate-600 dark:text-slate-400 text-sm font-medium">
-                        🗣️ {selectedLanguage === "hindi" ? "वक्ता" : "Speaker"}: <span className="text-slate-800 dark:text-slate-200 font-semibold">{shloka.speaker}</span>
+                        🗣️ {selectedLanguage === "hindi" ? "वक्ता" : "Speaker"}: <span className="text-slate-800 dark:text-slate-200 font-semibold">{speakerMap[shloka.speaker]?.[selectedLanguage] || shloka.speaker}</span>
                       </span>
                     </div>
                   )}
@@ -483,90 +535,32 @@ const Adhyay1 = () => {
                       </motion.div>
                     )}
 
-                    {/* ═══ Detailed Analysis Section ═══ */}
-                    {shloka.translations && shloka.translations[selectedLanguage] && (
+                    {/* ═══ Key Lesson ═══ */}
+                    {shloka.translations && shloka.translations[selectedLanguage] && shloka.translations[selectedLanguage].key_lesson && (
                       <motion.div
-                        key={`detailed-${shloka.num}`}
+                        key={`lesson-${shloka.num}`}
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true, margin: "100px" }}
                         transition={{ delay: 0.6 }}
-                        className="space-y-5 pt-4"
+                        className="relative overflow-hidden bg-gradient-to-r from-amber-50 via-orange-50/80 to-yellow-50/60 dark:from-amber-950/30 dark:via-orange-950/20 dark:to-yellow-950/10 p-6 rounded-2xl border border-amber-200/50 dark:border-amber-800/30 hover:border-amber-300/70 dark:hover:border-amber-600/50 transition-all duration-500 hover:shadow-lg hover:shadow-amber-500/5"
+                        whileHover={{ y: -2 }}
                       >
-                        {/* Section Divider */}
-                        <div className="flex items-center gap-4 mb-2">
-                          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300/50 dark:via-slate-700/50 to-transparent" />
-                          <span className="text-xs font-bold uppercase tracking-[0.25em] text-slate-400 dark:text-slate-500">
-                            {selectedLanguage === "hindi" ? "गहन विश्लेषण" : "Deep Analysis"}
-                          </span>
-                          <div className="h-px flex-1 bg-gradient-to-r from-transparent via-slate-300/50 dark:via-slate-700/50 to-transparent" />
-                        </div>
-
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-                          {/* Philosophical Meaning */}
-                          <motion.div 
-                            className="relative group overflow-hidden bg-gradient-to-br from-indigo-50/60 to-violet-50/40 dark:from-indigo-950/30 dark:to-violet-950/20 p-6 rounded-2xl border border-indigo-200/40 dark:border-indigo-800/30 hover:border-indigo-300/70 dark:hover:border-indigo-600/50 transition-all duration-500 hover:shadow-lg hover:shadow-indigo-500/5"
-                            whileHover={{ y: -2 }}
-                          >
-                            <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-indigo-200/20 dark:from-indigo-500/5 to-transparent rounded-bl-full" />
-                            <div className="relative z-10">
-                              <div className="flex items-center gap-3 mb-4">
-                                <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-indigo-100 dark:bg-indigo-900/40 border border-indigo-200/50 dark:border-indigo-700/40">
-                                  <LightBulbIcon className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
-                                </div>
-                                <h4 className="font-bold text-indigo-800 dark:text-indigo-300 text-base">
-                                  {selectedLanguage === "hindi" ? "दार्शनिक अर्थ" : "Philosophical Meaning"}
-                                </h4>
-                              </div>
-                              <p className="text-slate-700 dark:text-slate-300 text-[15px] leading-relaxed">
-                                {shloka.translations[selectedLanguage].philosophical_meaning}
-                              </p>
+                        <div className="absolute -top-2 -right-2 w-32 h-32 bg-gradient-to-bl from-amber-200/15 dark:from-amber-500/5 to-transparent rounded-bl-full" />
+                        <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-orange-200/10 dark:from-orange-500/5 to-transparent rounded-tr-full" />
+                        <div className="relative z-10">
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-900/40 border border-amber-200/50 dark:border-amber-700/40">
+                              <SparklesIcon className="w-5 h-5 text-amber-600 dark:text-amber-400" />
                             </div>
-                          </motion.div>
-
-                          {/* Practical Meaning */}
-                          <motion.div 
-                            className="relative group overflow-hidden bg-gradient-to-br from-teal-50/60 to-emerald-50/40 dark:from-teal-950/30 dark:to-emerald-950/20 p-6 rounded-2xl border border-teal-200/40 dark:border-teal-800/30 hover:border-teal-300/70 dark:hover:border-teal-600/50 transition-all duration-500 hover:shadow-lg hover:shadow-teal-500/5"
-                            whileHover={{ y: -2 }}
-                          >
-                            <div className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-bl from-teal-200/20 dark:from-teal-500/5 to-transparent rounded-bl-full" />
-                            <div className="relative z-10">
-                              <div className="flex items-center gap-3 mb-4">
-                                <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-teal-100 dark:bg-teal-900/40 border border-teal-200/50 dark:border-teal-700/40">
-                                  <WrenchScrewdriverIcon className="w-5 h-5 text-teal-600 dark:text-teal-400" />
-                                </div>
-                                <h4 className="font-bold text-teal-800 dark:text-teal-300 text-base">
-                                  {selectedLanguage === "hindi" ? "व्यावहारिक अर्थ" : "Practical Meaning"}
-                                </h4>
-                              </div>
-                              <p className="text-slate-700 dark:text-slate-300 text-[15px] leading-relaxed">
-                                {shloka.translations[selectedLanguage].practical_meaning}
-                              </p>
-                            </div>
-                          </motion.div>
-                        </div>
-
-                        {/* Key Lesson — Full Width Highlight Card */}
-                        <motion.div 
-                          className="relative overflow-hidden md:col-span-2 bg-gradient-to-r from-amber-50 via-orange-50/80 to-yellow-50/60 dark:from-amber-950/30 dark:via-orange-950/20 dark:to-yellow-950/10 p-6 rounded-2xl border border-amber-200/50 dark:border-amber-800/30 hover:border-amber-300/70 dark:hover:border-amber-600/50 transition-all duration-500 hover:shadow-lg hover:shadow-amber-500/5"
-                          whileHover={{ y: -2 }}
-                        >
-                          <div className="absolute -top-2 -right-2 w-32 h-32 bg-gradient-to-bl from-amber-200/15 dark:from-amber-500/5 to-transparent rounded-bl-full" />
-                          <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-orange-200/10 dark:from-orange-500/5 to-transparent rounded-tr-full" />
-                          <div className="relative z-10">
-                            <div className="flex items-center gap-3 mb-4">
-                              <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-900/40 border border-amber-200/50 dark:border-amber-700/40">
-                                <SparklesIcon className="w-5 h-5 text-amber-600 dark:text-amber-400" />
-                              </div>
-                              <h4 className="font-bold text-amber-800 dark:text-amber-300 text-base">
-                                {selectedLanguage === "hindi" ? "मुख्य पाठ" : "Key Lesson"}
-                              </h4>
-                            </div>
-                            <p className="text-slate-800 dark:text-slate-200 text-lg leading-relaxed font-medium">
-                              {shloka.translations[selectedLanguage].key_lesson}
-                            </p>
+                            <h4 className="font-bold text-amber-800 dark:text-amber-300 text-base">
+                              {selectedLanguage === "hindi" ? "मुख्य पाठ" : "Key Lesson"}
+                            </h4>
                           </div>
-                        </motion.div>
+                          <p className="text-slate-800 dark:text-slate-200 text-lg leading-relaxed font-medium">
+                            {shloka.translations[selectedLanguage].key_lesson}
+                          </p>
+                        </div>
                       </motion.div>
                     )}
                   </div>

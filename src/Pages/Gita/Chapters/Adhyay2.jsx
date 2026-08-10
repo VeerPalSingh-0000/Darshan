@@ -5,10 +5,12 @@ import { ArrowLeftIcon } from "@heroicons/react/24/outline";
 import {
   BookOpenIcon,
   BookmarkIcon as BookmarkSolidIcon,
+  SparklesIcon,
 } from "@heroicons/react/24/solid";
 import { BookmarkIcon as BookmarkOutlineIcon } from "@heroicons/react/24/outline";
 import ScrollToTop from "../../../Components/ScrollToTop";
 import SpeakButton from "../../../Components/SpeakButton";
+import SEO from "../../../Components/SEO";
 
 // --- Firebase & Auth Imports ---
 import { useAuth } from "../../../context/AuthContext";
@@ -40,6 +42,45 @@ const listItemVariants = {
     opacity: 1,
     y: 0,
     transition: { duration: 0.6 },
+  },
+};
+
+// --- Speaker Name Translations ---
+const speakerMap = {
+  "Lord Krishna": {
+    hindi: "श्रीकृष्ण",
+    english: "Lord Krishna",
+    tamil: "ஸ்ரீ கிருஷ்ணர்",
+    bengali: "শ্রীকৃষ্ণ",
+    spanish: "Señor Krishna",
+  },
+  "Arjuna": {
+    hindi: "अर्जुन",
+    english: "Arjuna",
+    tamil: "அர்ஜுனன்",
+    bengali: "অর্জুন",
+    spanish: "Arjuna",
+  },
+  "Sanjaya": {
+    hindi: "संजय",
+    english: "Sanjaya",
+    tamil: "சஞ்சயன்",
+    bengali: "সঞ্জয়",
+    spanish: "Sanjaya",
+  },
+  "Dhritarashtra": {
+    hindi: "धृतराष्ट्र",
+    english: "Dhritarashtra",
+    tamil: "திருதராஷ்டிரன்",
+    bengali: "ধৃতরাষ্ট্র",
+    spanish: "Dhritarashtra",
+  },
+  "Duryodhana": {
+    hindi: "दुर्योधन",
+    english: "Duryodhana",
+    tamil: "துரியோதனன்",
+    bengali: "দুর্যোধন",
+    spanish: "Duryodhana",
   },
 };
 
@@ -77,9 +118,7 @@ const Adhyay2 = () => {
       alert("Please log in to save your bookmarks.");
       return;
     }
-    const newBookmarks = bookmarks.includes(shlokaNum)
-      ? bookmarks.filter((num) => num !== shlokaNum)
-      : [...bookmarks, shlokaNum];
+    const newBookmarks = bookmarks.includes(shlokaNum) ? [] : [shlokaNum];
     setBookmarks(newBookmarks);
     try {
       const docRef = doc(db, "userBookmarks", currentUser.uid);
@@ -201,6 +240,22 @@ const Adhyay2 = () => {
       {/* Shlokas List */}
       <section className="relative pb-20 sm:pb-24">
         <div className="container mx-auto px-4 max-w-5xl">
+          {bookmarks.length > 0 && (
+            <div className="flex justify-end mb-6">
+              <button
+                onClick={() => {
+                  const el = document.getElementById(`verse-${bookmarks[0]}`);
+                  if (el) {
+                    el.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }}
+                className="flex items-center gap-2 px-4 py-2 bg-amber-100 dark:bg-amber-900/40 text-amber-800 dark:text-amber-200 rounded-lg hover:bg-amber-200 dark:hover:bg-amber-900/60 transition-colors shadow-sm"
+              >
+                <BookmarkSolidIcon className="w-5 h-5" />
+                <span className="font-medium">Go to Bookmark (Verse {bookmarks[0]})</span>
+              </button>
+            </div>
+          )}
           <motion.div
             className="space-y-10"
             variants={listContainerVariants}
@@ -210,6 +265,7 @@ const Adhyay2 = () => {
             {chapter2Shlokas.map((shloka) => (
               <motion.div
                 key={shloka.num}
+                id={`verse-${shloka.num}`}
                 className="group relative bg-white/80 dark:bg-slate-900/90 backdrop-blur-sm border border-slate-200/60 dark:border-slate-800 rounded-2xl shadow-lg hover:shadow-xl overflow-hidden transition-all duration-500 hover:border-amber-200 dark:hover:border-amber-900/50"
                 variants={listItemVariants}
                 whileHover={{ y: -4 }}
@@ -245,95 +301,105 @@ const Adhyay2 = () => {
                     </div>
                   </div>
 
-                  <p className="text-2xl md:text-3xl font-serif text-slate-900 dark:text-slate-100 leading-loose text-center whitespace-pre-line relative z-10 tracking-wide mb-10">
-                    {shloka.sanskrit}
-                  </p>
-
-                  <div className="space-y-8">
-                    {/* Translation */}
-                    <motion.div
-                      key={`translation-${shloka.num}`}
-                      initial={{ opacity: 0, y: 20 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      viewport={{ once: true, margin: "100px" }}
-                      transition={{ delay: 0.2 }}
-                    >
-                      <div className="flex items-center gap-3 mb-4">
-                        <div className="w-1 h-6 bg-gradient-to-b from-amber-500 to-orange-500 rounded-full" />
-                        <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg">
-                          {selectedLanguage === "hindi"
-                            ? "हिन्दी अनुवाद (Hindi Translation)"
-                            : selectedLanguage === "english"
-                              ? "English Translation"
-                              : `${selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)} Translation`}
-                        </h3>
-                      </div>
-                      <div className="bg-gradient-to-r from-slate-50 to-amber-50/30 dark:from-slate-800/40 dark:to-amber-900/10 p-6 rounded-xl border border-slate-100 dark:border-slate-800">
-                        <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg font-medium">
-                          {shloka[selectedLanguage] ||
-                            `Translation for ${selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)} will be available soon.`}
-                        </p>
-                      </div>
-                    </motion.div>
-
-                    {/* Meaning */}
-                    {(selectedLanguage === "hindi" && shloka.hindi_meaning) ||
-                    (selectedLanguage === "english" && shloka.meaning) ||
-                    shloka[`${selectedLanguage}_meaning`] ? (
-                      <motion.div
-                        key={`meaning-${shloka.num}`}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "100px" }}
-                        transition={{ delay: 0.4 }}
-                      >
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-1 h-6 bg-gradient-to-b from-emerald-500 to-green-500 rounded-full" />
-                          <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg">
-                            {selectedLanguage === "hindi"
-                              ? "भावार्थ (Hindi Meaning)"
-                              : selectedLanguage === "english"
-                                ? "English Meaning"
-                                : `${selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)} Meaning`}
-                          </h3>
-                        </div>
-                        <div className="bg-gradient-to-r from-emerald-50/20 to-green-50/20 p-6 rounded-xl border border-slate-100 dark:from-emerald-900/10 dark:to-green-900/10 dark:border-slate-800">
-                          <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg font-medium italic">
-                            {selectedLanguage === "hindi"
-                              ? shloka.hindi_meaning
-                              : selectedLanguage === "english"
-                                ? shloka.meaning
-                                : shloka[`${selectedLanguage}_meaning`]}
-                          </p>
-                        </div>
-                      </motion.div>
-                    ) : (
-                      <motion.div
-                        key={`meaning-${shloka.num}`}
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true, margin: "100px" }}
-                        transition={{ delay: 0.4 }}
-                      >
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="w-1 h-6 bg-gradient-to-b from-emerald-500 to-green-500 rounded-full" />
-                          <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg">
-                            {selectedLanguage.charAt(0).toUpperCase() +
-                              selectedLanguage.slice(1)}{" "}
-                            Meaning
-                          </h3>
-                        </div>
-                        <div className="bg-gradient-to-r from-emerald-50/20 to-green-50/20 dark:from-emerald-900/10 dark:to-green-900/10 p-6 rounded-xl border border-slate-100 dark:border-slate-800">
-                          <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg font-medium italic">
-                            Meaning for{" "}
-                            {selectedLanguage.charAt(0).toUpperCase() +
-                              selectedLanguage.slice(1)}{" "}
-                            will be available soon.
-                          </p>
-                        </div>
-                      </motion.div>
-                    )}
+                  {/* Sanskrit Verse with decorative accents */}
+                  <div className="relative py-6 mb-6">
+                    <div className="absolute left-1/2 -translate-x-1/2 top-0 w-16 h-[2px] bg-gradient-to-r from-transparent via-amber-400/60 to-transparent rounded-full" />
+                    <p className="text-2xl md:text-3xl font-serif text-slate-900 dark:text-slate-100 leading-loose text-center whitespace-pre-line relative z-10 tracking-wide">
+                      {shloka.sanskrit}
+                    </p>
+                    <div className="absolute left-1/2 -translate-x-1/2 bottom-0 w-16 h-[2px] bg-gradient-to-r from-transparent via-amber-400/60 to-transparent rounded-full" />
                   </div>
+
+                  {/* Speaker Badge */}
+                  {shloka.speaker && (
+                    <div className="flex justify-center mb-8">
+                      <span className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100/80 dark:bg-slate-800/60 border border-slate-200/60 dark:border-slate-700/50 text-slate-600 dark:text-slate-400 text-sm font-medium">
+                        🗣️ {selectedLanguage === "hindi" ? "वक्ता" : "Speaker"}: <span className="text-slate-800 dark:text-slate-200 font-semibold">{speakerMap[shloka.speaker]?.[selectedLanguage] || shloka.speaker}</span>
+                      </span>
+                    </div>
+                  )}
+
+                    <div className="space-y-8">
+                      {/* Translation */}
+                      <motion.div
+                        key={`translation-${shloka.num}`}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true, margin: "100px" }}
+                        transition={{ delay: 0.2 }}
+                      >
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="w-1 h-6 bg-gradient-to-b from-amber-500 to-orange-500 rounded-full" />
+                          <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg">
+                            {selectedLanguage === "hindi"
+                              ? "हिन्दी अनुवाद (Hindi Translation)"
+                              : selectedLanguage === "english"
+                                ? "English Translation"
+                                : `${selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)} Translation`}
+                          </h3>
+                        </div>
+                        <div className="relative bg-gradient-to-br from-slate-50/80 to-amber-50/40 dark:from-slate-800/60 dark:to-amber-950/20 p-6 rounded-2xl border border-slate-200/40 dark:border-slate-700/40 backdrop-blur-sm">
+                          <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg font-medium">
+                            {shloka[selectedLanguage] ||
+                              `Translation for ${selectedLanguage.charAt(0).toUpperCase() + selectedLanguage.slice(1)} will be available soon.`}
+                          </p>
+                        </div>
+                      </motion.div>
+
+                      {/* Context & Background — beginner-friendly explanation */}
+                      {shloka.translations && shloka.translations[selectedLanguage] && shloka.translations[selectedLanguage].literal_meaning && (
+                        <motion.div
+                          key={`context-${shloka.num}`}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true, margin: "100px" }}
+                          transition={{ delay: 0.4 }}
+                        >
+                          <div className="flex items-center gap-3 mb-4">
+                            <div className="w-1.5 h-7 bg-gradient-to-b from-emerald-400 to-green-500 rounded-full shadow-sm shadow-emerald-400/30" />
+                            <h3 className="font-bold text-slate-800 dark:text-slate-100 text-lg tracking-wide">
+                              {selectedLanguage === "hindi"
+                                ? "📖 सरल संदर्भ — यहाँ क्या हो रहा है?"
+                                : "📖 Context — What's Happening Here?"}
+                            </h3>
+                          </div>
+                          <div className="relative bg-gradient-to-br from-emerald-50/30 to-green-50/20 dark:from-emerald-950/20 dark:to-green-950/10 p-6 rounded-2xl border border-emerald-100/40 dark:border-emerald-900/30 backdrop-blur-sm">
+                            <p className="text-slate-700 dark:text-slate-200 leading-relaxed text-lg font-medium">
+                              {shloka.translations[selectedLanguage].literal_meaning}
+                            </p>
+                          </div>
+                        </motion.div>
+                      )}
+
+                      {/* ═══ Key Lesson ═══ */}
+                      {shloka.translations && shloka.translations[selectedLanguage] && shloka.translations[selectedLanguage].key_lesson && (
+                        <motion.div
+                          key={`lesson-${shloka.num}`}
+                          initial={{ opacity: 0, y: 20 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true, margin: "100px" }}
+                          transition={{ delay: 0.6 }}
+                          className="relative overflow-hidden bg-gradient-to-r from-amber-50 via-orange-50/80 to-yellow-50/60 dark:from-amber-950/30 dark:via-orange-950/20 dark:to-yellow-950/10 p-6 rounded-2xl border border-amber-200/50 dark:border-amber-800/30 hover:border-amber-300/70 dark:hover:border-amber-600/50 transition-all duration-500 hover:shadow-lg hover:shadow-amber-500/5"
+                          whileHover={{ y: -2 }}
+                        >
+                          <div className="absolute -top-2 -right-2 w-32 h-32 bg-gradient-to-bl from-amber-200/15 dark:from-amber-500/5 to-transparent rounded-bl-full" />
+                          <div className="absolute bottom-0 left-0 w-20 h-20 bg-gradient-to-tr from-orange-200/10 dark:from-orange-500/5 to-transparent rounded-tr-full" />
+                          <div className="relative z-10">
+                            <div className="flex items-center gap-3 mb-4">
+                              <div className="flex items-center justify-center w-9 h-9 rounded-xl bg-amber-100 dark:bg-amber-900/40 border border-amber-200/50 dark:border-amber-700/40">
+                                <SparklesIcon className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+                              </div>
+                              <h4 className="font-bold text-amber-800 dark:text-amber-300 text-base">
+                                {selectedLanguage === "hindi" ? "मुख्य पाठ" : "Key Lesson"}
+                              </h4>
+                            </div>
+                            <p className="text-slate-800 dark:text-slate-200 text-lg leading-relaxed font-medium">
+                              {shloka.translations[selectedLanguage].key_lesson}
+                            </p>
+                          </div>
+                        </motion.div>
+                      )}
+                    </div>
                 </div>
               </motion.div>
             ))}
